@@ -1,0 +1,1658 @@
+# Logfile created on Mon Oct 04 13:49:34 -0700 2010FEDORA: loading ActiveFedora config from /private/tmp/hydrangea/config/fedora.yml
+FEDORA: initializing ActiveFedora::SolrService with solr_config: {:url=>"http://localhost:8983/solr/development"}
+FEDORA: initialized Solr with ActiveFedora.solr_config: #<ActiveFedora::SolrService:0x2d81c18 @conn=#<Solr::Connection:0x2d81b8c @autocommit=true, @connection=#<Net::HTTP localhost:8983 open=false>, @url=#<URI::HTTP:0x2d81754 URL:http://localhost:8983/solr/development>>>
+FEDORA: initializing Fedora with fedora_config: {:url=>"http://fedoraAdmin:fedoraAdmin@127.0.0.1:8983/fedora"}
+FEDORA: initialized Fedora as: #<Fedora::Repository:0x2d8145c @repository_name="Fedora Repository", @pid_namespace="changeme", @fedora_version="3.3", @connection=#<Fedora::Connection:0x2d81038 @default_header={"Content-Type"=>"text/xml"}, @surrogate=nil, @format=Fedora::XmlFormat, @site=#<URI::HTTP:0x2d81074 URL:http://fedoraAdmin:fedoraAdmin@127.0.0.1:8983/fedora>>, @surrogate=nil, @base_url="http://localhost:8983/fedora", @fedora_url=#<URI::HTTP:0x2d81074 URL:http://fedoraAdmin:fedoraAdmin@127.0.0.1:8983/fedora>, @pid_delimiter=":">
+BLACKLIGHT: running version master
+BLACKLIGHT: initialized with Blacklight.solr_config: {"default"=>{"url"=>"http://localhost:8983/solr/development"}, :url=>"http://localhost:8983/solr/development", "fulltext"=>{"url"=>"http://localhost:8983/solr/development"}}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Client:0x2bc0a50 @connection=#<RSolr::Connection::NetHttp:0x2bcf640 @opts={"default"=>{"url"=>"http://localhost:8983/solr/development"}, :adapter=>:curb, :url=>"http://localhost:8983/solr/development", "fulltext"=>{"url"=>"http://localhost:8983/solr/development"}}, @uri=#<URI::HTTP:0x2bbad58 URL:http://localhost:8983/solr/development>>>
+BLACKLIGHT: initialized with Blacklight.config: {:index=>{:show_link=>"title_facet", :num_per_page=>40, :record_display_type=>"id"}, :show_fields=>{:labels=>{"access_t"=>"Access:", "rights_t"=>"Copyright:", "location_t"=>"Location:", "medium_t"=>"Document Type:", "text"=>"Text:", "date_t"=>"Date:", "title_facet"=>"Title:"}, :field_names=>["text", "title_facet", "date_t", "medium_t", "location_t", "rights_t", "access_t"]}, :facet=>{:limits=>{nil=>10}, :labels=>{"location_t"=>"Location", "medium_t"=>"Content Type", "title_t"=>"Title", "date_t"=>"Date"}, :field_names=>["date_t", "title_t", "medium_t", "location_t"]}, :raw_storage_type=>"marc21", :default_qt=>"search", :raw_storage_field=>"marc_display", :show=>{:display_type=>"has_model_s", :html_title=>"title_t", :heading=>"title_t"}, :public_qt=>"public_search", :search_fields=>[["Descriptions", "search"], ["Descriptions and full text", "fulltext"]], :sort_fields=>[["relevance", "score desc, year_facet desc, month_facet asc, title_facet asc"], ["date -", "year_facet desc, month_facet asc, title_facet asc"], ["date +", "year_facet asc, month_facet asc, title_facet asc"], ["title", "title_facet asc"], ["document type", "medium_t asc, year_facet desc, month_facet asc, title_facet asc"], ["location", "series_facet asc, box_facet asc, folder_facet asc, year_facet desc, month_facet asc, title_facet asc"]], :spell_max=>5, :index_fields=>{:labels=>{"location_t"=>"Location", "medium_t"=>"Content Type", "title_t"=>"Title", "date_t"=>"Date"}, :field_names=>["date_t", "title_t", "medium_t", "location_t"]}, :facet_more_num=>5}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'archivist1@archivist1.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'archivist1') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '3474f6ad47d76f303bfaaa3416de4e2e710105319b3235ead44f68106b98d5ff88a5e065080cda4a8007a8ade64496e3a10182c017746eea4d1a61ae38d6cc63') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'archivist1@archivist1.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'archivist1') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO "users" ("last_search_url", "created_at", "crypted_password", "updated_at", "password_salt", "current_login_at", "persistence_token", "login", "last_login_at", "email") VALUES(NULL, '2010-10-04 20:49:37', '4501805fcab0a74b13a71fd06d4d87c01aede6efbe583abb5254449328d8237ff48a1890071d99a1391262ea0b4fea058703d4526b9765674789b88bbaae4a34', '2010-10-04 20:49:37', 'I9ErL9wv8NtydoL6v80', NULL, '3474f6ad47d76f303bfaaa3416de4e2e710105319b3235ead44f68106b98d5ff88a5e065080cda4a8007a8ade64496e3a10182c017746eea4d1a61ae38d6cc63', 'archivist1', NULL, 'archivist1@archivist1.com')[0m
+REQUESTING PAGE: POST /user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password with {} and HTTP headers {}
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-04 13:49:37) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "login"=>"archivist1"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".login) = 'archivist1') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-04 20:49:37', "current_login_at" = '2010-10-04 20:49:37' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 253ms (DB: 2) | 302 Found [http://www.example.com/user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-10-04 13:49:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (4.0ms)
+Rendered catalog/_home_text (0.4ms)
+Rendered catalog/_facets (19.5ms)
+Rendered catalog/_home (26.5ms)
+Rendered _user_util_links (5.7ms)
+Rendered _flash_msg (0.7ms)
+Completed in 130ms (View: 62, DB: 0) | 200 OK [http://www.example.com/]
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+REQUESTING PAGE: GET /catalog?q=&search_field=search&action=index&controller=catalog&commit=search with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-10-04 13:49:37) [GET]
+  Parameters: {"commit"=>"search", "search_field"=>"search", "action"=>"index", "q"=>"", "controller"=>"catalog"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (2.1ms)
+Rendered catalog/_did_you_mean (0.9ms)
+Rendered catalog/_constraints (3.4ms)
+Rendered catalog/_sort_and_per_page (5.3ms)
+attempting to render hydrangea_datasets/_index
+Rendered hydrangea_datasets/_index (4.0ms)
+attempting to render hydrangea_articles/_index
+Rendered hydrangea_articles/_index (3.1ms)
+attempting to render hydrangea_articles/_index
+Rendered hydrangea_articles/_index (1.2ms)
+attempting to render hydrangea_articles/_index
+Rendered hydrangea_articles/_index (1.2ms)
+attempting to render hydrangea_articles/_index
+Rendered hydrangea_articles/_index (1.2ms)
+Rendered catalog/_index_partials/_default_group (14.6ms)
+Rendered catalog/_document_list (16.1ms)
+Rendered catalog/_facets (2.9ms)
+Rendered catalog/_solr_request (0.8ms)
+Rendered _user_util_links (0.9ms)
+Rendered _flash_msg (0.1ms)
+Completed in 52ms (View: 39, DB: 0) | 200 OK [http://www.example.com/catalog?q=&search_field=search&action=index&controller=catalog&commit=search]
+REQUESTING PAGE: GET /catalog?q=&search_field=search&action=index&controller=catalog&commit=search with {} and HTTP headers {}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-10-04 13:49:37) [GET]
+  Parameters: {"commit"=>"search", "search_field"=>"search", "action"=>"index", "q"=>"", "controller"=>"catalog"}
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.7ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (0.9ms)
+Rendered catalog/_sort_and_per_page (3.0ms)
+attempting to render hydrangea_articles/_index
+Rendered hydrangea_articles/_index (1.6ms)
+attempting to render hydrangea_articles/_index
+Rendered hydrangea_articles/_index (1.3ms)
+attempting to render hydrangea_articles/_index
+Rendered hydrangea_articles/_index (1.2ms)
+Rendered catalog/_index_partials/_default_group (5.7ms)
+Rendered catalog/_document_list (6.2ms)
+Rendered catalog/_facets (0.2ms)
+Rendered catalog/_solr_request (0.3ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 25ms (View: 18, DB: 0) | 200 OK [http://www.example.com/catalog?q=&search_field=search&action=index&controller=catalog&commit=search]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'archivist1@archivist1.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'archivist1') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '9f55c62b44a7ff3df2bfd881e889b8bc76b87b90696f5c1cf45b16b5c9069ad30ca4f8fcc2723e6cc1b2f48344b9722fb11f97c8562758867a60b3615bde247c') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'archivist1@archivist1.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'archivist1') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("last_search_url", "created_at", "crypted_password", "updated_at", "password_salt", "current_login_at", "persistence_token", "login", "last_login_at", "email") VALUES(NULL, '2010-10-04 20:49:37', 'f21f25d082afc2204188b84971367bdf8eedf2ee7e24f0c31ee1d6d4db2456e545f28d8015b078fe02c264ef8d0a5998a616c858cd86c8ced63b53edeeb497b2', '2010-10-04 20:49:37', 'zJxp0w4jk0VY2RINKwS', '2010-10-04 20:49:37', '9f55c62b44a7ff3df2bfd881e889b8bc76b87b90696f5c1cf45b16b5c9069ad30ca4f8fcc2723e6cc1b2f48344b9722fb11f97c8562758867a60b3615bde247c', 'archivist1', NULL, 'archivist1@archivist1.com')[0m
+REQUESTING PAGE: POST /user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password with {} and HTTP headers {}
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-04 13:49:37) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "login"=>"archivist1"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".login) = 'archivist1') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-04 20:49:37', "last_login_at" = '2010-10-04 20:49:37', "current_login_at" = '2010-10-04 20:49:37' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 5ms (DB: 1) | 302 Found [http://www.example.com/user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-10-04 13:49:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.6ms)
+Rendered catalog/_home_text (0.1ms)
+Rendered catalog/_facets (2.7ms)
+Rendered catalog/_home (5.9ms)
+Rendered _user_util_links (0.9ms)
+Rendered _flash_msg (0.1ms)
+Completed in 22ms (View: 12, DB: 0) | 200 OK [http://www.example.com/]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+REQUESTING PAGE: GET /catalog/hydrangea:fixture_mods_article1/edit with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+
+
+Processing CatalogController#edit (for 127.0.0.1 at 2010-10-04 13:49:37) [GET]
+  Parameters: {"action"=>"edit", "id"=>"hydrangea:fixture_mods_article1", "controller"=>"catalog"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+User archivist1 is a member of groups: ["archivist", "public"]
+Checking edit permissions for user: archivist1
+edit_groups: ["archivist"]
+test_permission result: true
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_tools (1.3ms)
+User archivist1 is a member of groups: ["archivist", "public"]
+Checking edit permissions for user: archivist1
+edit_groups: ["archivist"]
+test_permission result: true
+attempting to render hydrangea_articles/_edit
+Rendered contributors/_edit_person (6.5ms)
+Rendered contributors/_edit_person (3.0ms)
+Rendered contributors/_edit_organization (4.2ms)
+Rendered contributors/_edit_conference (4.1ms)
+Rendered hydrangea_articles/_edit_journal (8.8ms)
+Rendered hydrangea_articles/_edit_description (52.2ms)
+Rendered permissions/_edit_person_permissions (3.1ms)
+Rendered permissions/_new (4.1ms)
+Rendered permissions/_index (17.7ms)
+Rendered hydrangea_articles/_edit (167.7ms)
+Rendered catalog/_solr_request (0.4ms)
+Rendered catalog/_citation (0.7ms)
+Rendered catalog/_email_form (1.9ms)
+Rendered catalog/_sms_form (1.6ms)
+Rendered _user_util_links (0.9ms)
+Rendered _flash_msg (0.1ms)
+Completed in 279ms (View: 187, DB: 0) | 200 OK [http://www.example.com/catalog/hydrangea:fixture_mods_article1/edit]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'archivist1@archivist1.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'archivist1') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '0ee77dadcb361aec7e6f92e691c9834328e5bffa2e7ab1a3ef419bfe47fc7a0ca4199b219b66fb30ed242b96f59d03c52b3a619bcda1a2f7d141fd52d5aa1a4e') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'archivist1@archivist1.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'archivist1') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("last_search_url", "created_at", "crypted_password", "updated_at", "password_salt", "current_login_at", "persistence_token", "login", "last_login_at", "email") VALUES(NULL, '2010-10-04 20:49:38', 'e88dfc33570b862488226695b0c79ab06472763f2d5dee6a56724317c73a7e3ee509688419dd388805caf7ba03030e8f0429c3ab5b72f7381e0fa655e96668aa', '2010-10-04 20:49:38', 'zwfm8GKYhTPiKM5HS9m', '2010-10-04 20:49:38', '0ee77dadcb361aec7e6f92e691c9834328e5bffa2e7ab1a3ef419bfe47fc7a0ca4199b219b66fb30ed242b96f59d03c52b3a619bcda1a2f7d141fd52d5aa1a4e', 'archivist1', NULL, 'archivist1@archivist1.com')[0m
+REQUESTING PAGE: POST /user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password with {} and HTTP headers {}
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-04 13:49:38) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "login"=>"archivist1"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".login) = 'archivist1') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-04 20:49:38', "last_login_at" = '2010-10-04 20:49:38', "current_login_at" = '2010-10-04 20:49:38' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 5ms (DB: 1) | 302 Found [http://www.example.com/user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-10-04 13:49:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.6ms)
+Rendered catalog/_home_text (0.1ms)
+Rendered catalog/_facets (2.7ms)
+Rendered catalog/_home (5.9ms)
+Rendered _user_util_links (0.9ms)
+Rendered _flash_msg (0.1ms)
+Completed in 24ms (View: 12, DB: 0) | 200 OK [http://www.example.com/]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+REQUESTING PAGE: GET /catalog/hydrangea:fixture_mods_article1 with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2010-10-04 13:49:38) [GET]
+  Parameters: {"action"=>"show", "id"=>"hydrangea:fixture_mods_article1", "controller"=>"catalog"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+User archivist1 is a member of groups: ["archivist", "public"]
+Checking read permissions for user: archivist1
+edit_groups: ["archivist"]
+read_groups: ["archivist", "public"]
+test_permission result: true
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_tools (0.1ms)
+User archivist1 is a member of groups: ["archivist", "public"]
+Checking edit permissions for user: archivist1
+edit_groups: ["archivist"]
+test_permission result: true
+attempting to render hydrangea_articles/_show
+Rendered contributors/_show_person (5.9ms)
+Rendered contributors/_show_person (2.9ms)
+Rendered contributors/_show_organization (3.1ms)
+Rendered contributors/_show_conference (3.1ms)
+Rendered hydrangea_articles/_show_journal (9.1ms)
+Rendered hydrangea_articles/_show_description (33.4ms)
+Rendered hydrangea_articles/_show (37.1ms)
+Rendered catalog/_solr_request (0.4ms)
+Rendered catalog/_citation (0.1ms)
+Rendered catalog/_email_form (0.9ms)
+Rendered catalog/_sms_form (1.0ms)
+Rendered _user_util_links (0.9ms)
+Rendered _flash_msg (0.1ms)
+Completed in 211ms (View: 47, DB: 0) | 200 OK [http://www.example.com/catalog/hydrangea:fixture_mods_article1]
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'researcher1@researcher1.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'researcher1') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'b14de45cea3146563238fe4dc9d3d5db76953e8b2654e434e1293d4e2718d6b291a3b389566d72e89b3573b70aa934be77b11ff814e93bdc32eff63da003920a') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'researcher1@researcher1.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'researcher1') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("last_search_url", "created_at", "crypted_password", "updated_at", "password_salt", "current_login_at", "persistence_token", "login", "last_login_at", "email") VALUES(NULL, '2010-10-04 20:49:38', '9acd91dcf689ef71c0fd3916553265056d17f19828dfed8c5b2ad18be6c671db7025f9c754a94f7b4e4b12a3a6ba16713ecbdb2d8c145de53d0089819f24f202', '2010-10-04 20:49:38', 'VcXOZkKRqMKPl6kHANr', '2010-10-04 20:49:38', 'b14de45cea3146563238fe4dc9d3d5db76953e8b2654e434e1293d4e2718d6b291a3b389566d72e89b3573b70aa934be77b11ff814e93bdc32eff63da003920a', 'researcher1', NULL, 'researcher1@researcher1.com')[0m
+REQUESTING PAGE: POST /user_sessions?user_session%5Blogin%5D=researcher1&user_session%5Bpassword%5D=password with {} and HTTP headers {}
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-04 13:49:38) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "login"=>"researcher1"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".login) = 'researcher1') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-04 20:49:38', "last_login_at" = '2010-10-04 20:49:38', "current_login_at" = '2010-10-04 20:49:38' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 5ms (DB: 1) | 302 Found [http://www.example.com/user_sessions?user_session%5Blogin%5D=researcher1&user_session%5Bpassword%5D=password]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/user_sessions?user_session%5Blogin%5D=researcher1&user_session%5Bpassword%5D=password"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-10-04 13:49:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.6ms)
+Rendered catalog/_home_text (0.1ms)
+Rendered catalog/_facets (2.7ms)
+Rendered catalog/_home (5.8ms)
+Rendered _user_util_links (0.9ms)
+Rendered _flash_msg (0.1ms)
+Completed in 23ms (View: 12, DB: 0) | 200 OK [http://www.example.com/]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+REQUESTING PAGE: GET /catalog/hydrangea:fixture_mods_dataset1/edit with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+
+
+Processing CatalogController#edit (for 127.0.0.1 at 2010-10-04 13:49:38) [GET]
+  Parameters: {"action"=>"edit", "id"=>"hydrangea:fixture_mods_dataset1", "controller"=>"catalog"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+User researcher1 is a member of groups: ["researcher", "public"]
+Checking edit permissions for user: researcher1
+edit_groups: ["researcher"]
+test_permission result: true
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_tools (0.1ms)
+User researcher1 is a member of groups: ["researcher", "public"]
+Checking edit permissions for user: researcher1
+edit_groups: ["researcher"]
+test_permission result: true
+attempting to render hydrangea_datasets/_edit
+Rendered contributors/_edit_person (3.1ms)
+Rendered hydrangea_datasets/_edit_coverage_and_methodology (5.6ms)
+Rendered hydrangea_datasets/_edit_additional_info (6.9ms)
+Rendered hydrangea_datasets/_edit_description (24.4ms)
+Rendered permissions/_edit_person_permissions (0.9ms)
+Rendered permissions/_new (0.3ms)
+Rendered permissions/_index (6.9ms)
+Rendered hydrangea_datasets/_edit (41.0ms)
+Rendered catalog/_solr_request (0.4ms)
+Rendered catalog/_citation (0.1ms)
+Rendered catalog/_email_form (0.8ms)
+Rendered catalog/_sms_form (1.0ms)
+Rendered _user_util_links (0.9ms)
+Rendered _flash_msg (0.1ms)
+Completed in 265ms (View: 53, DB: 0) | 200 OK [http://www.example.com/catalog/hydrangea:fixture_mods_dataset1/edit]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'archivist1@archivist1.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'archivist1') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '28653aec4719ac99bf755f98561e208e21ee85d1c47a96e021a2ac43542803192c7c505f5ecfda0232e8a32a83320b23c03ae2eee4e0ec2165549263c3a31532') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'archivist1@archivist1.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'archivist1') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("last_search_url", "created_at", "crypted_password", "updated_at", "password_salt", "current_login_at", "persistence_token", "login", "last_login_at", "email") VALUES(NULL, '2010-10-04 20:49:38', '770362d57ba184ffe94e819f5384795e5fa8c6dfc62a20cebfb960612f651d54518c03aa1e3b1554d8543a6af7dc94d6d8657df0111142dba14d15fce793e785', '2010-10-04 20:49:38', 'WTsRyWuuY4lV7fG485y', '2010-10-04 20:49:38', '28653aec4719ac99bf755f98561e208e21ee85d1c47a96e021a2ac43542803192c7c505f5ecfda0232e8a32a83320b23c03ae2eee4e0ec2165549263c3a31532', 'archivist1', NULL, 'archivist1@archivist1.com')[0m
+REQUESTING PAGE: POST /user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password with {} and HTTP headers {}
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-04 13:49:38) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "login"=>"archivist1"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".login) = 'archivist1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-04 20:49:38', "last_login_at" = '2010-10-04 20:49:38', "current_login_at" = '2010-10-04 20:49:38' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 5ms (DB: 1) | 302 Found [http://www.example.com/user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-10-04 13:49:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.7ms)
+Rendered catalog/_home_text (0.1ms)
+Rendered catalog/_facets (2.7ms)
+Rendered catalog/_home (6.0ms)
+Rendered _user_util_links (0.9ms)
+Rendered _flash_msg (0.1ms)
+Completed in 24ms (View: 12, DB: 0) | 200 OK [http://www.example.com/]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+REQUESTING PAGE: GET /catalog/hydrangea:fixture_mods_article1/edit with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+
+
+Processing CatalogController#edit (for 127.0.0.1 at 2010-10-04 13:49:39) [GET]
+  Parameters: {"action"=>"edit", "id"=>"hydrangea:fixture_mods_article1", "controller"=>"catalog"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+User archivist1 is a member of groups: ["archivist", "public"]
+Checking edit permissions for user: archivist1
+edit_groups: ["archivist"]
+test_permission result: true
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_tools (0.1ms)
+User archivist1 is a member of groups: ["archivist", "public"]
+Checking edit permissions for user: archivist1
+edit_groups: ["archivist"]
+test_permission result: true
+attempting to render hydrangea_articles/_edit
+Rendered contributors/_edit_person (3.0ms)
+Rendered contributors/_edit_person (2.9ms)
+Rendered contributors/_edit_organization (1.7ms)
+Rendered contributors/_edit_conference (1.9ms)
+Rendered hydrangea_articles/_edit_journal (4.5ms)
+Rendered hydrangea_articles/_edit_description (107.9ms)
+Rendered permissions/_edit_person_permissions (1.0ms)
+Rendered permissions/_new (0.4ms)
+Rendered permissions/_index (7.1ms)
+Rendered hydrangea_articles/_edit (117.8ms)
+Rendered catalog/_solr_request (0.4ms)
+Rendered catalog/_citation (0.1ms)
+Rendered catalog/_email_form (0.8ms)
+Rendered catalog/_sms_form (1.0ms)
+Rendered _user_util_links (0.9ms)
+Rendered _flash_msg (0.1ms)
+Completed in 202ms (View: 130, DB: 0) | 200 OK [http://www.example.com/catalog/hydrangea:fixture_mods_article1/edit]
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'archivist1@archivist1.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'archivist1') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '7d92497abc54315774fea60bd6a596520c5de48b9fec3682d39de2b1ccfabc3ca36639f92278d9c43b91b1ade70a3a2aaf82bd36f5567b9599e865c7c67b7988') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'archivist1@archivist1.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'archivist1') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("last_search_url", "created_at", "crypted_password", "updated_at", "password_salt", "current_login_at", "persistence_token", "login", "last_login_at", "email") VALUES(NULL, '2010-10-04 20:49:39', '92119ad83b3e27c5d258ef4cfccd66dfb8fec00d2de5836ed5485eb5cc4933bd1199200bebff6c42f090dc45de9f1af017ddc16fc72c81ad03e8b416afb865dc', '2010-10-04 20:49:39', '3HwQq7blGUchEb4zyFL', '2010-10-04 20:49:39', '7d92497abc54315774fea60bd6a596520c5de48b9fec3682d39de2b1ccfabc3ca36639f92278d9c43b91b1ade70a3a2aaf82bd36f5567b9599e865c7c67b7988', 'archivist1', NULL, 'archivist1@archivist1.com')[0m
+REQUESTING PAGE: POST /user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password with {} and HTTP headers {}
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-04 13:49:39) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "login"=>"archivist1"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".login) = 'archivist1') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-04 20:49:39', "last_login_at" = '2010-10-04 20:49:39', "current_login_at" = '2010-10-04 20:49:39' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 5ms (DB: 1) | 302 Found [http://www.example.com/user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-10-04 13:49:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.6ms)
+Rendered catalog/_home_text (0.1ms)
+Rendered catalog/_facets (2.7ms)
+Rendered catalog/_home (6.0ms)
+Rendered _user_util_links (0.9ms)
+Rendered _flash_msg (0.1ms)
+Completed in 22ms (View: 12, DB: 0) | 200 OK [http://www.example.com/]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+REQUESTING PAGE: GET /catalog/hydrangea:fixture_mods_article1/edit with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+
+
+Processing CatalogController#edit (for 127.0.0.1 at 2010-10-04 13:49:39) [GET]
+  Parameters: {"action"=>"edit", "id"=>"hydrangea:fixture_mods_article1", "controller"=>"catalog"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+User archivist1 is a member of groups: ["archivist", "public"]
+Checking edit permissions for user: archivist1
+edit_groups: ["archivist"]
+test_permission result: true
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_tools (0.1ms)
+User archivist1 is a member of groups: ["archivist", "public"]
+Checking edit permissions for user: archivist1
+edit_groups: ["archivist"]
+test_permission result: true
+attempting to render hydrangea_articles/_edit
+Rendered contributors/_edit_person (3.0ms)
+Rendered contributors/_edit_person (2.9ms)
+Rendered contributors/_edit_organization (1.7ms)
+Rendered contributors/_edit_conference (1.7ms)
+Rendered hydrangea_articles/_edit_journal (4.4ms)
+Rendered hydrangea_articles/_edit_description (19.2ms)
+Rendered permissions/_edit_person_permissions (1.0ms)
+Rendered permissions/_new (0.4ms)
+Rendered permissions/_index (7.0ms)
+Rendered hydrangea_articles/_edit (29.0ms)
+Rendered catalog/_solr_request (0.4ms)
+Rendered catalog/_citation (0.1ms)
+Rendered catalog/_email_form (8.7ms)
+Rendered catalog/_sms_form (1.0ms)
+Rendered _user_util_links (0.9ms)
+Rendered _flash_msg (0.1ms)
+Completed in 291ms (View: 131, DB: 0) | 200 OK [http://www.example.com/catalog/hydrangea:fixture_mods_article1/edit]
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'archivist1@archivist1.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'archivist1') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '4ce949f6ba9d8e4b9637655e158ab36c6969f73944bb270a737d56f7361b8ded5a3a1627ac48bb0adf46b6916ea17851f7e7a4e09d1380faf2112f3733924769') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'archivist1@archivist1.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'archivist1') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("last_search_url", "created_at", "crypted_password", "updated_at", "password_salt", "current_login_at", "persistence_token", "login", "last_login_at", "email") VALUES(NULL, '2010-10-04 20:49:39', '2f4777d56ad5aca2f2f287fff2b28245a04ac2a5bfb3b3231415e6ca6cc7962dce861622f92fbf35fae8aba78c32e90e6ba31a9bdaa706a8b0b248d108de1059', '2010-10-04 20:49:39', 'fpeVMWPlYJQo5tHhYwuq', '2010-10-04 20:49:39', '4ce949f6ba9d8e4b9637655e158ab36c6969f73944bb270a737d56f7361b8ded5a3a1627ac48bb0adf46b6916ea17851f7e7a4e09d1380faf2112f3733924769', 'archivist1', NULL, 'archivist1@archivist1.com')[0m
+REQUESTING PAGE: POST /user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password with {} and HTTP headers {}
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-04 13:49:39) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "login"=>"archivist1"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".login) = 'archivist1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-04 20:49:39', "last_login_at" = '2010-10-04 20:49:39', "current_login_at" = '2010-10-04 20:49:39' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 5ms (DB: 1) | 302 Found [http://www.example.com/user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-10-04 13:49:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.6ms)
+Rendered catalog/_home_text (0.1ms)
+Rendered catalog/_facets (2.6ms)
+Rendered catalog/_home (5.7ms)
+Rendered _user_util_links (0.9ms)
+Rendered _flash_msg (0.1ms)
+Completed in 21ms (View: 11, DB: 0) | 200 OK [http://www.example.com/]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+REQUESTING PAGE: GET /catalog/hydrangea:fixture_mods_article1/edit with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+
+
+Processing CatalogController#edit (for 127.0.0.1 at 2010-10-04 13:49:39) [GET]
+  Parameters: {"action"=>"edit", "id"=>"hydrangea:fixture_mods_article1", "controller"=>"catalog"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+User archivist1 is a member of groups: ["archivist", "public"]
+Checking edit permissions for user: archivist1
+edit_groups: ["archivist"]
+test_permission result: true
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_tools (0.1ms)
+User archivist1 is a member of groups: ["archivist", "public"]
+Checking edit permissions for user: archivist1
+edit_groups: ["archivist"]
+test_permission result: true
+attempting to render hydrangea_articles/_edit
+Rendered contributors/_edit_person (3.0ms)
+Rendered contributors/_edit_person (3.0ms)
+Rendered contributors/_edit_organization (1.7ms)
+Rendered contributors/_edit_conference (1.7ms)
+Rendered hydrangea_articles/_edit_journal (4.3ms)
+Rendered hydrangea_articles/_edit_description (19.2ms)
+Rendered permissions/_edit_person_permissions (1.0ms)
+Rendered permissions/_new (0.4ms)
+Rendered permissions/_index (6.9ms)
+Rendered hydrangea_articles/_edit (28.8ms)
+Rendered catalog/_solr_request (0.4ms)
+Rendered catalog/_citation (0.1ms)
+Rendered catalog/_email_form (0.8ms)
+Rendered catalog/_sms_form (1.0ms)
+Rendered _user_util_links (0.9ms)
+Rendered _flash_msg (0.1ms)
+Completed in 206ms (View: 41, DB: 0) | 200 OK [http://www.example.com/catalog/hydrangea:fixture_mods_article1/edit]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'researcher1@researcher1.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'researcher1') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '1a59ef9ca790f0ed38241524b7e015886f8cc6d72343b3e812762aecb71ac532844c39141aef4764bf0c8c267ac922a663c4fd872aa403031efcedfb0ed2c544') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'researcher1@researcher1.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'researcher1') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("last_search_url", "created_at", "crypted_password", "updated_at", "password_salt", "current_login_at", "persistence_token", "login", "last_login_at", "email") VALUES(NULL, '2010-10-04 20:49:40', '42d16bc56e37686c3c25dfa8da4b62d6dbd73692de92400d0050d33ae4c432d514a707f77d473cb8c6a8d3595af5e42fee403887e3236997357616f2232c90fc', '2010-10-04 20:49:40', 'sHggfAi7rqgGTh7swHK', '2010-10-04 20:49:40', '1a59ef9ca790f0ed38241524b7e015886f8cc6d72343b3e812762aecb71ac532844c39141aef4764bf0c8c267ac922a663c4fd872aa403031efcedfb0ed2c544', 'researcher1', NULL, 'researcher1@researcher1.com')[0m
+REQUESTING PAGE: POST /user_sessions?user_session%5Blogin%5D=researcher1&user_session%5Bpassword%5D=password with {} and HTTP headers {}
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-04 13:49:40) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "login"=>"researcher1"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".login) = 'researcher1') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-04 20:49:40', "last_login_at" = '2010-10-04 20:49:40', "current_login_at" = '2010-10-04 20:49:40' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 5ms (DB: 1) | 302 Found [http://www.example.com/user_sessions?user_session%5Blogin%5D=researcher1&user_session%5Bpassword%5D=password]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/user_sessions?user_session%5Blogin%5D=researcher1&user_session%5Bpassword%5D=password"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-10-04 13:49:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.6ms)
+Rendered catalog/_home_text (0.1ms)
+Rendered catalog/_facets (2.8ms)
+Rendered catalog/_home (6.0ms)
+Rendered _user_util_links (0.9ms)
+Rendered _flash_msg (0.1ms)
+Completed in 23ms (View: 12, DB: 0) | 200 OK [http://www.example.com/]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+REQUESTING PAGE: GET /catalog/hydrangea:fixture_mods_article1/edit with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+
+
+Processing CatalogController#edit (for 127.0.0.1 at 2010-10-04 13:49:40) [GET]
+  Parameters: {"action"=>"edit", "id"=>"hydrangea:fixture_mods_article1", "controller"=>"catalog"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+User researcher1 is a member of groups: ["researcher", "public"]
+Checking edit permissions for user: researcher1
+edit_groups: ["archivist"]
+edit_persons: ["researcher1"]
+test_permission result: true
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_tools (0.1ms)
+User researcher1 is a member of groups: ["researcher", "public"]
+Checking edit permissions for user: researcher1
+edit_groups: ["archivist"]
+edit_persons: ["researcher1"]
+test_permission result: true
+attempting to render hydrangea_articles/_edit
+Rendered contributors/_edit_person (3.1ms)
+Rendered contributors/_edit_person (3.1ms)
+Rendered contributors/_edit_organization (1.7ms)
+Rendered contributors/_edit_conference (1.7ms)
+Rendered hydrangea_articles/_edit_journal (4.6ms)
+Rendered hydrangea_articles/_edit_description (20.5ms)
+Rendered permissions/_edit_person_permissions (0.1ms)
+Rendered permissions/_new (0.4ms)
+Rendered permissions/_index (6.0ms)
+Rendered hydrangea_articles/_edit (29.4ms)
+Rendered catalog/_solr_request (0.4ms)
+Rendered catalog/_citation (0.1ms)
+Rendered catalog/_email_form (0.8ms)
+Rendered catalog/_sms_form (1.0ms)
+Rendered _user_util_links (0.9ms)
+Rendered _flash_msg (0.1ms)
+Completed in 198ms (View: 42, DB: 0) | 200 OK [http://www.example.com/catalog/hydrangea:fixture_mods_article1/edit]
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-10-04 13:49:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.6ms)
+Rendered catalog/_home_text (0.1ms)
+Rendered catalog/_facets (0.2ms)
+Rendered catalog/_home (3.5ms)
+Rendered _user_util_links (0.2ms)
+Rendered _flash_msg (0.1ms)
+Completed in 104ms (View: 9, DB: 0) | 200 OK [http://www.example.com/]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'archivist1@archivist1.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'archivist1') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '69ac7916e1213c4f0b0c6b7bbdbd46e6369df137c29f3f01abc065da46c85ed8d1bcd5c58517810f841849b0b2c434dee53bff2581260f0ab5ffb891c0f09ee3') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'archivist1@archivist1.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'archivist1') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("last_search_url", "created_at", "crypted_password", "updated_at", "password_salt", "current_login_at", "persistence_token", "login", "last_login_at", "email") VALUES(NULL, '2010-10-04 20:49:40', '9e551756ea6f29b5b42097fdda1be3fdc857049eda905333ce49e8ded5a60e7f6fb0837e6125bcbf54eef3b4f93ebb0e06bb757d117b7ed7504e3eb03210295d', '2010-10-04 20:49:40', 'Rx4V2c7oU9QyqqISwN', '2010-10-04 20:49:40', '69ac7916e1213c4f0b0c6b7bbdbd46e6369df137c29f3f01abc065da46c85ed8d1bcd5c58517810f841849b0b2c434dee53bff2581260f0ab5ffb891c0f09ee3', 'archivist1', NULL, 'archivist1@archivist1.com')[0m
+REQUESTING PAGE: POST /user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password with {} and HTTP headers {}
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-04 13:49:40) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "login"=>"archivist1"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".login) = 'archivist1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-04 20:49:40', "last_login_at" = '2010-10-04 20:49:40', "current_login_at" = '2010-10-04 20:49:40' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 5ms (DB: 1) | 302 Found [http://www.example.com/user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-10-04 13:49:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.7ms)
+Rendered catalog/_home_text (0.1ms)
+Rendered catalog/_facets (2.7ms)
+Rendered catalog/_home (5.9ms)
+Rendered _user_util_links (1.0ms)
+Rendered _flash_msg (0.2ms)
+Completed in 23ms (View: 12, DB: 0) | 200 OK [http://www.example.com/]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+REQUESTING PAGE: GET /assets/hydrangea:fixture_mods_article1/file_assets with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+
+
+Processing FileAssetsController#index (for 127.0.0.1 at 2010-10-04 13:49:40) [GET]
+  Parameters: {"action"=>"index", "container_id"=>"hydrangea:fixture_mods_article1", "controller"=>"file_assets"}
+Rendering template within layouts/application
+Rendering file_assets/index
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+User archivist1 is a member of groups: ["archivist", "public"]
+Checking edit permissions for user: archivist1
+edit_groups: ["archivist"]
+test_permission result: true
+Rendered file_assets/_result (8.1ms)
+User archivist1 is a member of groups: ["archivist", "public"]
+Checking edit permissions for user: archivist1
+edit_groups: ["archivist"]
+test_permission result: true
+Rendered fluid_infusion/_uploader (2.4ms)
+Rendered fluid_infusion/_uploader_js (1.5ms)
+Rendered file_assets/_new (5.5ms)
+Rendered _user_util_links (90.6ms)
+Rendered _flash_msg (0.1ms)
+Completed in 160ms (View: 114, DB: 0) | 200 OK [http://www.example.com/assets/hydrangea:fixture_mods_article1/file_assets]
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'permissionlessdude@permissionlessdude.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'permissionlessdude') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'b870e1e0d102e642fb6580765d32f71d74c1ae89c7c84e5facc68f6cf01ea43b011e0200045e67766580fdccbcf6f3617d73d5ce263b598a78897e57ae4ec8ab') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'permissionlessdude@permissionlessdude.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'permissionlessdude') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("last_search_url", "created_at", "crypted_password", "updated_at", "password_salt", "current_login_at", "persistence_token", "login", "last_login_at", "email") VALUES(NULL, '2010-10-04 20:49:40', 'a978e4e0a9f794fca8c05b964881a86c2b8a0d6b244fefac2957714c5a2536d05ada2ce156ba7a72e2db42c1bc170d0b451e2f90ef65a77331b1b43aa41b7005', '2010-10-04 20:49:40', 'sETivILXXiI6bD6pxEjP', '2010-10-04 20:49:40', 'b870e1e0d102e642fb6580765d32f71d74c1ae89c7c84e5facc68f6cf01ea43b011e0200045e67766580fdccbcf6f3617d73d5ce263b598a78897e57ae4ec8ab', 'permissionlessdude', NULL, 'permissionlessdude@permissionlessdude.com')[0m
+REQUESTING PAGE: POST /user_sessions?user_session%5Blogin%5D=permissionlessdude&user_session%5Bpassword%5D=password with {} and HTTP headers {}
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-04 13:49:40) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "login"=>"permissionlessdude"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".login) = 'permissionlessdude') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-04 20:49:40', "last_login_at" = '2010-10-04 20:49:40', "current_login_at" = '2010-10-04 20:49:40' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 5ms (DB: 1) | 302 Found [http://www.example.com/user_sessions?user_session%5Blogin%5D=permissionlessdude&user_session%5Bpassword%5D=password]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/user_sessions?user_session%5Blogin%5D=permissionlessdude&user_session%5Bpassword%5D=password"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-10-04 13:49:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.6ms)
+Rendered catalog/_home_text (0.1ms)
+Rendered catalog/_facets (0.2ms)
+Rendered catalog/_home (3.3ms)
+Rendered _user_util_links (0.9ms)
+Rendered _flash_msg (0.1ms)
+Completed in 19ms (View: 9, DB: 0) | 200 OK [http://www.example.com/]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+REQUESTING PAGE: GET /assets/hydrangea:fixture_mods_article1/file_assets with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+
+
+Processing FileAssetsController#index (for 127.0.0.1 at 2010-10-04 13:49:40) [GET]
+  Parameters: {"action"=>"index", "container_id"=>"hydrangea:fixture_mods_article1", "controller"=>"file_assets"}
+Rendering template within layouts/application
+Rendering file_assets/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+User permissionlessdude is a member of groups: ["public"]
+Checking edit permissions for user: permissionlessdude
+edit_groups: ["archivist"]
+edit_persons: ["researcher1"]
+test_permission result: false
+Rendered file_assets/_result (93.9ms)
+User permissionlessdude is a member of groups: ["public"]
+Checking edit permissions for user: permissionlessdude
+edit_groups: ["archivist"]
+edit_persons: ["researcher1"]
+test_permission result: false
+Rendered _user_util_links (1.0ms)
+Rendered _flash_msg (0.1ms)
+Completed in 149ms (View: 99, DB: 0) | 200 OK [http://www.example.com/assets/hydrangea:fixture_mods_article1/file_assets]
+REQUESTING PAGE: GET /catalog/hydrangea:fixture_mods_article1 with {} and HTTP headers {}
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2010-10-04 13:49:40) [GET]
+  Parameters: {"action"=>"show", "id"=>"hydrangea:fixture_mods_article1", "controller"=>"catalog"}
+current_user is nil, assigning public
+User public is a member of groups: ["public"]
+Checking read permissions for user: public
+edit_groups: ["archivist"]
+read_groups: ["archivist", "public"]
+test_permission result: true
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_tools (0.1ms)
+current_user is nil, assigning public
+User public is a member of groups: ["public"]
+Checking edit permissions for user: public
+edit_groups: ["archivist"]
+edit_persons: ["researcher1"]
+test_permission result: false
+attempting to render hydrangea_articles/_show
+Rendered contributors/_show_person (2.9ms)
+Rendered contributors/_show_person (90.8ms)
+Rendered contributors/_show_organization (1.2ms)
+Rendered contributors/_show_conference (1.2ms)
+Rendered hydrangea_articles/_show_journal (4.1ms)
+Rendered hydrangea_articles/_show_description (104.4ms)
+Rendered hydrangea_articles/_show (105.7ms)
+Rendered catalog/_solr_request (0.4ms)
+Rendered catalog/_citation (0.1ms)
+Rendered catalog/_email_form (0.9ms)
+Rendered catalog/_sms_form (1.0ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 184ms (View: 115, DB: 0) | 200 OK [http://www.example.com/catalog/hydrangea:fixture_mods_article1]
+REQUESTING PAGE: GET /catalog/hydrangea:fixture_archivist_only_mods_article with {} and HTTP headers {}
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2010-10-04 13:49:41) [GET]
+  Parameters: {"action"=>"show", "id"=>"hydrangea:fixture_archivist_only_mods_article", "controller"=>"catalog"}
+current_user is nil, assigning public
+User public is a member of groups: ["public"]
+Checking read permissions for user: public
+edit_groups: ["archivist"]
+read_groups: ["archivist"]
+edit_persons: []
+read_persons: []
+test_permission result: false
+Redirected to http://www.example.com/
+Completed in 183ms (DB: 0) | 302 Found [http://www.example.com/catalog/hydrangea:fixture_archivist_only_mods_article]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/catalog/hydrangea:fixture_archivist_only_mods_article"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-10-04 13:49:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.6ms)
+Rendered catalog/_home_text (0.1ms)
+Rendered catalog/_facets (0.2ms)
+Rendered catalog/_home (3.3ms)
+Rendered _user_util_links (0.2ms)
+Rendered _flash_msg (0.1ms)
+Completed in 15ms (View: 9, DB: 0) | 200 OK [http://www.example.com/]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'archivist1@archivist1.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'archivist1') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '5947bf813396067277dd1f2edbb120492f26a8f2fa45de785ec09d90a850b7060f353dd59e738ae860298790dd7383520f1c9fdf3d095ba155a03d41eab9b6cf') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'archivist1@archivist1.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'archivist1') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("last_search_url", "created_at", "crypted_password", "updated_at", "password_salt", "current_login_at", "persistence_token", "login", "last_login_at", "email") VALUES(NULL, '2010-10-04 20:49:41', '48e2b41d79fda72e1ce5ee9ca94d961890fff8beeb40f31e8859375303795d48564c6a29bc71b51983bda5f4d2593c54d70db1363e68490d24460f4dca7efc8c', '2010-10-04 20:49:41', 'Q8Y2mChTxrFN6qgPiXoE', '2010-10-04 20:49:41', '5947bf813396067277dd1f2edbb120492f26a8f2fa45de785ec09d90a850b7060f353dd59e738ae860298790dd7383520f1c9fdf3d095ba155a03d41eab9b6cf', 'archivist1', NULL, 'archivist1@archivist1.com')[0m
+REQUESTING PAGE: POST /user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password with {} and HTTP headers {}
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-04 13:49:41) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "login"=>"archivist1"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".login) = 'archivist1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-04 20:49:41', "last_login_at" = '2010-10-04 20:49:41', "current_login_at" = '2010-10-04 20:49:41' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 5ms (DB: 1) | 302 Found [http://www.example.com/user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-10-04 13:49:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.6ms)
+Rendered catalog/_home_text (0.1ms)
+Rendered catalog/_facets (2.7ms)
+Rendered catalog/_home (5.9ms)
+Rendered _user_util_links (1.0ms)
+Rendered _flash_msg (0.1ms)
+Completed in 27ms (View: 12, DB: 0) | 200 OK [http://www.example.com/]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+REQUESTING PAGE: GET /catalog/hydrangea:fixture_archivist_only_mods_article with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2010-10-04 13:49:41) [GET]
+  Parameters: {"action"=>"show", "id"=>"hydrangea:fixture_archivist_only_mods_article", "controller"=>"catalog"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+User archivist1 is a member of groups: ["archivist", "public"]
+Checking read permissions for user: archivist1
+edit_groups: ["archivist"]
+read_groups: ["archivist"]
+test_permission result: true
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_tools (0.1ms)
+User archivist1 is a member of groups: ["archivist", "public"]
+Checking edit permissions for user: archivist1
+edit_groups: ["archivist"]
+test_permission result: true
+attempting to render hydrangea_articles/_show
+Rendered contributors/_show_person (2.9ms)
+Rendered contributors/_show_organization (0.5ms)
+Rendered contributors/_show_conference (0.5ms)
+Rendered hydrangea_articles/_show_journal (1.9ms)
+Rendered hydrangea_articles/_show_description (9.3ms)
+Rendered hydrangea_articles/_show (10.5ms)
+Rendered catalog/_solr_request (0.4ms)
+Rendered catalog/_citation (0.2ms)
+Rendered catalog/_email_form (0.9ms)
+Rendered catalog/_sms_form (1.0ms)
+Rendered _user_util_links (0.9ms)
+Rendered _flash_msg (0.1ms)
+Completed in 193ms (View: 20, DB: 0) | 200 OK [http://www.example.com/catalog/hydrangea:fixture_archivist_only_mods_article]
+REQUESTING PAGE: GET /catalog with {} and HTTP headers {}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-10-04 13:49:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.7ms)
+Rendered catalog/_home_text (0.1ms)
+Rendered catalog/_facets (0.2ms)
+Rendered catalog/_home (3.7ms)
+Rendered _user_util_links (0.2ms)
+Rendered _flash_msg (0.1ms)
+Completed in 17ms (View: 9, DB: 0) | 200 OK [http://www.example.com/catalog]
+FEDORA: loading ActiveFedora config from /private/tmp/hydrangea/config/fedora.yml
+FEDORA: initializing ActiveFedora::SolrService with solr_config: {:url=>"http://localhost:8983/solr/development"}
+FEDORA: initialized Solr with ActiveFedora.solr_config: #<ActiveFedora::SolrService:0x2d81c54 @conn=#<Solr::Connection:0x2d81bdc @autocommit=true, @connection=#<Net::HTTP localhost:8983 open=false>, @url=#<URI::HTTP:0x2d81790 URL:http://localhost:8983/solr/development>>>
+FEDORA: initializing Fedora with fedora_config: {:url=>"http://fedoraAdmin:fedoraAdmin@127.0.0.1:8983/fedora"}
+FEDORA: initialized Fedora as: #<Fedora::Repository:0x2d81498 @repository_name="Fedora Repository", @pid_namespace="changeme", @fedora_version="3.3", @connection=#<Fedora::Connection:0x2d8109c @default_header={"Content-Type"=>"text/xml"}, @surrogate=nil, @format=Fedora::XmlFormat, @site=#<URI::HTTP:0x2d810b0 URL:http://fedoraAdmin:fedoraAdmin@127.0.0.1:8983/fedora>>, @surrogate=nil, @base_url="http://localhost:8983/fedora", @fedora_url=#<URI::HTTP:0x2d810b0 URL:http://fedoraAdmin:fedoraAdmin@127.0.0.1:8983/fedora>, @pid_delimiter=":">
+BLACKLIGHT: running version master
+BLACKLIGHT: initialized with Blacklight.solr_config: {"default"=>{"url"=>"http://localhost:8983/solr/development"}, :url=>"http://localhost:8983/solr/development", "fulltext"=>{"url"=>"http://localhost:8983/solr/development"}}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Client:0x2bc0bcc @connection=#<RSolr::Connection::NetHttp:0x2bcdb9c @opts={"default"=>{"url"=>"http://localhost:8983/solr/development"}, :adapter=>:curb, :url=>"http://localhost:8983/solr/development", "fulltext"=>{"url"=>"http://localhost:8983/solr/development"}}, @uri=#<URI::HTTP:0x2bbac40 URL:http://localhost:8983/solr/development>>>
+BLACKLIGHT: initialized with Blacklight.config: {:index=>{:show_link=>"title_facet", :num_per_page=>40, :record_display_type=>"id"}, :show_fields=>{:labels=>{"access_t"=>"Access:", "rights_t"=>"Copyright:", "location_t"=>"Location:", "medium_t"=>"Document Type:", "text"=>"Text:", "date_t"=>"Date:", "title_facet"=>"Title:"}, :field_names=>["text", "title_facet", "date_t", "medium_t", "location_t", "rights_t", "access_t"]}, :facet=>{:limits=>{nil=>10}, :labels=>{"location_t"=>"Location", "medium_t"=>"Content Type", "title_t"=>"Title", "date_t"=>"Date"}, :field_names=>["date_t", "title_t", "medium_t", "location_t"]}, :raw_storage_type=>"marc21", :default_qt=>"search", :raw_storage_field=>"marc_display", :show=>{:display_type=>"has_model_s", :html_title=>"title_t", :heading=>"title_t"}, :public_qt=>"public_search", :search_fields=>[["Descriptions", "search"], ["Descriptions and full text", "fulltext"]], :sort_fields=>[["relevance", "score desc, year_facet desc, month_facet asc, title_facet asc"], ["date -", "year_facet desc, month_facet asc, title_facet asc"], ["date +", "year_facet asc, month_facet asc, title_facet asc"], ["title", "title_facet asc"], ["document type", "medium_t asc, year_facet desc, month_facet asc, title_facet asc"], ["location", "series_facet asc, box_facet asc, folder_facet asc, year_facet desc, month_facet asc, title_facet asc"]], :spell_max=>5, :index_fields=>{:labels=>{"location_t"=>"Location", "medium_t"=>"Content Type", "title_t"=>"Title", "date_t"=>"Date"}, :field_names=>["date_t", "title_t", "medium_t", "location_t"]}, :facet_more_num=>5}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'archivist1@archivist1.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'archivist1') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'eba2e3674ae77a477f3243022b3ed9f5801992734342575cd234e39ac40f98049be321bb59303ae44878994f449bdecd984b26e702a25bd5ad4f8db4bb4b22bd') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'archivist1@archivist1.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'archivist1') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO "users" ("last_search_url", "created_at", "crypted_password", "updated_at", "password_salt", "current_login_at", "persistence_token", "login", "last_login_at", "email") VALUES(NULL, '2010-10-04 20:49:50', '33091ab6f12738c6753e73666875df81e88d7f1ac04174ecce5a7d9e69a0c46296c42e6f70a2e3d554d89aed8290ffed8d07abcec157bde23828695c28504b08', '2010-10-04 20:49:50', 'KvshL40to58cDFbwDE4', NULL, 'eba2e3674ae77a477f3243022b3ed9f5801992734342575cd234e39ac40f98049be321bb59303ae44878994f449bdecd984b26e702a25bd5ad4f8db4bb4b22bd', 'archivist1', NULL, 'archivist1@archivist1.com')[0m
+REQUESTING PAGE: POST /user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password with {} and HTTP headers {}
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-04 13:49:50) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "login"=>"archivist1"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".login) = 'archivist1') LIMIT 1[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-04 20:49:50', "current_login_at" = '2010-10-04 20:49:50' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 43ms (DB: 2) | 302 Found [http://www.example.com/user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-10-04 13:49:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (2.3ms)
+Rendered catalog/_home_text (0.3ms)
+Rendered catalog/_facets (6.1ms)
+Rendered catalog/_home (10.5ms)
+Rendered _user_util_links (4.4ms)
+Rendered _flash_msg (0.6ms)
+Completed in 51ms (View: 26, DB: 0) | 200 OK [http://www.example.com/]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+REQUESTING PAGE: GET /catalog?q=&search_field=search&action=index&controller=catalog&commit=search with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-10-04 13:49:50) [GET]
+  Parameters: {"commit"=>"search", "search_field"=>"search", "action"=>"index", "q"=>"", "controller"=>"catalog"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.8ms)
+Rendered catalog/_did_you_mean (0.7ms)
+Rendered catalog/_constraints (2.7ms)
+Rendered catalog/_sort_and_per_page (4.1ms)
+attempting to render hydrangea_datasets/_index
+Rendered hydrangea_datasets/_index (3.6ms)
+attempting to render hydrangea_articles/_index
+Rendered hydrangea_articles/_index (3.1ms)
+attempting to render hydrangea_articles/_index
+Rendered hydrangea_articles/_index (1.2ms)
+attempting to render hydrangea_articles/_index
+Rendered hydrangea_articles/_index (1.2ms)
+attempting to render hydrangea_articles/_index
+Rendered hydrangea_articles/_index (1.3ms)
+Rendered catalog/_index_partials/_default_group (13.7ms)
+Rendered catalog/_document_list (14.9ms)
+Rendered catalog/_facets (3.0ms)
+Rendered catalog/_solr_request (0.8ms)
+Rendered _user_util_links (0.9ms)
+Rendered _flash_msg (0.1ms)
+Completed in 47ms (View: 35, DB: 0) | 200 OK [http://www.example.com/catalog?q=&search_field=search&action=index&controller=catalog&commit=search]
+REQUESTING PAGE: GET /catalog?q=&search_field=search&action=index&controller=catalog&commit=search with {} and HTTP headers {}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-10-04 13:49:50) [GET]
+  Parameters: {"commit"=>"search", "search_field"=>"search", "action"=>"index", "q"=>"", "controller"=>"catalog"}
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.7ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (0.9ms)
+Rendered catalog/_sort_and_per_page (3.2ms)
+attempting to render hydrangea_articles/_index
+Rendered hydrangea_articles/_index (1.7ms)
+attempting to render hydrangea_articles/_index
+Rendered hydrangea_articles/_index (1.2ms)
+attempting to render hydrangea_articles/_index
+Rendered hydrangea_articles/_index (1.2ms)
+Rendered catalog/_index_partials/_default_group (5.7ms)
+Rendered catalog/_document_list (6.2ms)
+Rendered catalog/_facets (0.2ms)
+Rendered catalog/_solr_request (0.4ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 26ms (View: 19, DB: 0) | 200 OK [http://www.example.com/catalog?q=&search_field=search&action=index&controller=catalog&commit=search]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'archivist1@archivist1.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'archivist1') LIMIT 1[0m
+  [4;35;1mUser Load (8.9ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '25d8bcf1f8f576a4ec49ddf36b2d551d939a00c04bbab2ffe7cb388d9e704ad5d72dd33206d86b7fa4952462773968942fc4cc3fcda6841a6e047b180b2c567d') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'archivist1@archivist1.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'archivist1') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("last_search_url", "created_at", "crypted_password", "updated_at", "password_salt", "current_login_at", "persistence_token", "login", "last_login_at", "email") VALUES(NULL, '2010-10-04 20:49:51', '84ff035a41c6b8d06bd23f97e721d90ce1b75402427c69c41d4a93b83ae23cae7107b9afc5e8ae10a75b4571ca107cc614e4c0821201292bf5b74f07080603ad', '2010-10-04 20:49:51', 'dxjt8fiMBHcHCsxhAVYH', '2010-10-04 20:49:51', '25d8bcf1f8f576a4ec49ddf36b2d551d939a00c04bbab2ffe7cb388d9e704ad5d72dd33206d86b7fa4952462773968942fc4cc3fcda6841a6e047b180b2c567d', 'archivist1', NULL, 'archivist1@archivist1.com')[0m
+REQUESTING PAGE: POST /user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password with {} and HTTP headers {}
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-04 13:49:51) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "login"=>"archivist1"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".login) = 'archivist1') LIMIT 1[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-04 20:49:51', "last_login_at" = '2010-10-04 20:49:51', "current_login_at" = '2010-10-04 20:49:51' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 7ms (DB: 10) | 302 Found [http://www.example.com/user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-10-04 13:49:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.7ms)
+Rendered catalog/_home_text (0.1ms)
+Rendered catalog/_facets (4.4ms)
+Rendered catalog/_home (7.9ms)
+Rendered _user_util_links (1.2ms)
+Rendered _flash_msg (0.2ms)
+Completed in 28ms (View: 15, DB: 0) | 200 OK [http://www.example.com/]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+REQUESTING PAGE: GET /catalog/hydrangea:fixture_mods_article1/edit with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+
+
+Processing CatalogController#edit (for 127.0.0.1 at 2010-10-04 13:49:51) [GET]
+  Parameters: {"action"=>"edit", "id"=>"hydrangea:fixture_mods_article1", "controller"=>"catalog"}
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+User archivist1 is a member of groups: ["archivist", "public"]
+Checking edit permissions for user: archivist1
+edit_groups: ["archivist"]
+test_permission result: true
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_tools (1.4ms)
+User archivist1 is a member of groups: ["archivist", "public"]
+Checking edit permissions for user: archivist1
+edit_groups: ["archivist"]
+test_permission result: true
+attempting to render hydrangea_articles/_edit
+Rendered contributors/_edit_person (6.6ms)
+Rendered contributors/_edit_person (3.0ms)
+Rendered contributors/_edit_organization (4.2ms)
+Rendered contributors/_edit_conference (4.3ms)
+Rendered hydrangea_articles/_edit_journal (9.0ms)
+Rendered hydrangea_articles/_edit_description (53.2ms)
+Rendered permissions/_edit_person_permissions (3.1ms)
+Rendered permissions/_new (4.2ms)
+Rendered permissions/_index (17.9ms)
+Rendered hydrangea_articles/_edit (192.0ms)
+Rendered catalog/_solr_request (0.4ms)
+Rendered catalog/_citation (0.7ms)
+Rendered catalog/_email_form (1.9ms)
+Rendered catalog/_sms_form (1.6ms)
+Rendered _user_util_links (0.9ms)
+Rendered _flash_msg (0.1ms)
+Completed in 330ms (View: 211, DB: 1) | 200 OK [http://www.example.com/catalog/hydrangea:fixture_mods_article1/edit]
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'archivist1@archivist1.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'archivist1') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '94ad333f325d4bb39661fb6a9b2ace04594e79410bb1edf697288dd95d735be5e456f539f763e95838d80b890aea195b5455260910dce9a201407beabb9809d7') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'archivist1@archivist1.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'archivist1') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("last_search_url", "created_at", "crypted_password", "updated_at", "password_salt", "current_login_at", "persistence_token", "login", "last_login_at", "email") VALUES(NULL, '2010-10-04 20:49:51', '143099b2fe5c16035c3bb6aed2180d3d3b35902550ab45684d7202e41a9f8fe4af43c9e12e3a92a49883d6185a6c7428f906f06f131813ff8a368b2b2326a47c', '2010-10-04 20:49:51', 'cZhOGhqCklJ7a5SJiUS', '2010-10-04 20:49:51', '94ad333f325d4bb39661fb6a9b2ace04594e79410bb1edf697288dd95d735be5e456f539f763e95838d80b890aea195b5455260910dce9a201407beabb9809d7', 'archivist1', NULL, 'archivist1@archivist1.com')[0m
+REQUESTING PAGE: POST /user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password with {} and HTTP headers {}
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-04 13:49:51) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "login"=>"archivist1"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".login) = 'archivist1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-04 20:49:51', "last_login_at" = '2010-10-04 20:49:51', "current_login_at" = '2010-10-04 20:49:51' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 5ms (DB: 1) | 302 Found [http://www.example.com/user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-10-04 13:49:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.6ms)
+Rendered catalog/_home_text (0.1ms)
+Rendered catalog/_facets (2.7ms)
+Rendered catalog/_home (5.8ms)
+Rendered _user_util_links (1.0ms)
+Rendered _flash_msg (0.1ms)
+Completed in 22ms (View: 12, DB: 0) | 200 OK [http://www.example.com/]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+REQUESTING PAGE: GET /catalog/hydrangea:fixture_mods_article1 with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2010-10-04 13:49:51) [GET]
+  Parameters: {"action"=>"show", "id"=>"hydrangea:fixture_mods_article1", "controller"=>"catalog"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+User archivist1 is a member of groups: ["archivist", "public"]
+Checking read permissions for user: archivist1
+edit_groups: ["archivist"]
+read_groups: ["archivist", "public"]
+test_permission result: true
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_tools (0.1ms)
+User archivist1 is a member of groups: ["archivist", "public"]
+Checking edit permissions for user: archivist1
+edit_groups: ["archivist"]
+test_permission result: true
+attempting to render hydrangea_articles/_show
+Rendered contributors/_show_person (6.3ms)
+Rendered contributors/_show_person (2.9ms)
+Rendered contributors/_show_organization (3.2ms)
+Rendered contributors/_show_conference (3.1ms)
+Rendered hydrangea_articles/_show_journal (9.4ms)
+Rendered hydrangea_articles/_show_description (35.0ms)
+Rendered hydrangea_articles/_show (39.1ms)
+Rendered catalog/_solr_request (0.4ms)
+Rendered catalog/_citation (0.1ms)
+Rendered catalog/_email_form (0.9ms)
+Rendered catalog/_sms_form (1.0ms)
+Rendered _user_util_links (0.9ms)
+Rendered _flash_msg (0.1ms)
+Completed in 214ms (View: 49, DB: 0) | 200 OK [http://www.example.com/catalog/hydrangea:fixture_mods_article1]
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'researcher1@researcher1.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'researcher1') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '1d207af637a4ae77b2c006eda6e7186b104a57c32881300b561dd802ec68be6561a2724d1194e41c6840c7e0d8fa19fe3c4126a40a042f996359340d2acebe51') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'researcher1@researcher1.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'researcher1') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("last_search_url", "created_at", "crypted_password", "updated_at", "password_salt", "current_login_at", "persistence_token", "login", "last_login_at", "email") VALUES(NULL, '2010-10-04 20:49:52', '1ec3ae329ab8ef74ee258e97398ba30bad5c6fa2921e6ddf5bce7b86fe839ab7c914e0f4525f9f4b0a5d472746324038f68456cafa1ba42293155a3ac86c5957', '2010-10-04 20:49:52', 's6CfIVkLBFHq8kTje7UI', '2010-10-04 20:49:52', '1d207af637a4ae77b2c006eda6e7186b104a57c32881300b561dd802ec68be6561a2724d1194e41c6840c7e0d8fa19fe3c4126a40a042f996359340d2acebe51', 'researcher1', NULL, 'researcher1@researcher1.com')[0m
+REQUESTING PAGE: POST /user_sessions?user_session%5Blogin%5D=researcher1&user_session%5Bpassword%5D=password with {} and HTTP headers {}
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-04 13:49:52) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "login"=>"researcher1"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".login) = 'researcher1') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-04 20:49:52', "last_login_at" = '2010-10-04 20:49:52', "current_login_at" = '2010-10-04 20:49:52' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 5ms (DB: 1) | 302 Found [http://www.example.com/user_sessions?user_session%5Blogin%5D=researcher1&user_session%5Bpassword%5D=password]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/user_sessions?user_session%5Blogin%5D=researcher1&user_session%5Bpassword%5D=password"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-10-04 13:49:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.6ms)
+Rendered catalog/_home_text (0.1ms)
+Rendered catalog/_facets (2.8ms)
+Rendered catalog/_home (6.0ms)
+Rendered _user_util_links (1.0ms)
+Rendered _flash_msg (0.1ms)
+Completed in 28ms (View: 12, DB: 0) | 200 OK [http://www.example.com/]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+REQUESTING PAGE: GET /catalog/hydrangea:fixture_mods_dataset1/edit with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+
+
+Processing CatalogController#edit (for 127.0.0.1 at 2010-10-04 13:49:52) [GET]
+  Parameters: {"action"=>"edit", "id"=>"hydrangea:fixture_mods_dataset1", "controller"=>"catalog"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+User researcher1 is a member of groups: ["researcher", "public"]
+Checking edit permissions for user: researcher1
+edit_groups: ["researcher"]
+test_permission result: true
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_tools (0.1ms)
+User researcher1 is a member of groups: ["researcher", "public"]
+Checking edit permissions for user: researcher1
+edit_groups: ["researcher"]
+test_permission result: true
+attempting to render hydrangea_datasets/_edit
+Rendered contributors/_edit_person (3.1ms)
+Rendered hydrangea_datasets/_edit_coverage_and_methodology (5.6ms)
+Rendered hydrangea_datasets/_edit_additional_info (7.0ms)
+Rendered hydrangea_datasets/_edit_description (24.6ms)
+Rendered permissions/_edit_person_permissions (0.9ms)
+Rendered permissions/_new (0.4ms)
+Rendered permissions/_index (7.1ms)
+Rendered hydrangea_datasets/_edit (41.5ms)
+Rendered catalog/_solr_request (0.4ms)
+Rendered catalog/_citation (0.1ms)
+Rendered catalog/_email_form (0.8ms)
+Rendered catalog/_sms_form (1.0ms)
+Rendered _user_util_links (0.9ms)
+Rendered _flash_msg (0.1ms)
+Completed in 277ms (View: 54, DB: 0) | 200 OK [http://www.example.com/catalog/hydrangea:fixture_mods_dataset1/edit]
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'archivist1@archivist1.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'archivist1') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '12b89b92d360442bcadd12c04576d39abfb8d9ee73866869a1da4458830b2c44d5bc46ff3f6c7d32ab87ecbf0599054cb3549b22db9d6f0371ef190e8b3e9080') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'archivist1@archivist1.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'archivist1') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("last_search_url", "created_at", "crypted_password", "updated_at", "password_salt", "current_login_at", "persistence_token", "login", "last_login_at", "email") VALUES(NULL, '2010-10-04 20:49:52', 'd0b98f31e127448f7010d9faf8c731ea4b2236559a67eb01fe783ef17f1b724e437f7a48fb6bc491be66e581648aebb66dc3170c2afe0daf4be21494871c37c1', '2010-10-04 20:49:52', 'wM3yuACnHkXfZOvDQ7Cg', '2010-10-04 20:49:52', '12b89b92d360442bcadd12c04576d39abfb8d9ee73866869a1da4458830b2c44d5bc46ff3f6c7d32ab87ecbf0599054cb3549b22db9d6f0371ef190e8b3e9080', 'archivist1', NULL, 'archivist1@archivist1.com')[0m
+REQUESTING PAGE: POST /user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password with {} and HTTP headers {}
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-04 13:49:52) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "login"=>"archivist1"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".login) = 'archivist1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-04 20:49:52', "last_login_at" = '2010-10-04 20:49:52', "current_login_at" = '2010-10-04 20:49:52' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 5ms (DB: 1) | 302 Found [http://www.example.com/user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-10-04 13:49:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.7ms)
+Rendered catalog/_home_text (0.1ms)
+Rendered catalog/_facets (2.8ms)
+Rendered catalog/_home (6.2ms)
+Rendered _user_util_links (1.0ms)
+Rendered _flash_msg (0.1ms)
+Completed in 114ms (View: 12, DB: 0) | 200 OK [http://www.example.com/]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+REQUESTING PAGE: GET /catalog/hydrangea:fixture_mods_article1/edit with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+
+
+Processing CatalogController#edit (for 127.0.0.1 at 2010-10-04 13:49:52) [GET]
+  Parameters: {"action"=>"edit", "id"=>"hydrangea:fixture_mods_article1", "controller"=>"catalog"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+User archivist1 is a member of groups: ["archivist", "public"]
+Checking edit permissions for user: archivist1
+edit_groups: ["archivist"]
+test_permission result: true
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_tools (0.1ms)
+User archivist1 is a member of groups: ["archivist", "public"]
+Checking edit permissions for user: archivist1
+edit_groups: ["archivist"]
+test_permission result: true
+attempting to render hydrangea_articles/_edit
+Rendered contributors/_edit_person (3.1ms)
+Rendered contributors/_edit_person (3.0ms)
+Rendered contributors/_edit_organization (1.8ms)
+Rendered contributors/_edit_conference (92.6ms)
+Rendered hydrangea_articles/_edit_journal (4.5ms)
+Rendered hydrangea_articles/_edit_description (111.3ms)
+Rendered permissions/_edit_person_permissions (1.0ms)
+Rendered permissions/_new (0.4ms)
+Rendered permissions/_index (7.0ms)
+Rendered hydrangea_articles/_edit (121.3ms)
+Rendered catalog/_solr_request (0.4ms)
+Rendered catalog/_citation (0.1ms)
+Rendered catalog/_email_form (0.8ms)
+Rendered catalog/_sms_form (1.0ms)
+Rendered _user_util_links (1.0ms)
+Rendered _flash_msg (0.1ms)
+Completed in 201ms (View: 134, DB: 0) | 200 OK [http://www.example.com/catalog/hydrangea:fixture_mods_article1/edit]
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'archivist1@archivist1.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'archivist1') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '239c124e9383c5f10a462dd18db3d0725042ca41e418b6306a70cc9f91e34e77175814fc2400ffbcd88b2b217bdaacfeadf93fa625c16b7af08fcd5a8777fbe0') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'archivist1@archivist1.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'archivist1') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("last_search_url", "created_at", "crypted_password", "updated_at", "password_salt", "current_login_at", "persistence_token", "login", "last_login_at", "email") VALUES(NULL, '2010-10-04 20:49:52', '1a72c69d08c0d75abc9b1e58c8eeb52c79d0d683f4dec1f41b4b0714cbb94c371f53477e124af86590991a05851f0f18a25445c10fb0eac746b9d9fde44def39', '2010-10-04 20:49:52', 'tVMmg4DWAeisYVxsKLRd', '2010-10-04 20:49:52', '239c124e9383c5f10a462dd18db3d0725042ca41e418b6306a70cc9f91e34e77175814fc2400ffbcd88b2b217bdaacfeadf93fa625c16b7af08fcd5a8777fbe0', 'archivist1', NULL, 'archivist1@archivist1.com')[0m
+REQUESTING PAGE: POST /user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password with {} and HTTP headers {}
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-04 13:49:52) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "login"=>"archivist1"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".login) = 'archivist1') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-04 20:49:52', "last_login_at" = '2010-10-04 20:49:52', "current_login_at" = '2010-10-04 20:49:52' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 5ms (DB: 1) | 302 Found [http://www.example.com/user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-10-04 13:49:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.7ms)
+Rendered catalog/_home_text (0.1ms)
+Rendered catalog/_facets (2.7ms)
+Rendered catalog/_home (6.1ms)
+Rendered _user_util_links (1.0ms)
+Rendered _flash_msg (0.1ms)
+Completed in 22ms (View: 12, DB: 0) | 200 OK [http://www.example.com/]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+REQUESTING PAGE: GET /catalog/hydrangea:fixture_mods_article1/edit with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+
+
+Processing CatalogController#edit (for 127.0.0.1 at 2010-10-04 13:49:52) [GET]
+  Parameters: {"action"=>"edit", "id"=>"hydrangea:fixture_mods_article1", "controller"=>"catalog"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+User archivist1 is a member of groups: ["archivist", "public"]
+Checking edit permissions for user: archivist1
+edit_groups: ["archivist"]
+test_permission result: true
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_tools (0.1ms)
+User archivist1 is a member of groups: ["archivist", "public"]
+Checking edit permissions for user: archivist1
+edit_groups: ["archivist"]
+test_permission result: true
+attempting to render hydrangea_articles/_edit
+Rendered contributors/_edit_person (3.0ms)
+Rendered contributors/_edit_person (3.0ms)
+Rendered contributors/_edit_organization (1.7ms)
+Rendered contributors/_edit_conference (1.6ms)
+Rendered hydrangea_articles/_edit_journal (4.5ms)
+Rendered hydrangea_articles/_edit_description (19.4ms)
+Rendered permissions/_edit_person_permissions (1.0ms)
+Rendered permissions/_new (0.4ms)
+Rendered permissions/_index (7.0ms)
+Rendered hydrangea_articles/_edit (29.3ms)
+Rendered catalog/_solr_request (0.4ms)
+Rendered catalog/_citation (0.1ms)
+Rendered catalog/_email_form (0.8ms)
+Rendered catalog/_sms_form (1.0ms)
+Rendered _user_util_links (1.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 297ms (View: 132, DB: 0) | 200 OK [http://www.example.com/catalog/hydrangea:fixture_mods_article1/edit]
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'archivist1@archivist1.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'archivist1') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '492e35bb4e2cb74bdaed5c6ded5ad3057f9661db63f472f0d7902771df6610d2c9308d4f5ed922bec765310333091cde92c7c0a5262a8d1cf5bae40e7ff14ee0') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'archivist1@archivist1.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'archivist1') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("last_search_url", "created_at", "crypted_password", "updated_at", "password_salt", "current_login_at", "persistence_token", "login", "last_login_at", "email") VALUES(NULL, '2010-10-04 20:49:53', '9d9f484828c7bfdff7ffd4b1a2d33dc36c2869912491f69d62f85e6563f41294d922d1bebbe413df6ebcc8350953845e4fe16b9018e89c22673d7a2d8135e3cd', '2010-10-04 20:49:53', 'xlZVgAEXQ1mJ5NWMH2K0', '2010-10-04 20:49:53', '492e35bb4e2cb74bdaed5c6ded5ad3057f9661db63f472f0d7902771df6610d2c9308d4f5ed922bec765310333091cde92c7c0a5262a8d1cf5bae40e7ff14ee0', 'archivist1', NULL, 'archivist1@archivist1.com')[0m
+REQUESTING PAGE: POST /user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password with {} and HTTP headers {}
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-04 13:49:53) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "login"=>"archivist1"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".login) = 'archivist1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-04 20:49:53', "last_login_at" = '2010-10-04 20:49:53', "current_login_at" = '2010-10-04 20:49:53' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 5ms (DB: 1) | 302 Found [http://www.example.com/user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-10-04 13:49:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.6ms)
+Rendered catalog/_home_text (0.1ms)
+Rendered catalog/_facets (2.6ms)
+Rendered catalog/_home (5.7ms)
+Rendered _user_util_links (1.0ms)
+Rendered _flash_msg (0.1ms)
+Completed in 22ms (View: 12, DB: 0) | 200 OK [http://www.example.com/]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+REQUESTING PAGE: GET /catalog/hydrangea:fixture_mods_article1/edit with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+
+
+Processing CatalogController#edit (for 127.0.0.1 at 2010-10-04 13:49:53) [GET]
+  Parameters: {"action"=>"edit", "id"=>"hydrangea:fixture_mods_article1", "controller"=>"catalog"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+User archivist1 is a member of groups: ["archivist", "public"]
+Checking edit permissions for user: archivist1
+edit_groups: ["archivist"]
+test_permission result: true
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_tools (0.1ms)
+User archivist1 is a member of groups: ["archivist", "public"]
+Checking edit permissions for user: archivist1
+edit_groups: ["archivist"]
+test_permission result: true
+attempting to render hydrangea_articles/_edit
+Rendered contributors/_edit_person (3.0ms)
+Rendered contributors/_edit_person (2.9ms)
+Rendered contributors/_edit_organization (1.8ms)
+Rendered contributors/_edit_conference (1.6ms)
+Rendered hydrangea_articles/_edit_journal (4.5ms)
+Rendered hydrangea_articles/_edit_description (19.5ms)
+Rendered permissions/_edit_person_permissions (1.0ms)
+Rendered permissions/_new (0.4ms)
+Rendered permissions/_index (6.8ms)
+Rendered hydrangea_articles/_edit (29.1ms)
+Rendered catalog/_solr_request (0.4ms)
+Rendered catalog/_citation (0.1ms)
+Rendered catalog/_email_form (0.8ms)
+Rendered catalog/_sms_form (1.0ms)
+Rendered _user_util_links (0.9ms)
+Rendered _flash_msg (0.1ms)
+Completed in 203ms (View: 42, DB: 0) | 200 OK [http://www.example.com/catalog/hydrangea:fixture_mods_article1/edit]
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'researcher1@researcher1.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'researcher1') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'cb7482df75cf636c023644c12b56d454c9ea64dbf25f515cb5f123a044ccf08f738c7929d19a120d0a3e24ff20599e05e5dec06f8f8b0a1a91f04ebba2b07dbb') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'researcher1@researcher1.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'researcher1') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("last_search_url", "created_at", "crypted_password", "updated_at", "password_salt", "current_login_at", "persistence_token", "login", "last_login_at", "email") VALUES(NULL, '2010-10-04 20:49:53', '746c8aa890e75053ceb639730d1a32337c936abfd9abd192992eae5591b3509b83868281f361ee676db8812ca0510a5fa41f3ae93224156226f38f9548fbcdce', '2010-10-04 20:49:53', 'qy5WAEfGPmvRwxxuEfHB', '2010-10-04 20:49:53', 'cb7482df75cf636c023644c12b56d454c9ea64dbf25f515cb5f123a044ccf08f738c7929d19a120d0a3e24ff20599e05e5dec06f8f8b0a1a91f04ebba2b07dbb', 'researcher1', NULL, 'researcher1@researcher1.com')[0m
+REQUESTING PAGE: POST /user_sessions?user_session%5Blogin%5D=researcher1&user_session%5Bpassword%5D=password with {} and HTTP headers {}
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-04 13:49:53) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "login"=>"researcher1"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".login) = 'researcher1') LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-04 20:49:53', "last_login_at" = '2010-10-04 20:49:53', "current_login_at" = '2010-10-04 20:49:53' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 5ms (DB: 1) | 302 Found [http://www.example.com/user_sessions?user_session%5Blogin%5D=researcher1&user_session%5Bpassword%5D=password]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/user_sessions?user_session%5Blogin%5D=researcher1&user_session%5Bpassword%5D=password"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-10-04 13:49:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.6ms)
+Rendered catalog/_home_text (0.1ms)
+Rendered catalog/_facets (2.7ms)
+Rendered catalog/_home (5.9ms)
+Rendered _user_util_links (1.0ms)
+Rendered _flash_msg (0.1ms)
+Completed in 23ms (View: 12, DB: 0) | 200 OK [http://www.example.com/]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+REQUESTING PAGE: GET /catalog/hydrangea:fixture_mods_article1/edit with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+
+
+Processing CatalogController#edit (for 127.0.0.1 at 2010-10-04 13:49:53) [GET]
+  Parameters: {"action"=>"edit", "id"=>"hydrangea:fixture_mods_article1", "controller"=>"catalog"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+User researcher1 is a member of groups: ["researcher", "public"]
+Checking edit permissions for user: researcher1
+edit_groups: ["archivist"]
+edit_persons: ["researcher1"]
+test_permission result: true
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_tools (0.1ms)
+User researcher1 is a member of groups: ["researcher", "public"]
+Checking edit permissions for user: researcher1
+edit_groups: ["archivist"]
+edit_persons: ["researcher1"]
+test_permission result: true
+attempting to render hydrangea_articles/_edit
+Rendered contributors/_edit_person (3.1ms)
+Rendered contributors/_edit_person (3.0ms)
+Rendered contributors/_edit_organization (1.7ms)
+Rendered contributors/_edit_conference (1.7ms)
+Rendered hydrangea_articles/_edit_journal (4.4ms)
+Rendered hydrangea_articles/_edit_description (19.7ms)
+Rendered permissions/_edit_person_permissions (0.1ms)
+Rendered permissions/_new (0.3ms)
+Rendered permissions/_index (5.9ms)
+Rendered hydrangea_articles/_edit (28.5ms)
+Rendered catalog/_solr_request (0.4ms)
+Rendered catalog/_citation (0.1ms)
+Rendered catalog/_email_form (0.8ms)
+Rendered catalog/_sms_form (1.0ms)
+Rendered _user_util_links (0.9ms)
+Rendered _flash_msg (0.1ms)
+Completed in 199ms (View: 41, DB: 0) | 200 OK [http://www.example.com/catalog/hydrangea:fixture_mods_article1/edit]
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-10-04 13:49:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (89.5ms)
+Rendered catalog/_home_text (0.1ms)
+Rendered catalog/_facets (0.2ms)
+Rendered catalog/_home (91.4ms)
+Rendered _user_util_links (0.2ms)
+Rendered _flash_msg (0.1ms)
+Completed in 105ms (View: 97, DB: 0) | 200 OK [http://www.example.com/]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'archivist1@archivist1.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'archivist1') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '100a026f07cf2518d655f0878060e891387e008f3e427284d5d88f8aea9eb10425f551e22b0ef2486f0642fa9c2b2366ccf8fb71393bdf7c52540107fbab3b93') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'archivist1@archivist1.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'archivist1') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("last_search_url", "created_at", "crypted_password", "updated_at", "password_salt", "current_login_at", "persistence_token", "login", "last_login_at", "email") VALUES(NULL, '2010-10-04 20:49:53', 'a1934bfb726ed3b4dc37eaa869deb4e1eec8920d939b5b4c3a4291736c0fb13eaccad5fb6fab2dd8a31d61aeb804f707d3dd19db9dd9ae8d79c87c4ce265982d', '2010-10-04 20:49:53', 'lx0cJsUCkd7LQiYUGpxm', '2010-10-04 20:49:53', '100a026f07cf2518d655f0878060e891387e008f3e427284d5d88f8aea9eb10425f551e22b0ef2486f0642fa9c2b2366ccf8fb71393bdf7c52540107fbab3b93', 'archivist1', NULL, 'archivist1@archivist1.com')[0m
+REQUESTING PAGE: POST /user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password with {} and HTTP headers {}
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-04 13:49:53) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "login"=>"archivist1"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".login) = 'archivist1') LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-04 20:49:53', "last_login_at" = '2010-10-04 20:49:53', "current_login_at" = '2010-10-04 20:49:53' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 5ms (DB: 1) | 302 Found [http://www.example.com/user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-10-04 13:49:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.7ms)
+Rendered catalog/_home_text (0.1ms)
+Rendered catalog/_facets (2.9ms)
+Rendered catalog/_home (6.1ms)
+Rendered _user_util_links (0.9ms)
+Rendered _flash_msg (0.1ms)
+Completed in 24ms (View: 12, DB: 0) | 200 OK [http://www.example.com/]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+REQUESTING PAGE: GET /assets/hydrangea:fixture_mods_article1/file_assets with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+
+
+Processing FileAssetsController#index (for 127.0.0.1 at 2010-10-04 13:49:53) [GET]
+  Parameters: {"action"=>"index", "container_id"=>"hydrangea:fixture_mods_article1", "controller"=>"file_assets"}
+Rendering template within layouts/application
+Rendering file_assets/index
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+User archivist1 is a member of groups: ["archivist", "public"]
+Checking edit permissions for user: archivist1
+edit_groups: ["archivist"]
+test_permission result: true
+Rendered file_assets/_result (8.2ms)
+User archivist1 is a member of groups: ["archivist", "public"]
+Checking edit permissions for user: archivist1
+edit_groups: ["archivist"]
+test_permission result: true
+Rendered fluid_infusion/_uploader (2.4ms)
+Rendered fluid_infusion/_uploader_js (1.5ms)
+Rendered file_assets/_new (5.5ms)
+Rendered _user_util_links (0.9ms)
+Rendered _flash_msg (0.1ms)
+Completed in 71ms (View: 24, DB: 0) | 200 OK [http://www.example.com/assets/hydrangea:fixture_mods_article1/file_assets]
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'permissionlessdude@permissionlessdude.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'permissionlessdude') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'afc571662b6df0b738ee575a9f65e4e6eddd1fe28ae297660fd288ee26216ba2b5a734642df031c29ad9e396aa5a658b3336dbf46bbc414c4e249dcb27b15437') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'permissionlessdude@permissionlessdude.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'permissionlessdude') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("last_search_url", "created_at", "crypted_password", "updated_at", "password_salt", "current_login_at", "persistence_token", "login", "last_login_at", "email") VALUES(NULL, '2010-10-04 20:49:54', '1e6ae70296c383e4a736e9de1d2cd290770022654e0fe249cb4622dbfef255b12f16b6bd46421f7b2cc49683628ce248059613f44aa06638e1af1143c4006e04', '2010-10-04 20:49:54', 'Jlgz8GElOiMGRjV3fyRm', '2010-10-04 20:49:54', 'afc571662b6df0b738ee575a9f65e4e6eddd1fe28ae297660fd288ee26216ba2b5a734642df031c29ad9e396aa5a658b3336dbf46bbc414c4e249dcb27b15437', 'permissionlessdude', NULL, 'permissionlessdude@permissionlessdude.com')[0m
+REQUESTING PAGE: POST /user_sessions?user_session%5Blogin%5D=permissionlessdude&user_session%5Bpassword%5D=password with {} and HTTP headers {}
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-04 13:49:54) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "login"=>"permissionlessdude"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".login) = 'permissionlessdude') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-04 20:49:54', "last_login_at" = '2010-10-04 20:49:54', "current_login_at" = '2010-10-04 20:49:54' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 5ms (DB: 1) | 302 Found [http://www.example.com/user_sessions?user_session%5Blogin%5D=permissionlessdude&user_session%5Bpassword%5D=password]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/user_sessions?user_session%5Blogin%5D=permissionlessdude&user_session%5Bpassword%5D=password"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-10-04 13:49:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.6ms)
+Rendered catalog/_home_text (0.1ms)
+Rendered catalog/_facets (0.2ms)
+Rendered catalog/_home (3.4ms)
+Rendered _user_util_links (1.0ms)
+Rendered _flash_msg (0.1ms)
+Completed in 19ms (View: 9, DB: 0) | 200 OK [http://www.example.com/]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+REQUESTING PAGE: GET /assets/hydrangea:fixture_mods_article1/file_assets with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+
+
+Processing FileAssetsController#index (for 127.0.0.1 at 2010-10-04 13:49:54) [GET]
+  Parameters: {"action"=>"index", "container_id"=>"hydrangea:fixture_mods_article1", "controller"=>"file_assets"}
+Rendering template within layouts/application
+Rendering file_assets/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+User permissionlessdude is a member of groups: ["public"]
+Checking edit permissions for user: permissionlessdude
+edit_groups: ["archivist"]
+edit_persons: ["researcher1"]
+test_permission result: false
+Rendered file_assets/_result (4.5ms)
+User permissionlessdude is a member of groups: ["public"]
+Checking edit permissions for user: permissionlessdude
+edit_groups: ["archivist"]
+edit_persons: ["researcher1"]
+test_permission result: false
+Rendered _user_util_links (0.9ms)
+Rendered _flash_msg (8.1ms)
+Completed in 144ms (View: 103, DB: 0) | 200 OK [http://www.example.com/assets/hydrangea:fixture_mods_article1/file_assets]
+REQUESTING PAGE: GET /catalog/hydrangea:fixture_mods_article1 with {} and HTTP headers {}
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2010-10-04 13:49:54) [GET]
+  Parameters: {"action"=>"show", "id"=>"hydrangea:fixture_mods_article1", "controller"=>"catalog"}
+current_user is nil, assigning public
+User public is a member of groups: ["public"]
+Checking read permissions for user: public
+edit_groups: ["archivist"]
+read_groups: ["archivist", "public"]
+test_permission result: true
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_tools (0.1ms)
+current_user is nil, assigning public
+User public is a member of groups: ["public"]
+Checking edit permissions for user: public
+edit_groups: ["archivist"]
+edit_persons: ["researcher1"]
+test_permission result: false
+attempting to render hydrangea_articles/_show
+Rendered contributors/_show_person (4.0ms)
+Rendered contributors/_show_person (141.8ms)
+Rendered contributors/_show_organization (1.2ms)
+Rendered contributors/_show_conference (1.2ms)
+Rendered hydrangea_articles/_show_journal (4.2ms)
+Rendered hydrangea_articles/_show_description (156.8ms)
+Rendered hydrangea_articles/_show (158.2ms)
+Rendered catalog/_solr_request (0.4ms)
+Rendered catalog/_citation (0.1ms)
+Rendered catalog/_email_form (0.9ms)
+Rendered catalog/_sms_form (1.0ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 247ms (View: 167, DB: 0) | 200 OK [http://www.example.com/catalog/hydrangea:fixture_mods_article1]
+REQUESTING PAGE: GET /catalog/hydrangea:fixture_archivist_only_mods_article with {} and HTTP headers {}
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2010-10-04 13:49:54) [GET]
+  Parameters: {"action"=>"show", "id"=>"hydrangea:fixture_archivist_only_mods_article", "controller"=>"catalog"}
+current_user is nil, assigning public
+User public is a member of groups: ["public"]
+Checking read permissions for user: public
+edit_groups: ["archivist"]
+read_groups: ["archivist"]
+edit_persons: []
+read_persons: []
+test_permission result: false
+Redirected to http://www.example.com/
+Completed in 184ms (DB: 0) | 302 Found [http://www.example.com/catalog/hydrangea:fixture_archivist_only_mods_article]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/catalog/hydrangea:fixture_archivist_only_mods_article"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-10-04 13:49:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.6ms)
+Rendered catalog/_home_text (0.1ms)
+Rendered catalog/_facets (0.2ms)
+Rendered catalog/_home (3.4ms)
+Rendered _user_util_links (0.2ms)
+Rendered _flash_msg (0.1ms)
+Completed in 15ms (View: 8, DB: 0) | 200 OK [http://www.example.com/]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'archivist1@archivist1.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'archivist1') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '0f031d5101ed1062560dcde187354ac8667023a3773c182104935973b2d3469ed215196a90be4ee2ab0b170dc94069348e3ea55428d118e40277d8a8060fec5f') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'archivist1@archivist1.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'archivist1') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("last_search_url", "created_at", "crypted_password", "updated_at", "password_salt", "current_login_at", "persistence_token", "login", "last_login_at", "email") VALUES(NULL, '2010-10-04 20:49:54', '4cad535e4f3fbf7e45b7f7d8152aaa260ad18317f744dfa894cf44093254c83afd3cebd0499c6913e55382279827aa4fd4e3e1b2f67603f95ff02dd1412baa32', '2010-10-04 20:49:54', '8YnCgfECXmbEk3GIRyt', '2010-10-04 20:49:54', '0f031d5101ed1062560dcde187354ac8667023a3773c182104935973b2d3469ed215196a90be4ee2ab0b170dc94069348e3ea55428d118e40277d8a8060fec5f', 'archivist1', NULL, 'archivist1@archivist1.com')[0m
+REQUESTING PAGE: POST /user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password with {} and HTTP headers {}
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-04 13:49:54) [POST]
+  Parameters: {"user_session"=>{"password"=>"[FILTERED]", "login"=>"archivist1"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".login) = 'archivist1') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-04 20:49:54', "last_login_at" = '2010-10-04 20:49:54', "current_login_at" = '2010-10-04 20:49:54' WHERE "id" = 1[0m
+Redirected to http://www.example.com/
+Completed in 5ms (DB: 1) | 302 Found [http://www.example.com/user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password]
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/user_sessions?user_session%5Blogin%5D=archivist1&user_session%5Bpassword%5D=password"}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-10-04 13:49:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (2.4ms)
+Rendered catalog/_home_text (0.1ms)
+Rendered catalog/_facets (3.6ms)
+Rendered catalog/_home (7.7ms)
+Rendered _user_util_links (1.0ms)
+Rendered _flash_msg (0.1ms)
+Completed in 28ms (View: 14, DB: 0) | 200 OK [http://www.example.com/]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+REQUESTING PAGE: GET /catalog/hydrangea:fixture_archivist_only_mods_article with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/"}
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2010-10-04 13:49:54) [GET]
+  Parameters: {"action"=>"show", "id"=>"hydrangea:fixture_archivist_only_mods_article", "controller"=>"catalog"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+User archivist1 is a member of groups: ["archivist", "public"]
+Checking read permissions for user: archivist1
+edit_groups: ["archivist"]
+read_groups: ["archivist"]
+test_permission result: true
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_show_tools (0.1ms)
+User archivist1 is a member of groups: ["archivist", "public"]
+Checking edit permissions for user: archivist1
+edit_groups: ["archivist"]
+test_permission result: true
+attempting to render hydrangea_articles/_show
+Rendered contributors/_show_person (3.0ms)
+Rendered contributors/_show_organization (0.5ms)
+Rendered contributors/_show_conference (0.5ms)
+Rendered hydrangea_articles/_show_journal (1.9ms)
+Rendered hydrangea_articles/_show_description (9.5ms)
+Rendered hydrangea_articles/_show (10.8ms)
+Rendered catalog/_solr_request (0.5ms)
+Rendered catalog/_citation (0.1ms)
+Rendered catalog/_email_form (0.9ms)
+Rendered catalog/_sms_form (1.0ms)
+Rendered _user_util_links (0.9ms)
+Rendered _flash_msg (0.1ms)
+Completed in 195ms (View: 21, DB: 0) | 200 OK [http://www.example.com/catalog/hydrangea:fixture_archivist_only_mods_article]
+REQUESTING PAGE: GET /catalog with {} and HTTP headers {}
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-10-04 13:49:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.8ms)
+Rendered catalog/_home_text (0.1ms)
+Rendered catalog/_facets (0.2ms)
+Rendered catalog/_home (3.6ms)
+Rendered _user_util_links (0.2ms)
+Rendered _flash_msg (0.1ms)
+Completed in 16ms (View: 9, DB: 0) | 200 OK [http://www.example.com/catalog]

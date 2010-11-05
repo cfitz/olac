@@ -1,0 +1,339 @@
+# Logfile created on Thu Nov 04 16:04:32 -0700 2010
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-04 16:05:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+Redirected to http://localhost:3000/
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-04 16:05:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+Rendering public/500.html (500)
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-04 16:05:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+Redirected to http://localhost:3000/
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-04 16:05:31) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+Rendering public/500.html (500)
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-04 16:05:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+Redirected to http://localhost:3000/
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-04 16:06:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+Rendering public/500.html (500)
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-04 16:06:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+Redirected to http://localhost:3000/
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-04 16:06:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+Rendering public/500.html (500)
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-04 16:08:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+Redirected to http://localhost:3000/
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-04 16:08:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+Rendering public/500.html (500)
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-04 16:09:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+Redirected to http://localhost:3000/
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-04 16:14:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mSearch Load (0.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (12,11,10,9,8,7,6,5,4,3,2,1)) [0m
+Redirected to http://localhost:3000/
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-04 16:15:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (12,11,10,9,8,7,6,5,4,3,2,1)) [0m
+Rendering public/500.html (500)
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-04 16:15:42) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+Redirected to http://localhost:3000/
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-04 16:16:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mSearch Load (0.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (12,11,10,9,8,7,6,5,4,3,2,1)) [0m
+Rendering public/500.html (500)
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-04 16:17:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mSearch Load (0.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (12,11,10,9,8,7,6,5,4,3,2,1)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.7ms)
+Rendered catalog/_home_text (0.3ms)
+Rendered catalog/_facets (41.6ms)
+Rendered catalog/_home (44.5ms)
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'b6c6bd91f38b8708740750b097ccc30e5b26d55eacbf144b4d6934102a3dd70a35ffeade2770aeb95659d27411405ba4a546d8867e199fb8c9653907a4032998') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered _user_util_links (9.9ms)
+Rendered _flash_msg (0.4ms)
+Completed in 102ms (View: 61, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-04 16:18:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mSearch Load (0.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (12,11,10,9,8,7,6,5,4,3,2,1)) [0m
+Redirected to http://localhost:3000/
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-04 16:20:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mSearch Load (0.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (12,11,10,9,8,7,6,5,4,3,2,1)) [0m
+
+Net::HTTPBadResponse (wrong status line: "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">"):
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/net/http.rb:2028:in `read_status_line'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/net/http.rb:2015:in `read_new'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/net/http.rb:1051:in `request'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/net/http.rb:1037:in `request'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/net/http.rb:543:in `start'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/net/http.rb:1035:in `request'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/net/http.rb:772:in `get'
+  rsolr (0.12.1) lib/rsolr/connection/net_http.rb:16:in `get'
+  rsolr (0.12.1) lib/rsolr/connection/requestable.rb:36:in `request'
+  rsolr (0.12.1) lib/rsolr/client.rb:34:in `request'
+  /Users/cfitz/.rvm/gems/ree-1.8.7-2010.02/gems/rsolr-ext-0.12.1/lib/rsolr-ext/client.rb:20:in `find'
+  vendor/plugins/blacklight/app/controllers/catalog_controller.rb:22:in `index'
+  haml (3.0.18) lib/sass/plugin/rack.rb:41:in `call'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (32.0ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-04 16:24:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mSearch Load (0.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (12,11,10,9,8,7,6,5,4,3,2,1)) [0m
+
+Net::HTTPBadResponse (wrong status line: "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">"):
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/net/http.rb:2028:in `read_status_line'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/net/http.rb:2015:in `read_new'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/net/http.rb:1051:in `request'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/net/http.rb:1037:in `request'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/net/http.rb:543:in `start'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/net/http.rb:1035:in `request'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/net/http.rb:772:in `get'
+  rsolr (0.12.1) lib/rsolr/connection/net_http.rb:16:in `get'
+  rsolr (0.12.1) lib/rsolr/connection/requestable.rb:36:in `request'
+  rsolr (0.12.1) lib/rsolr/client.rb:34:in `request'
+  /Users/cfitz/.rvm/gems/ree-1.8.7-2010.02/gems/rsolr-ext-0.12.1/lib/rsolr-ext/client.rb:20:in `find'
+  vendor/plugins/blacklight/app/controllers/catalog_controller.rb:22:in `index'
+  haml (3.0.18) lib/sass/plugin/rack.rb:41:in `call'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (32.8ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-04 16:26:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mSearch Load (0.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (12,11,10,9,8,7,6,5,4,3,2,1)) [0m
+
+Net::HTTPBadResponse (wrong status line: "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">"):
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/net/http.rb:2028:in `read_status_line'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/net/http.rb:2015:in `read_new'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/net/http.rb:1051:in `request'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/net/http.rb:1037:in `request'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/net/http.rb:543:in `start'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/net/http.rb:1035:in `request'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/net/http.rb:772:in `get'
+  rsolr (0.12.1) lib/rsolr/connection/net_http.rb:16:in `get'
+  rsolr (0.12.1) lib/rsolr/connection/requestable.rb:36:in `request'
+  rsolr (0.12.1) lib/rsolr/client.rb:34:in `request'
+  /Users/cfitz/.rvm/gems/ree-1.8.7-2010.02/gems/rsolr-ext-0.12.1/lib/rsolr-ext/client.rb:20:in `find'
+  vendor/plugins/blacklight/app/controllers/catalog_controller.rb:22:in `index'
+  haml (3.0.18) lib/sass/plugin/rack.rb:41:in `call'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (32.8ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-04 16:26:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.2ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (12,11,10,9,8,7,6,5,4,3,2,1)) [0m
+
+Net::HTTPBadResponse (wrong status line: "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">"):
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/net/http.rb:2028:in `read_status_line'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/net/http.rb:2015:in `read_new'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/net/http.rb:1051:in `request'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/net/http.rb:1037:in `request'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/net/http.rb:543:in `start'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/net/http.rb:1035:in `request'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/net/http.rb:772:in `get'
+  rsolr (0.12.1) lib/rsolr/connection/net_http.rb:16:in `get'
+  rsolr (0.12.1) lib/rsolr/connection/requestable.rb:36:in `request'
+  rsolr (0.12.1) lib/rsolr/client.rb:34:in `request'
+  /Users/cfitz/.rvm/gems/ree-1.8.7-2010.02/gems/rsolr-ext-0.12.1/lib/rsolr-ext/client.rb:20:in `find'
+  vendor/plugins/blacklight/app/controllers/catalog_controller.rb:22:in `index'
+  haml (3.0.18) lib/sass/plugin/rack.rb:41:in `call'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (111.3ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-04 16:32:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mSearch Load (0.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (12,11,10,9,8,7,6,5,4,3,2,1)) [0m
+Rendering public/500.html (500)
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-04 16:33:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (12,11,10,9,8,7,6,5,4,3,2,1)) [0m
+Redirected to http://localhost:3000/
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-04 16:35:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mSearch Load (0.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (12,11,10,9,8,7,6,5,4,3,2,1)) [0m
+Rendering public/500.html (500)
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-04 16:35:28) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.2ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (12,11,10,9,8,7,6,5,4,3,2,1)) [0m
+Redirected to http://localhost:3000/
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-04 16:35:31) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mSearch Load (0.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (12,11,10,9,8,7,6,5,4,3,2,1)) [0m
+Rendering public/500.html (500)
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-04 17:13:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mSearch Load (0.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (12,11,10,9,8,7,6,5,4,3,2,1)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.9ms)
+Rendered catalog/_home_text (0.3ms)
+Rendered catalog/_facets (41.6ms)
+Rendered catalog/_home (44.6ms)
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'b6c6bd91f38b8708740750b097ccc30e5b26d55eacbf144b4d6934102a3dd70a35ffeade2770aeb95659d27411405ba4a546d8867e199fb8c9653907a4032998') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered _user_util_links (11.5ms)
+Rendered _flash_msg (0.5ms)
+Completed in 104ms (View: 62, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-05 09:00:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.2ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (12,11,10,9,8,7,6,5,4,3,2,1)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.3ms)
+Rendered catalog/_home_text (0.1ms)
+Rendered catalog/_facets (34.2ms)
+Rendered catalog/_home (36.2ms)
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'b6c6bd91f38b8708740750b097ccc30e5b26d55eacbf144b4d6934102a3dd70a35ffeade2770aeb95659d27411405ba4a546d8867e199fb8c9653907a4032998') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered _user_util_links (2.5ms)
+Rendered _flash_msg (0.1ms)
+Completed in 133ms (View: 41, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-05 09:02:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mSearch Load (0.5ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (12,11,10,9,8,7,6,5,4,3,2,1)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (2.5ms)
+Rendered catalog/_home_text (0.4ms)
+Rendered catalog/_facets (1.4ms)
+Rendered catalog/_home (5.3ms)
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'b6c6bd91f38b8708740750b097ccc30e5b26d55eacbf144b4d6934102a3dd70a35ffeade2770aeb95659d27411405ba4a546d8867e199fb8c9653907a4032998') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered _user_util_links (12.9ms)
+Rendered _flash_msg (0.4ms)
+Completed in 166ms (View: 25, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-05 09:23:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mSearch Load (0.3ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (12,11,10,9,8,7,6,5,4,3,2,1)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (2.2ms)
+Rendered catalog/_home_text (0.5ms)
+Rendered catalog/_facets (45.7ms)
+Rendered catalog/_home (49.4ms)
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = 'b6c6bd91f38b8708740750b097ccc30e5b26d55eacbf144b4d6934102a3dd70a35ffeade2770aeb95659d27411405ba4a546d8867e199fb8c9653907a4032998') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered _user_util_links (10.3ms)
+Rendered _flash_msg (0.5ms)
+Completed in 230ms (View: 66, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing CatalogController#facet (for 127.0.0.1 at 2010-11-05 09:24:12) [GET]
+  Parameters: {"action"=>"facet", "id"=>"worktitle_facet", "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (12,11,10,9,8,7,6,5,4,3,2,1)) [0m
+Rendering catalog/facet
+Rendered catalog/_facet_pagination (2.0ms)
+Rendered catalog/_facet_pagination (1.1ms)
+Completed in 29ms (View: 14, DB: 0) | 200 OK [http://localhost/catalog/facet/worktitle_facet]

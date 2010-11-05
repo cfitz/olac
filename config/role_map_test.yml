@@ -1,0 +1,12 @@
+archivist:
+  - archivist1
+  - archivist2
+  - leland_himself
+donor:
+  - donor1
+  - leland_himself
+researcher:
+  - researcher1
+patron:
+  - patron1
+  - leland_himself

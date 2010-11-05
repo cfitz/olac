@@ -1,0 +1,234 @@
+# Logfile created on Mon Oct 04 13:49:05 -0700 2010FEDORA: loading ActiveFedora config from /private/tmp/hydrangea/config/fedora.yml
+FEDORA: initializing ActiveFedora::SolrService with solr_config: {:url=>"http://localhost:8983/solr/development"}
+FEDORA: initialized Solr with ActiveFedora.solr_config: #<ActiveFedora::SolrService:0x5757a74 @conn=#<Solr::Connection:0x57579fc @autocommit=true, @connection=#<Net::HTTP localhost:8983 open=false>, @url=#<URI::HTTP:0x57576c8 URL:http://localhost:8983/solr/development>>>
+FEDORA: initializing Fedora with fedora_config: {:url=>"http://fedoraAdmin:fedoraAdmin@127.0.0.1:8983/fedora"}
+FEDORA: initialized Fedora as: #<Fedora::Repository:0x575628c @pid_delimiter=":", @repository_name="Fedora Repository", @pid_namespace="changeme", @fedora_url=#<URI::HTTP:0x5755f1c URL:http://fedoraAdmin:fedoraAdmin@127.0.0.1:8983/fedora>, @fedora_version="3.3", @connection=#<Fedora::Connection:0x57555a8 @default_header={"Content-Type"=>"text/xml"}, @format=Fedora::XmlFormat, @site=#<URI::HTTP:0x5755f1c URL:http://fedoraAdmin:fedoraAdmin@127.0.0.1:8983/fedora>, @surrogate=nil>, @base_url="http://localhost:8983/fedora", @surrogate=nil>
+BLACKLIGHT: running version master
+BLACKLIGHT: initialized with Blacklight.solr_config: {"default"=>{"url"=>"http://localhost:8983/solr/development"}, :url=>"http://localhost:8983/solr/development", "fulltext"=>{"url"=>"http://localhost:8983/solr/development"}}
+BLACKLIGHT: initialized with Blacklight.solr: #<RSolr::Client:0x5646b58 @connection=#<RSolr::Connection::NetHttp:0x5649524 @opts={"default"=>{"url"=>"http://localhost:8983/solr/development"}, :url=>"http://localhost:8983/solr/development", "fulltext"=>{"url"=>"http://localhost:8983/solr/development"}, :adapter=>:curb}, @uri=#<URI::HTTP:0x563ed04 URL:http://localhost:8983/solr/development>>>
+BLACKLIGHT: initialized with Blacklight.config: {:index=>{:record_display_type=>"id", :show_link=>"title_facet", :num_per_page=>40}, :spell_max=>5, :index_fields=>{:field_names=>["date_t", "title_t", "medium_t", "location_t"], :labels=>{"location_t"=>"Location", "medium_t"=>"Content Type", "title_t"=>"Title", "date_t"=>"Date"}}, :facet_more_num=>5, :show_fields=>{:field_names=>["text", "title_facet", "date_t", "medium_t", "location_t", "rights_t", "access_t"], :labels=>{"access_t"=>"Access:", "rights_t"=>"Copyright:", "location_t"=>"Location:", "medium_t"=>"Document Type:", "text"=>"Text:", "date_t"=>"Date:", "title_facet"=>"Title:"}}, :raw_storage_type=>"marc21", :show=>{:html_title=>"title_t", :heading=>"title_t", :display_type=>"has_model_s"}, :default_qt=>"search", :facet=>{:limits=>{nil=>10}, :field_names=>["date_t", "title_t", "medium_t", "location_t"], :labels=>{"location_t"=>"Location", "medium_t"=>"Content Type", "title_t"=>"Title", "date_t"=>"Date"}}, :raw_storage_field=>"marc_display", :public_qt=>"public_search", :search_fields=>[["Descriptions", "search"], ["Descriptions and full text", "fulltext"]], :sort_fields=>[["relevance", "score desc, year_facet desc, month_facet asc, title_facet asc"], ["date -", "year_facet desc, month_facet asc, title_facet asc"], ["date +", "year_facet asc, month_facet asc, title_facet asc"], ["title", "title_facet asc"], ["document type", "medium_t asc, year_facet desc, month_facet asc, title_facet asc"], ["location", "series_facet asc, box_facet asc, folder_facet asc, year_facet desc, month_facet asc, title_facet asc"]]}
+SolrDocument is nil
+current_user is nil, assigning public
+User public is a member of groups: ["public"]
+Checking edit permissions for user: public
+edit_groups: []
+edit_persons: []
+test_permission result: false
+SolrDocument is nil
+User nobody_special is a member of groups: ["public"]
+Checking edit permissions for user: nobody_special
+edit_groups: []
+edit_persons: []
+test_permission result: false
+
+
+Processing PermissionsController#update (for 0.0.0.0 at 2010-10-04 13:49:11) [POST]
+  Parameters: {"action"=>"update", "permission"=>{"group"=>{"_group_id_"=>"discover"}}, "controller"=>"permissions", "asset_id"=>"_pid_"}
+Completed in 18ms (View: 1, DB: 0) | 200 OK [http://test.host/assets/_pid_/permissions?permission%5Bgroup%5D%5B_group_id_%5D=discover]
+
+
+Processing PermissionsController#create (for 0.0.0.0 at 2010-10-04 13:49:11) [POST]
+  Parameters: {"action"=>"create", "permission"=>{"access_level"=>"read", "actor_id"=>"_person_id_", "actor_type"=>"person"}, "controller"=>"permissions", "asset_id"=>"_pid_"}
+Completed in 11ms (View: 1, DB: 0) | 200 OK [http://test.host/assets/_pid_/permissions?permission%5Baccess_level%5D=read&permission%5Bactor_id%5D=_person_id_&permission%5Bactor_type%5D=person]
+
+
+Processing GetController#show (for 0.0.0.0 at 2010-10-04 13:49:11) [GET]
+  Parameters: {"action"=>"show", "id"=>"_PID_", "controller"=>"get"}
+Rendering template within layouts/application
+Rendering get/show
+Completed in 18ms (View: 1, DB: 0) | 200 OK [http://test.host/get/_PID_]
+
+
+Processing GetController#show to pdf (for 0.0.0.0 at 2010-10-04 13:49:11) [GET]
+  Parameters: {"format"=>"pdf", "action"=>"show", "id"=>"_PID_", "controller"=>"get"}
+Rendering get/show
+Completed in 11ms (View: 1, DB: 0) | 200 OK [http://test.host/get/_PID_.pdf]
+
+
+Processing GetController#show to jp2 (for 0.0.0.0 at 2010-10-04 13:49:11) [GET]
+  Parameters: {"format"=>"jp2", "action"=>"show", "id"=>"_PID_", "controller"=>"get"}
+Rendering get/show
+Completed in 11ms (View: 1, DB: 0) | 200 OK [http://test.host/get/_PID_.jp2]
+
+
+Processing GetController#show to jp2 (for 0.0.0.0 at 2010-10-04 13:49:11) [GET]
+  Parameters: {"format"=>"jp2", "action"=>"show", "id"=>"_PID_", "controller"=>"get", "image_server"=>"true"}
+Rendering get/show
+Completed in 11ms (View: 1, DB: 0) | 200 OK [http://test.host/get/_PID_.jp2?image_server=true]
+
+
+Processing GetController#show to jp2 (for 0.0.0.0 at 2010-10-04 13:49:11) [GET]
+  Parameters: {"format"=>"jp2", "action"=>"show", "id"=>"_PID_", "controller"=>"get", "image_server"=>{"scale"=>"96"}}
+Rendering get/show
+Completed in 11ms (View: 1, DB: 0) | 200 OK [http://test.host/get/_PID_.jp2?image_server%5Bscale%5D=96]
+
+
+Processing FileAssetsController#create (for 0.0.0.0 at 2010-10-04 13:49:11) [POST]
+  Parameters: {"Filename"=>"Foo File", "action"=>"create", "container_id"=>"changeme:1", "controller"=>"file_assets", "Filedata"=>#<Mock:File>}
+Completed in 443ms (View: 1, DB: 0) | 200 OK [http://test.host/assets/changeme:1/file_assets?Filedata=%23%3CMocha%3A%3AMock%3A0x5367194%3E&Filename=Foo+File]
+
+
+Processing FileAssetsController#index (for 0.0.0.0 at 2010-10-04 13:49:12) [GET]
+  Parameters: {"action"=>"index", "container_id"=>"changeme:2", "controller"=>"file_assets"}
+Rendering template within layouts/application
+Rendering file_assets/index
+Completed in 174ms (View: 1, DB: 0) | 200 OK [http://test.host/assets/changeme:2/file_assets]
+
+
+Processing FileAssetsController#destroy (for 0.0.0.0 at 2010-10-04 13:49:12) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"__PID__", "controller"=>"file_assets"}
+Completed in 10ms (View: 0, DB: 0) | 200 OK [http://test.host/file_assets/__PID__]
+
+
+Processing FileAssetsController#create (for 0.0.0.0 at 2010-10-04 13:49:12) [POST]
+  Parameters: {"Filename"=>"Foo File", "action"=>"create", "controller"=>"file_assets", "Filedata"=>#<Mock:File>}
+Completed in 10ms (View: 1, DB: 0) | 200 OK [http://test.host/file_assets?Filedata=%23%3CMocha%3A%3AMock%3A0x52a9b6c%3E&Filename=Foo+File]
+
+
+Processing FileAssetsController#create (for 0.0.0.0 at 2010-10-04 13:49:12) [POST]
+  Parameters: {"Filename"=>"Foo File", "action"=>"create", "container_id"=>"_PID_", "controller"=>"file_assets", "Filedata"=>#<Mock:File>}
+Completed in 12ms (View: 1, DB: 0) | 200 OK [http://test.host/assets/_PID_/file_assets?Filedata=%23%3CMocha%3A%3AMock%3A0x5279200%3E&Filename=Foo+File]
+
+
+Processing FileAssetsController#show (for 0.0.0.0 at 2010-10-04 13:49:12) [GET]
+  Parameters: {"action"=>"show", "id"=>"hydrangea:fixture_file_asset1", "controller"=>"file_assets"}
+User fake_user is a member of groups: ["public"]
+Checking read permissions for user: fake_user
+edit_groups: ["archivist"]
+read_groups: ["archivist", "researcher"]
+edit_persons: ["researcher1"]
+read_persons: ["researcher1"]
+test_permission result: false
+Redirected to http://test.host/file_assets
+Completed in 80ms (DB: 0) | 302 Found [http://test.host/file_assets/hydrangea:fixture_file_asset1]
+
+
+Processing FileAssetsController#show (for 0.0.0.0 at 2010-10-04 13:49:12) [GET]
+  Parameters: {"action"=>"show", "id"=>"example:invalid_object", "controller"=>"file_assets"}
+No such file asset: example:invalid_object
+Redirected to http://test.host/file_assets
+Completed in 14ms (DB: 0) | 302 Found [http://test.host/file_assets/example:invalid_object]
+
+
+Processing FileAssetsController#new (for 0.0.0.0 at 2010-10-04 13:49:12) [GET]
+  Parameters: {"action"=>"new", "container_id"=>"_PID_", "controller"=>"file_assets"}
+Completed in 98ms (View: 0, DB: 0) | 200 OK [http://test.host/assets/_PID_/file_assets/new]
+
+
+Processing FileAssetsController#index (for 0.0.0.0 at 2010-10-04 13:49:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"file_assets"}
+Rendering file_assets/index
+Completed in 10ms (View: 1, DB: 0) | 200 OK [http://test.host/file_assets]
+
+
+Processing FileAssetsController#index (for 0.0.0.0 at 2010-10-04 13:49:12) [GET]
+  Parameters: {"action"=>"index", "container_id"=>"_PID_", "controller"=>"file_assets"}
+Rendering file_assets/index
+Completed in 11ms (View: 1, DB: 0) | 200 OK [http://test.host/assets/_PID_/file_assets]
+
+
+Processing ContributorsController#destroy (for 0.0.0.0 at 2010-10-04 13:49:12) [DELETE]
+  Parameters: {"content_type"=>"hydrangea_dataset", "action"=>"destroy", "index"=>"3", "controller"=>"contributors", "contributor_type"=>"conference", "asset_id"=>"_PID_"}
+Completed in 17ms (View: 1, DB: 0) | 200 OK [http://test.host/assets/_PID_/contributors/conference/3?content_type=hydrangea_dataset]
+
+
+Processing ContributorsController#create (for 0.0.0.0 at 2010-10-04 13:49:12) [POST]
+  Parameters: {"content_type"=>"hydrangea_article", "action"=>"create", "contributor_type"=>"person", "controller"=>"contributors", "asset_id"=>"_PID_"}
+Completed in 11ms (View: 0, DB: 0) | 200 OK [http://test.host/assets/_PID_/contributors?content_type=hydrangea_article&contributor_type=person]
+
+
+Processing ContributorsController#create (for 0.0.0.0 at 2010-10-04 13:49:12) [POST]
+  Parameters: {"content_type"=>"hydrangea_article", "action"=>"create", "contributor_type"=>"conference", "controller"=>"contributors", "asset_id"=>"_PID_"}
+Completed in 10ms (View: 0, DB: 0) | 200 OK [http://test.host/assets/_PID_/contributors?content_type=hydrangea_article&contributor_type=person]
+
+
+Processing ContributorsController#create (for 0.0.0.0 at 2010-10-04 13:49:12) [POST]
+  Parameters: {"content_type"=>"hydrangea_article", "action"=>"create", "contributor_type"=>"organization", "controller"=>"contributors", "asset_id"=>"_PID_"}
+Completed in 10ms (View: 0, DB: 0) | 200 OK [http://test.host/assets/_PID_/contributors?content_type=hydrangea_article&contributor_type=person]
+
+
+Processing CatalogController#edit (for 0.0.0.0 at 2010-10-04 13:49:12) [GET]
+  Parameters: {"action"=>"edit", "id"=>"hydrangea:fixture_mods_article1", "controller"=>"catalog"}
+User patron1 is a member of groups: ["patron", "public"]
+Checking edit permissions for user: patron1
+edit_groups: ["archivist"]
+edit_persons: ["researcher1"]
+test_permission result: false
+Redirected to http://test.host/catalog/hydrangea:fixture_mods_article1
+Completed in 193ms (DB: 0) | 302 Found [http://test.host/catalog/hydrangea:fixture_mods_article1/edit]
+
+
+Processing CatalogController#edit (for 0.0.0.0 at 2010-10-04 13:49:13) [GET]
+  Parameters: {"action"=>"edit", "id"=>"hydrangea:fixture_mods_article1", "controller"=>"catalog"}
+User archivist1 is a member of groups: ["archivist", "public"]
+Checking edit permissions for user: archivist1
+edit_groups: ["archivist"]
+test_permission result: true
+Rendering template within layouts/application
+Rendering catalog/show
+Completed in 75ms (View: 1, DB: 0) | 200 OK [http://test.host/catalog/hydrangea:fixture_mods_article1/edit]
+
+
+Processing CatalogController#show (for 0.0.0.0 at 2010-10-04 13:49:13) [GET]
+  Parameters: {"action"=>"show", "id"=>"hydrangea:fixture_mods_article1", "controller"=>"catalog"}
+User archivist1 is a member of groups: ["archivist", "public"]
+Checking edit permissions for user: archivist1
+edit_groups: ["archivist"]
+test_permission result: true
+enforce_viewing_context_for_show_requests redirecting to edit
+Redirected to http://test.host/catalog/hydrangea:fixture_mods_article1/edit
+User archivist1 is a member of groups: ["archivist", "public"]
+Checking read permissions for user: archivist1
+edit_groups: ["archivist"]
+read_groups: ["archivist", "public"]
+test_permission result: true
+Completed in 169ms (DB: 0) | 302 Found [http://test.host/catalog/hydrangea:fixture_mods_article1]
+
+
+Processing CatalogController#show (for 0.0.0.0 at 2010-10-04 13:49:13) [GET]
+  Parameters: {"action"=>"show", "viewing_context"=>"browse", "id"=>"hydrangea:fixture_mods_article1", "controller"=>"catalog"}
+User archivist1 is a member of groups: ["archivist", "public"]
+Checking read permissions for user: archivist1
+edit_groups: ["archivist"]
+read_groups: ["archivist", "public"]
+test_permission result: true
+Rendering template within layouts/application
+Rendering catalog/show
+Completed in 80ms (View: 1, DB: 0) | 200 OK [http://test.host/catalog/hydrangea:fixture_mods_article1?viewing_context=browse]
+
+
+Processing CatalogController#show (for 0.0.0.0 at 2010-10-04 13:49:13) [GET]
+  Parameters: {"action"=>"show", "id"=>"hydrangea:fixture_mods_article1", "controller"=>"catalog"}
+User nobody_special is a member of groups: ["public"]
+Checking edit permissions for user: nobody_special
+edit_groups: ["archivist"]
+edit_persons: ["researcher1"]
+test_permission result: false
+User nobody_special is a member of groups: ["public"]
+Checking read permissions for user: nobody_special
+edit_groups: ["archivist"]
+read_groups: ["archivist", "public"]
+test_permission result: true
+Rendering template within layouts/application
+Rendering catalog/show
+Completed in 168ms (View: 1, DB: 0) | 200 OK [http://test.host/catalog/hydrangea:fixture_mods_article1]
+
+
+Processing AssetsController#destroy (for 0.0.0.0 at 2010-10-04 13:49:14) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"__PID__", "controller"=>"assets"}
+Redirected to http://test.host/
+Completed in 18ms (DB: 0) | 302 Found [http://test.host/assets/__PID__]
+
+
+Processing AssetsController#update (for 0.0.0.0 at 2010-10-04 13:49:14) [PUT]
+  Parameters: {"action"=>"update", "id"=>"_PID_", "controller"=>"assets", "asset"=>{"descMetadata"=>{"subject"=>{"0"=>"subject1", "1"=>"subject2", "2"=>"subject3"}}}}
+attributes submitted: {:opts=>{:datastreams=>"descMetadata"}, :params=>{"subject"=>{"0"=>"subject1", "1"=>"subject2", "2"=>"subject3"}}}
+returning {"updated"=>[{"value"=>"My Topic", "index"=>"2", "field_name"=>"subject"}]}
+Completed in 12ms (View: 1, DB: 0) | 200 OK [http://test.host/assets/_PID_?asset%5BdescMetadata%5D%5Bsubject%5D%5B0%5D=subject1&asset%5BdescMetadata%5D%5Bsubject%5D%5B1%5D=subject2&asset%5BdescMetadata%5D%5Bsubject%5D%5B2%5D=subject3]
+
+
+Processing AssetsController#update (for 0.0.0.0 at 2010-10-04 13:49:14) [PUT]
+  Parameters: {"content_type"=>"hydrangea_dataset", "field_selectors"=>{"descMetadata"=>{"person_0_role"=>[{":person"=>"0"}, "role"]}}, "action"=>"update", "id"=>"_PID_", "controller"=>"assets", "asset"=>{"descMetadata"=>{"person_0_role"=>{"0"=>"role1", "1"=>"role2", "2"=>"role3"}}}}
+attributes submitted: {:opts=>{:datastreams=>"descMetadata"}, :params=>{[{:person=>0}, :role]=>{"0"=>"role1", "1"=>"role2", "2"=>"role3"}}}
+returning {"updated"=>[{"value"=>"role1", "index"=>"0", "field_name"=>"person_0_role"}, {"value"=>"role2", "index"=>"1", "field_name"=>"person_0_role"}, {"value"=>"role3", "index"=>"2", "field_name"=>"person_0_role"}]}
+Completed in 11ms (View: 1, DB: 0) | 200 OK [http://test.host/assets/_PID_?asset%5BdescMetadata%5D%5Bperson_0_role%5D%5B0%5D=role1&asset%5BdescMetadata%5D%5Bperson_0_role%5D%5B1%5D=role2&asset%5BdescMetadata%5D%5Bperson_0_role%5D%5B2%5D=role3&content_type=hydrangea_dataset&field_selectors%5BdescMetadata%5D%5Bperson_0_role%5D%5B%5D%5B%3Aperson%5D=0&field_selectors%5BdescMetadata%5D%5Bperson_0_role%5D%5B%5D=role]
