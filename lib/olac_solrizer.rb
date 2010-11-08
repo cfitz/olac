@@ -7,21 +7,41 @@ require 'solr'
 xml = Nokogiri::XML(open('/tmp/test.xml'))
 
 @connection = Solr::Connection.new('http://salt-prod.stanford.edu:8080/chris_solr/', :autocommit => :on )
+#@connection = Solr::Connection.new("http://localhost:8983/solr/development", :autocommit => :on )
 
 xml.root.children.each do |child|
   if child.name == "ROW"
-    document = Solr::Document.new(:id => child["RECORDID"])
+    values = {}
     puts child["RECORDID"]
     child.children.each do |grandchildren|
-      values = []
+     
       grandchildren.children.each do |value|
-        document << Solr::Field.new("#{grandchildren.name.downcase}_s" => value.content)
-        document << Solr::Field.new("#{grandchildren.name.downcase}_t" => value.content)
-        document << Solr::Field.new("#{grandchildren.name.downcase}_facet" => value.content)  
-        document << Solr::Field.new("#{grandchildren.name.downcase}_display" => value.content)    
-      end #each
-      @connection.add(document)
-    end #if child.children
+        if  values["#{grandchildren.name.downcase}"].nil?
+          values["#{grandchildren.name.downcase}"] = []
+        end #if .nil?
+        values["#{grandchildren.name.downcase}"] << value.content
+      end #grandchildren
+    
+    
+      @document = Solr::Document.new(:id => child["RECORDID"])  
+      
+    end #children.each  
+    
+    puts values.inspect
+
+    values.each do |key,value|
+      uniques = value.uniq
+      uniques.each do |v|
+        v.strip!
+        unless v.empty?
+          @document << Solr::Field.new("#{key}_s" => v)
+          @document << Solr::Field.new("#{key}_t" => v)
+          @document << Solr::Field.new("#{key}_facet" => v)  
+          @document << Solr::Field.new("#{key}_display" => v)
+        end
+      end #value.each
+    end #values.each           
+    @connection.add(@document)
   end #if child.name
 end #each
 

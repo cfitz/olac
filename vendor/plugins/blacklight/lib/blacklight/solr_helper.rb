@@ -169,7 +169,7 @@ module Blacklight::SolrHelper
   # and second an array of SolrDocuments representing the response.docs
   def get_search_results(extra_controller_params={})
   
-  
+    
     solr_response = Blacklight.solr.find(  self.solr_search_params(extra_controller_params) )
 
     document_list = solr_response.docs.collect {|doc| SolrDocument.new(doc)}

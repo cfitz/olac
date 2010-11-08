@@ -48,9 +48,9 @@ Blacklight.configure(:shared) do |config|
 
   # solr field values given special treatment in the show (single result) view
   config[:show] = {
-    :html_title => "worktitle_display",
-    :heading => "worktitle_display",
-     :display_type => "format"
+    :html_title => "worktitle_t",
+    :heading => "worktitle_t",
+     :display_type => "format_t"
   }
 
   # solr fld values given special treatment in the index (search results) view
@@ -77,7 +77,7 @@ Blacklight.configure(:shared) do |config|
       "worktitle_facet" => "Title",
         "date_facet"=> "Date",
         "countryname_facet" => "Country",
-        "directorname_facet" => "Directory",
+        "directorname_facet" => "Director",
         "format_facet" => "Format",
         "genrename_facet" => "Genre",
         "langname_facet" => "Language",
@@ -107,22 +107,22 @@ Blacklight.configure(:shared) do |config|
     :field_names => [
       "worktitle_display",
         "date_display",
-        "countryname_s",
-        "directorname_s",
-        "format_s",
-        "genrename_s",
-        "langname_s",
-        "alttitlename_s"
+        "countryname_display",
+        "directorname_display",
+        "format_display",
+        "genrename_display",
+        "langname_display",
+        "alttitlename_disaply",
     ],
     :labels => {
-       "worktitle_facet" => "Title",
-          "date_facet"=> "Date",
-          "countryname_facet" => "Country",
-          "directorname_facet" => "Directory",
-          "format_facet" => "Format",
-          "genrename_facet" => "Genre",
-          "langname_facet" => "Language",
-          "alttitlename_facet" => "Alternate Title"
+       "worktitle_display" => "Title",
+          "date_display"=> "Date",
+          "countryname_display" => "Country",
+          "directorname_display" => "Director",
+          "format_display" => "Format",
+          "genrename_display" => "Genre",
+          "langname_display" => "Language",
+          "alttitlename_display" => "Alternate Title",
     }
   }
 
