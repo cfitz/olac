@@ -1,0 +1,17 @@
+
+dl.defList {width:100%;}
+dl.defList dt {
+clear:both;
+color:#888888;
+float:left;
+margin:0;
+padding:2px 1em 2px 0;
+text-align:right;
+width:0%;
+}
+dl.defList dd {  margin-left: 6em; padding: .5px 0;}
+
+.holdings {margin-top: 4em; background-color: #EEEEEE; padding: 2em;}
+.holdings_library_header { margin-right: 2em;   }
+.holdings dd {margin-top: .5em;}
+.holdings span {margin-right: 6em; text-align: right;}
