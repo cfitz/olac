@@ -95,14 +95,14 @@ Blacklight.configure(:shared) do |config|
   #   The ordering of the field names is the order of the display 
   config[:index_fields] = {
     :field_names => [
-      "date_display",
-      "worktitle_display",
-      "format_display",
+      "alttitlename_display",
+      "directorname_display",
+      "genrename_display",
       ],
     :labels => {
-      "date_display"=>"Date",
-      "worktitle_display"=>"Title",
-      "format_display"=>"Format"
+      "alttitlename_display"=>"Alternate Title:",
+      "directorname_display"=>"Director:",
+      "genrename_display"=>"Genre:"
     }
   }
 
@@ -110,24 +110,26 @@ Blacklight.configure(:shared) do |config|
   #   The ordering of the field names is the order of the display 
   config[:show_fields] = {
     :field_names => [
-      "worktitle_display",
-        "date_display",
-        "countryname_display",
-        "directorname_display",
-        "format_display",
-        "genrename_display",
-        "langname_display",
-        "alttitlename_disaply",
+      "alttitlename_disaply",
+      "directorname_display",
+      "genrename_display",
+      "worklang_display",
+      "countryname_display",
+      "workduration_display",
+      "color_display",
+      "sound_display",
+      "workaspect_display"
     ],
     :labels => {
-       "worktitle_display" => "Title",
-          "date_display"=> "Date",
-          "countryname_display" => "Country",
-          "directorname_display" => "Director",
-          "format_display" => "Format",
-          "genrename_display" => "Genre",
-          "langname_display" => "Language",
-          "alttitlename_display" => "Alternate Title",
+       "alttitlename_display" => "Alternate Title:",
+       "directorname_display" => "Director:",
+        "genrename_display" => "Genre:",
+        "worklang_display" => "Language:",
+        "countryname_display" => "Country:",
+        "workduration_display" => "Run Time:",
+        "color_display" => "Color:",
+        "sound_display" => "Sound:",
+        "workaspect_display" => "Aspect ratio:"
     }
   }
 
