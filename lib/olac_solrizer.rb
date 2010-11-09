@@ -4,7 +4,7 @@ require 'nokogiri'
 require 'solr'
 
 
-xml = Nokogiri::XML(open('/tmp/test.xml'))
+xml = Nokogiri::XML(open('../spec/fixtures/export_from_db.xml'))
 
 @connection = Solr::Connection.new('http://salt-prod.stanford.edu:8080/chris_solr/', :autocommit => :on )
 #@connection = Solr::Connection.new("http://localhost:8983/solr/development", :autocommit => :on )
@@ -34,10 +34,19 @@ xml.root.children.each do |child|
       uniques.each do |v|
         v.strip!
         unless v.empty?
-          @document << Solr::Field.new("#{key}_s" => v)
-          @document << Solr::Field.new("#{key}_t" => v)
-          @document << Solr::Field.new("#{key}_facet" => v)  
-          @document << Solr::Field.new("#{key}_display" => v)
+          
+          if key == "captioning" && v == "yes"
+            puts "captioning"
+            @document << Solr::Field.new("accessibility_facet" => "Captioning")
+            @document << Solr::Field.new("accessibility_t" => "Captioning")
+            @document << Solr::Field.new("accessibility_s" => "Captioning")
+            @document << Solr::Field.new("accessibility_display" => "Captioning")
+          else
+            @document << Solr::Field.new("#{key}_s" => v)
+            @document << Solr::Field.new("#{key}_t" => v)
+            @document << Solr::Field.new("#{key}_facet" => v)  
+            @document << Solr::Field.new("#{key}_display" => v)
+          end
         end
       end #value.each
     end #values.each           

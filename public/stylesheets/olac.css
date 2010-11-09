@@ -15,3 +15,20 @@ dl.defList dd {  margin-left: 6em; padding: .5px 0;}
 .holdings_library_header { margin-right: 2em;   }
 .holdings dd {margin-top: .5em;}
 .holdings span {margin-right: 6em; text-align: right;}
+
+h1.site_title {
+background:url("../images/olac_logo_white_transparent.png") no-repeat scroll left top transparent;
+height:35px;
+margin:2em 0 0 1em;
+width:120px;
+}
+
+#item_facets dl { margin-bottom: 2em;}
+#item_facets dl dd { display: inline; margin-left: .5em;}
+#item_facets dl h3 { display:inline;}
+/*.yui-t2 {
+background:url("../images/kodak_border.png") repeat-x scroll left top #FFFFFF;
+border-bottom:2px solid #555555;
+margin:0 auto;
+}*/
+

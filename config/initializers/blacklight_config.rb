@@ -61,27 +61,32 @@ Blacklight.configure(:shared) do |config|
   }
 
   # solr fields that will be treated as facets by the blacklight application
-  #   The ordering of the field names is the order of the display 
+  #   usually , The ordering of the field names is the order of the display 
+  # however, we are overriding this in the app/catalog/facets paritals
   config[:facet] = {
     :field_names => [
-      "worktitle_facet",
+      "libname_facet",
+      "format_facet",
+      "langname_facet",
+      "subtitlelang_facet",
+       "accessibility_facet",
+       "genrename_facet",  
         "date_facet",
+        "worklang_facet",
         "countryname_facet",
         "directorname_facet",
-        "format_facet",
-        "genrename_facet",
-        "langname_facet",
-        "alttitlename_facet"
       ],
     :labels => {
-      "worktitle_facet" => "Title",
-        "date_facet"=> "Date",
-        "countryname_facet" => "Country",
-        "directorname_facet" => "Director",
-        "format_facet" => "Format",
-        "genrename_facet" => "Genre",
-        "langname_facet" => "Language",
-        "alttitlename_facet" => "Alternate Title"
+      "libname_facet" => "At Library:",
+       "format_facet" => "Format:",
+      "langname_facet" => "Spoken Language:",
+        "subtitlelang_facet"=> "Subtitle/Caption Language:",
+        "accessibility_facet" => "Accessibility Options:",
+        "genrename_facet" => "Genre:",
+        "date_facet" => "Dates:",
+        "worklang_facet" => "Original Language:",
+        "countryname_facet" => "Country:",
+        "directorname_facet" => "Director:",
     },
     :limits=> {nil=>10}
   }
