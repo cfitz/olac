@@ -1,6 +1,6 @@
 <% # main container for facets/limits menu -%>
 <div id="item_facets" class="item_facets">
-  <% item_facets = ["genrename_facet", "date_facet", "worklang_facet", "countryname_facet", "directorname_facet"] %>
+  <% item_facets = ["genrename_facet", "workdate_facet", "worklang_facet", "countryname_facet", "directorname_facet"] %>
   <% item_facets.each do |solr_fname| %>
     <div>
       <% display_facet = @response.facets.detect {|f| f.name == solr_fname} -%>

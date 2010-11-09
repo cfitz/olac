@@ -27,7 +27,7 @@ xml.root.children.each do |child|
       
     end #children.each  
     
-    puts values.inspect
+    #puts values.inspect
 
     values.each do |key,value|
       uniques = value.uniq
@@ -44,12 +44,25 @@ xml.root.children.each do |child|
           elsif key == "worktitle"
             @document << Solr::Field.new("#{key}_s" => v)
             @document << Solr::Field.new("#{key}_t" => v)
-            @document << Solr::Field.new("#{key}_facet" => v)          
+            @document << Solr::Field.new("#{key}_facet" => v)    
+          elsif key == "workdate"
+            @document << Solr::Field.new("workdate_s" => v)
+            @document << Solr::Field.new("workdate_t" => v)
+            @document << Solr::Field.new("workdate_sort" => v)
+            unless v == "unspecified"
+              decade = "#{v.slice(0..2)}0s"
+              puts decade
+              @document << Solr::Field.new("workdate_facet" => decade)    
+            else
+              @document << Solr::Field.new("workdate_facet" => "Unspecified")    
+            end
           else
-            @document << Solr::Field.new("#{key}_s" => v)
-            @document << Solr::Field.new("#{key}_t" => v)
-            @document << Solr::Field.new("#{key}_facet" => v)  
-            @document << Solr::Field.new("#{key}_display" => v)
+            unless v == "unspecified"
+              @document << Solr::Field.new("#{key}_s" => v)
+              @document << Solr::Field.new("#{key}_t" => v)
+              @document << Solr::Field.new("#{key}_facet" => v)  
+              @document << Solr::Field.new("#{key}_display" => v)
+            end
           end
         end
       end #value.each
