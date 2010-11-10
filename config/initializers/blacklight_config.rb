@@ -88,7 +88,7 @@ Blacklight.configure(:shared) do |config|
         "countryname_facet" => "Country:",
         "directorname_facet" => "Director:",
     },
-    :limits=> {nil=>10}
+    :limits=> {nil=>5}
   }
 
   # solr fields to be displayed in the index (search results) view

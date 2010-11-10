@@ -27,7 +27,7 @@ xml.root.children.each do |child|
       
     end #children.each  
     
-    #puts values.inspect
+    puts values.inspect
 
     values.each do |key,value|
       uniques = value.uniq
