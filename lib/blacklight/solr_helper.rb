@@ -80,7 +80,12 @@ module Blacklight::SolrHelper
     [:facets, :f, :page, :sort, :per_page].each do |key|
       unless params[key].nil? && params[key].blank? 
         if params[key].has_key?("libname_facet") && params[key].has_key?("format_facet")
-          params[key]["holdings_regular_facet"] = ["#{params[key]['libname_facet']}:#{params[key]['format_facet']}"] 
+          params[key]["holdings_regular_facet"] = []
+          params[key]['libname_facet'].each do |lib|
+            params[key]['format_facet'].each do |form|
+              params[key]["holdings_regular_facet"] << "#{lib}:#{form}"
+            end #format each
+          end #lib each
         elsif params[key].has_key?("holdings_regular_facet")
           params[key].delete("holdings_regular_facet")
         end #if  
