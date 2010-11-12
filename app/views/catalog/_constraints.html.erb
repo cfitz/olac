@@ -25,7 +25,7 @@
 		<span id="appliedFilters">
 			<span id = "appliedFiltersList">
 				<% localized_params[:f].each_pair do |facet,values| %>
-					<% if facet == "holdings_regular_facet"%>
+					<% if facet == "holdings_regular_s"%>
 						<% values.each do |v| %>
 						<span class="appliedFilter">
 							<span class="first">
@@ -36,7 +36,7 @@
 							</span>
 							</span>
 						<% end %>
-					<% elsif facet != "holdings_regular_facet" %>
+					<% elsif facet != "holdings_regular_s" %>
 					
 						<% values.each do |v| %>
 							<span class="appliedFilter">

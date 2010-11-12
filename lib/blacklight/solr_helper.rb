@@ -56,7 +56,9 @@ module Blacklight::SolrHelper
     solr_parameters = {
       :qt => Blacklight.config[:default_qt],
       :facets => Blacklight.config[:facet][:field_names].clone,
-      :per_page => (Blacklight.config[:index][:num_per_page] rescue "10")
+      :per_page => (Blacklight.config[:index][:num_per_page] rescue "10"),
+      :facet_pivot => [],
+      :f_limits => []
     }
 
     
@@ -76,28 +78,58 @@ module Blacklight::SolrHelper
     ###
     # Merge in certain values from HTTP query itelf
     ###
+    
+    
+    params[:facet_pivot] = []
+    facet_limit_hash = {}
+    
     # Omit empty strings and nil values. 
-    [:facets, :f, :page, :sort, :per_page].each do |key|
-      unless params[key].nil? && params[key].blank? 
-        if params[key].has_key?("libname_facet") && params[key].has_key?("format_facet")
-          params[key]["holdings_regular_facet"] = []
-          params[key]['libname_facet'].each do |lib|
-            params[key]['format_facet'].each do |form|
-              params[key]["holdings_regular_facet"] << "#{lib}:#{form}"
-            end #format each
-          end #lib each
-        elsif params[key].has_key?("holdings_regular_facet")
-          params[key].delete("holdings_regular_facet")
-        end #if  
-      end #unless
-      solr_parameters[key] = params[key] unless params[key].blank?      
-    end
-    puts params.inspect
+     item_facets = ["libname_facet", "format_facet", "langname_facet", "subtitlelang_facet", "accessibility_facet" ]
+     holdings = []
+     unless params[:f].nil? && params[:f].blank?
+      if params[:f].is_a?(Hash)
+         params[:f][:holdings_regular_s]  = []  
+        item_facets.each do |i|
+          if params[:f].has_key?(i)
+            params[:facet_pivot] << i
+            if i == "subtitlelang_facet"
+              holdings << "sub#{params[:f][i]}"
+            else
+              holdings << params[:f][i]
+            end #if i ==
+          elsif !params[:facet_pivot].nil?
+            params[:facet_pivot].delete(i)
+          end #if
+        end #do each
+        params[:f][:holdings_regular_s] = holdings.join(":")
+      end #if
+     end #unless
+     
+     
+    
+    
+     
+     
+     # Omit empty strings and nil values. 
+      [:facets, :f, :page, :sort, :per_page].each do |key|
+        solr_parameters[key] = params[key] unless params[key].blank?      
+      end
+      
+      [:facet_pivot].each do |pv|
+        if  params[pv]
+          params[pv].uniq!
+          solr_parameters[pv] = params[pv].join(",") if params[pv]
+          params[pv].each do |p|
+            facet_limit_hash[p] = 0
+          end
+        end
+      end
+      
     # :q is meaningful as an empty string, should be used unless nil!
     [:q].each do |key|
       solr_parameters[key] = params[key] if params[key]
     end
-        
+     puts "BOOO!!!!" + solr_parameters.inspect
     # qt is handled different for legacy reasons; qt in HTTP param can not
     # over-ride qt from search_field_def defaults, it's only used if there
     # was no qt from search_field_def_defaults
@@ -150,7 +182,7 @@ module Blacklight::SolrHelper
         end              
       end      
     end
-
+    
     # Facet 'more' limits. Add +1 to any configured facets limits,
     # also include 'nil' default limit.
     if ( default_limit = facet_limit_for(nil))

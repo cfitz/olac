@@ -17,7 +17,7 @@
             <% if facet_in_params?( solr_fname, item.value ) %>              
                 <%= render_selected_facet_value(solr_fname, item) %>              
               <% else %>              
-                <%= render_facet_value(solr_fname, item) %>              
+                <%= render_item_facet_value(solr_fname, item) %>              
             <% end -%>
             </li>
           <% end %>
