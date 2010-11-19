@@ -37,7 +37,7 @@ module Blacklight::SolrHelper
   # specified otherwise. 
   #
   # Incoming parameter :f is mapped to :fq solr parameter.
-  def solr_search_params(extra_controller_params={})
+  def solr_search_params(mode, extra_controller_params={})
     # Order of precedence for all the places solr params can come from,
     # start lowest, and keep over-riding with higher. 
     ####
@@ -53,13 +53,32 @@ module Blacklight::SolrHelper
     #   in blacklight, just leave don't fill out the config.
     ####
 
+
+  if mode == :works
     solr_parameters = {
       :qt => Blacklight.config[:default_qt],
       :facets => Blacklight.config[:facet][:field_names].clone,
       :per_page => (Blacklight.config[:index][:num_per_page] rescue "10"),
-      :facet_pivot => [],
-      :f_limits => []
+      :f_limits => [],
+      :f  => {:documentType_s => "work"},
+      :fq => []
     }
+  elsif mode == :manifestations
+    solr_parameters = {
+      :qt => Blacklight.config[:manifestations_qt],
+      :facets => Blacklight.config[:facet_manifestations][:field_names].clone,
+      :per_page => (Blacklight.config[:index][:num_per_page] rescue "10"),
+      :f_limits => [],
+      :f => {:documentType_s => "manifestation"},
+      :fq => []
+    }
+  else
+     solr_parameters = {
+        :qt => Blacklight.config[:default_qt],
+        :facets => Blacklight.config[:facet][:field_names].clone,
+        :per_page => (Blacklight.config[:index][:num_per_page] rescue "10")
+      }
+  end
 
     
     ###
@@ -80,56 +99,32 @@ module Blacklight::SolrHelper
     ###
     
     
-    params[:facet_pivot] = []
-    facet_limit_hash = {}
-    
-    # Omit empty strings and nil values. 
-     item_facets = ["libname_facet", "format_facet", "langname_facet", "subtitlelang_facet", "accessibility_facet" ]
-     holdings = []
-     unless params[:f].nil? && params[:f].blank?
+    unless params[:f].nil? && params[:f].blank?
       if params[:f].is_a?(Hash)
-         params[:f][:holdings_regular_s]  = []  
-        item_facets.each do |i|
-          if params[:f].has_key?(i)
-            params[:facet_pivot] << i
-            if i == "subtitlelang_facet"
-              holdings << "sub#{params[:f][i]}"
-            else
-              holdings << params[:f][i]
-            end #if i ==
-          elsif !params[:facet_pivot].nil?
-            params[:facet_pivot].delete(i)
-          end #if
-        end #do each
-        params[:f][:holdings_regular_s] = holdings.join(":")
-      end #if
-     end #unless
-     
-     
-    
-    
-     
-     
+         solr_parameters[:fq] ||= []
+         params[:f].each_pair do |key, value|
+           value.each {|v| solr_parameters[:fq] << "holdings_t:#{key.downcase}_#{v.downcase}" }
+         end
+      end
+    end
+           
      # Omit empty strings and nil values. 
-      [:facets, :f, :page, :sort, :per_page].each do |key|
-        solr_parameters[key] = params[key] unless params[key].blank?      
+      [:facets, :f, :sort].each do |key|
+        solr_parameters[key].merge! params[key] unless params[key].blank?      
       end
-      
-      [:facet_pivot].each do |pv|
-        if  params[pv]
-          params[pv].uniq!
-          solr_parameters[pv] = params[pv].join(",") if params[pv]
-          params[pv].each do |p|
-            facet_limit_hash[p] = 0
-          end
-        end
+    
+    # don't do paging for manifestations only for works.  
+    if mode == :works
+      [:page, :per_page].each do |key|
+        solr_parameters[key] = params[key] unless params[key].blank? 
       end
-      
+    end
+        
     # :q is meaningful as an empty string, should be used unless nil!
     [:q].each do |key|
       solr_parameters[key] = params[key] if params[key]
     end
-     puts "BOOO!!!!" + solr_parameters.inspect
+   
     # qt is handled different for legacy reasons; qt in HTTP param can not
     # over-ride qt from search_field_def defaults, it's only used if there
     # was no qt from search_field_def_defaults
@@ -215,13 +210,27 @@ module Blacklight::SolrHelper
   def get_search_results(extra_controller_params={})
   
     
-    solr_response = Blacklight.solr.find(  self.solr_search_params(extra_controller_params) )
-
-    document_list = solr_response.docs.collect {|doc| SolrDocument.new(doc)}
-
-    return [solr_response, document_list]
+    solr_response = Blacklight.solr.find(  self.solr_search_params(:works,extra_controller_params) )
+    item_solr_response = Blacklight.solr.find(  self.solr_search_params(:manifestations,extra_controller_params) )
+    
+   
+    document_list = []
+    documents = solr_response.docs.collect {|doc| SolrDocument.new(doc)}
+    
+    documents.each do |doc|
+        extra_controller_params[:f] ||= {}
+        extra_controller_params[:f]["worknum_s"] = doc["id"]
+        manifestations = Blacklight.solr.find(  self.solr_search_params(:manifestations,extra_controller_params) )
+        manifestations_list = manifestations.docs.collect {|d| SolrDocument.new(d)}
+        document_list << {"document" => doc, "manifestations" => manifestations_list }
+    end
+    
+  
+    
+    return [solr_response, item_solr_response, document_list]
     
   end
+  
   
   # returns a params hash for finding a single solr document (CatalogController #show action)
   # If the id arg is nil, then the value is fetched from params[:id]
@@ -243,7 +252,14 @@ module Blacklight::SolrHelper
     solr_response = Blacklight.solr.find solr_doc_params(id, extra_controller_params)
     raise InvalidSolrID.new if solr_response.docs.empty?
     document = SolrDocument.new(solr_response.docs.first)
-    [solr_response, document]
+    
+    extra_controller_params[:f] ||= {}
+    extra_controller_params[:f]["worknum_s"] = document["id"]
+    manifestations = Blacklight.solr.find(  self.solr_search_params(:manifestations,extra_controller_params) )
+    manifestations_list = manifestations.docs.collect {|d| SolrDocument.new(d)}
+    
+    [solr_response, document, manifestations_list]
+    
   end
   
   # returns a params hash for a single facet field solr query.
@@ -255,9 +271,15 @@ module Blacklight::SolrHelper
   def solr_facet_params(facet_field, extra_controller_params={})
     input = params.deep_merge(extra_controller_params)
 
+    if  ["genrename_facet", "workdate_facet", "worklang_facet", "countryname_facet", "directorname_facet"].include?(facet_field)
+      mode = :works
+    else
+      mode = :manifestations
+    end
+    
     # First start with a standard solr search params calculations,
     # for any search context in our request params. 
-    solr_params = solr_search_params(extra_controller_params)
+    solr_params = solr_search_params(mode, extra_controller_params)
     
     # Now override with our specific things for fetching facet values
     solr_params[:facets] = {:fields => facet_field}
@@ -283,6 +305,10 @@ module Blacklight::SolrHelper
   # used to paginate through a single facet field's values
   # /catalog/facet/language_facet
   def get_facet_pagination(facet_field, extra_controller_params={})
+    
+    
+    
+    
     solr_params = solr_facet_params(facet_field, extra_controller_params)
 
     # Make the solr call

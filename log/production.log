@@ -337,3 +337,2965 @@ Rendering catalog/facet
 Rendered catalog/_facet_pagination (2.0ms)
 Rendered catalog/_facet_pagination (1.1ms)
 Completed in 29ms (View: 14, DB: 0) | 200 OK [http://localhost/catalog/facet/worktitle_facet]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 10:31:34) [GET]
+  Parameters: {"action"=>"index", "f"=>{"workdate_facet"=>["1960s"], "directorname_facet"=>["Kurosawa, Akira, 1910-1998"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (0.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24)) [0m
+Redirected to http://localhost:3000/
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 10:31:59) [GET]
+  Parameters: {"action"=>"index", "f"=>{"workdate_facet"=>["1960s"], "directorname_facet"=>["Kurosawa, Akira, 1910-1998"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (0.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24)) [0m
+
+Net::HTTPBadResponse (wrong status line: "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">"):
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/net/http.rb:2028:in `read_status_line'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/net/http.rb:2015:in `read_new'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/net/http.rb:1051:in `request'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/net/http.rb:1037:in `request'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/net/http.rb:543:in `start'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/net/http.rb:1035:in `request'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/net/http.rb:772:in `get'
+  rsolr (0.12.1) lib/rsolr/connection/net_http.rb:16:in `get'
+  rsolr (0.12.1) lib/rsolr/connection/requestable.rb:36:in `request'
+  rsolr (0.12.1) lib/rsolr/client.rb:34:in `request'
+  /Users/cfitz/.rvm/gems/ree-1.8.7-2010.02/gems/rsolr-ext-0.12.1/lib/rsolr-ext/client.rb:20:in `find'
+  vendor/plugins/blacklight/app/controllers/catalog_controller.rb:22:in `index'
+  haml (3.0.23) lib/sass/plugin/rack.rb:41:in `call'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (122.3ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 11:11:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mSearch Load (0.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (88.7ms)
+Rendered catalog/_home_text (0.3ms)
+Rendered catalog/_facets (38.4ms)
+Rendered catalog/_item_facets (13.8ms)
+Rendered catalog/_home (142.3ms)
+Rendered _user_util_links (10.5ms)
+Rendered _flash_msg (0.4ms)
+Completed in 398ms (View: 159, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 11:12:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.4ms)
+Rendered catalog/_home_text (0.1ms)
+Rendered catalog/_facets (15.5ms)
+Rendered catalog/_item_facets (12.9ms)
+Rendered catalog/_home (30.8ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 11260ms (View: 34, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 11:54:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mSearch Load (0.3ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.5ms)
+Rendered catalog/_home_text (0.1ms)
+Rendered catalog/_facets (13.9ms)
+Rendered catalog/_item_facets (12.9ms)
+Rendered catalog/_home (29.3ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 1040ms (View: 33, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 13:55:05) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;35;1mSearch Load (7.2ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.7ms)
+Rendered catalog/_home_text (0.0ms)
+Rendered catalog/_facets (12.7ms)
+Rendered catalog/_item_facets (13.2ms)
+Rendered catalog/_home (28.4ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 314ms (View: 32, DB: 7) | 200 OK [http://localhost/]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 13:55:15) [GET]
+  Parameters: {"action"=>"index", "f"=>{"libname_facet"=>["F"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (0.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24)) [0m
+  [4;35;1mSearch Create (56.6ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-09 21:55:15', '2010-11-09 21:55:15', NULL, '--- 
+:counter: "1"
+:total: 144
+:f: !map:HashWithIndifferentAccess 
+ libname_facet: 
+ - F
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (17.5ms)
+Rendered catalog/_search_form (1.3ms)
+Rendered catalog/_did_you_mean (0.9ms)
+Rendered catalog/_constraints (2.5ms)
+Rendered catalog/_sort_and_per_page (2.6ms)
+Rendered catalog/_bookmark_control (1.2ms)
+Rendered catalog/_index_partials/_default (0.5ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (20.4ms)
+Rendered catalog/_facets (15.9ms)
+Rendered catalog/_solr_request (0.4ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 603ms (View: 71, DB: 57) | 200 OK [http://localhost/?f%5Blibname_facet%5D%5B%5D=F]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 13:56:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mSearch Load (0.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.2ms)
+Rendered catalog/_home_text (0.0ms)
+Rendered catalog/_facets (12.2ms)
+Rendered catalog/_item_facets (12.7ms)
+Rendered catalog/_home (27.0ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 224ms (View: 31, DB: 0) | 200 OK [http://localhost/?]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 13:56:54) [GET]
+  Parameters: {"action"=>"index", "f"=>{"libname_facet"=>["C"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24)) [0m
+  [4;36;1mSearch Create (0.5ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-09 21:56:54', '2010-11-09 21:56:54', NULL, '--- 
+:counter: "1"
+:total: 144
+:f: !map:HashWithIndifferentAccess 
+ libname_facet: 
+ - C
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (17.5ms)
+Rendered catalog/_search_form (1.2ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (1.1ms)
+Rendered catalog/_sort_and_per_page (1.9ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (18.9ms)
+Rendered catalog/_facets (13.3ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 283ms (View: 63, DB: 1) | 200 OK [http://localhost/?f%5Blibname_facet%5D%5B%5D=C]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 13:57:00) [GET]
+  Parameters: {"action"=>"index", "f"=>{"libname_facet"=>["C"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24)) [0m
+  [4;36;1mSearch Create (0.4ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-09 21:57:01', '2010-11-09 21:57:01', NULL, '--- 
+:counter: "1"
+:total: 30
+:f: !map:HashWithIndifferentAccess 
+ libname_facet: 
+ - C
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (21.2ms)
+Rendered catalog/_search_form (1.5ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (1.8ms)
+Rendered catalog/_sort_and_per_page (93.6ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (18.7ms)
+Rendered catalog/_facets (15.8ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 393ms (View: 163, DB: 1) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Blibname_facet%5D%5B%5D=C]
+
+
+Processing CatalogController#update (for 127.0.0.1 at 2010-11-09 13:57:05) [PUT]
+  Parameters: {"action"=>"update", "_method"=>"put", "id"=>"145", "controller"=>"catalog", "counter"=>"1"}
+  [4;35;1mSearch Load (0.5ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24)) [0m
+Redirected to http://localhost:3000/catalog/145
+Completed in 3ms (DB: 1) | 302 Found [http://localhost/catalog/145]
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2010-11-09 13:57:05) [GET]
+  Parameters: {"action"=>"show", "id"=>"145", "controller"=>"catalog"}
+  [4;36;1mSearch Load (0.3ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_constraints (2.5ms)
+Rendered catalog/_previous_next_doc (1.7ms)
+Rendered catalog/_show_tools (1.1ms)
+Rendered catalog/_show_partials/_holdings (0.5ms)
+Rendered catalog/_show_partials/_default (1.5ms)
+Rendered catalog/_solr_request (0.0ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 490ms (View: 14, DB: 0) | 200 OK [http://localhost/catalog/145]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 13:57:15) [GET]
+  Parameters: {"action"=>"index", "f"=>{"libname_facet"=>["C"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24)) [0m
+  [4;36;1mSearch Create (0.5ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-09 21:57:15', '2010-11-09 21:57:15', NULL, '--- 
+:counter: "1"
+:total: 30
+:f: !map:HashWithIndifferentAccess 
+ libname_facet: 
+ - C
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (95.8ms)
+Rendered catalog/_search_form (1.4ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (2.0ms)
+Rendered catalog/_sort_and_per_page (2.1ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (18.9ms)
+Rendered catalog/_facets (16.1ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 353ms (View: 146, DB: 1) | 200 OK [http://localhost/catalog?f%5Bformat_facet%5D%5B%5D=DVD&f%5Blibname_facet%5D%5B%5D=C]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 14:56:29) [GET]
+  Parameters: {"action"=>"index", "f"=>{"libname_facet"=>["C"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24)) [0m
+  [4;36;1mSearch Create (0.6ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-09 22:56:29', '2010-11-09 22:56:29', NULL, '--- 
+:counter: "1"
+:total: 30
+:f: !map:HashWithIndifferentAccess 
+ libname_facet: 
+ - C
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (21.9ms)
+Rendered catalog/_search_form (1.5ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (2.1ms)
+Rendered catalog/_sort_and_per_page (2.6ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (19.2ms)
+Rendered catalog/_facets (16.0ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.2ms)
+Rendered _flash_msg (0.1ms)
+Completed in 365ms (View: 73, DB: 1) | 200 OK [http://localhost/catalog?f%5Bformat_facet%5D%5B%5D=DVD&f%5Blibname_facet%5D%5B%5D=C]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 14:56:42) [GET]
+  Parameters: {"action"=>"index", "f"=>{"libname_facet"=>["C"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.5ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24)) [0m
+  [4;36;1mSearch Create (0.4ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-09 22:56:42', '2010-11-09 22:56:42', NULL, '--- 
+:counter: "1"
+:total: 30
+:f: !map:HashWithIndifferentAccess 
+ libname_facet: 
+ - C
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (20.4ms)
+Rendered catalog/_search_form (1.4ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (1.8ms)
+Rendered catalog/_sort_and_per_page (2.2ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (18.8ms)
+Rendered catalog/_facets (15.8ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 269ms (View: 70, DB: 1) | 200 OK [http://localhost/catalog?f[format_facet][]=DVD&f[libname_facet][]=C]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 14:56:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.6ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.2ms)
+Rendered catalog/_home_text (0.0ms)
+Rendered catalog/_facets (14.6ms)
+Rendered catalog/_item_facets (13.6ms)
+Rendered catalog/_home (30.2ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 230ms (View: 34, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:31:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mSearch Load (0.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (90.2ms)
+Rendered catalog/_home_text (0.2ms)
+Rendered catalog/_facets (11.4ms)
+Rendered catalog/_item_facets (11.6ms)
+Rendered catalog/_home (114.6ms)
+Rendered _user_util_links (8.2ms)
+Rendered _flash_msg (0.4ms)
+Completed in 430ms (View: 129, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:44:05) [GET]
+  Parameters: {"action"=>"index", "f"=>{"libname_facet"=>["C"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (0.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24)) [0m
+  [4;35;1mSearch Create (0.7ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 04:44:05', '2010-11-10 04:44:05', NULL, '--- 
+:counter: "1"
+:total: 144
+:f: !map:HashWithIndifferentAccess 
+ libname_facet: 
+ - C
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (15.6ms)
+Rendered catalog/_search_form (1.9ms)
+Rendered catalog/_did_you_mean (0.4ms)
+Rendered catalog/_constraints (2.4ms)
+Rendered catalog/_sort_and_per_page (2.9ms)
+Rendered catalog/_bookmark_control (8.5ms)
+Rendered catalog/_index_partials/_default (0.6ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (27.9ms)
+Rendered catalog/_facets (11.3ms)
+Rendered catalog/_solr_request (0.3ms)
+Rendered _user_util_links (0.6ms)
+Rendered _flash_msg (0.3ms)
+Completed in 397ms (View: 75, DB: 1) | 200 OK [http://localhost/?f%5Blibname_facet%5D%5B%5D=C]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:44:08) [GET]
+  Parameters: {"action"=>"index", "f"=>{"libname_facet"=>["C"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (0.5ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24)) [0m
+  [4;35;1mSearch Create (0.5ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 04:44:08', '2010-11-10 04:44:08', NULL, '--- 
+:counter: "1"
+:total: 30
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - C:DVD
+ libname_facet: 
+ - C
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (18.4ms)
+Rendered catalog/_search_form (1.5ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (3.0ms)
+Rendered catalog/_sort_and_per_page (2.5ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (3.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (93.7ms)
+Rendered catalog/_facets (9.7ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 441ms (View: 140, DB: 1) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Blibname_facet%5D%5B%5D=C]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-09 20:47:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+
+SyntaxError (/Users/cfitz/code/olac/lib/blacklight/solr_helper.rb:85: syntax error, unexpected '|'
+/Users/cfitz/code/olac/lib/blacklight/solr_helper.rb:89: syntax error, unexpected kELSIF, expecting kEND
+        elsif params[key].has_key?("holdings_regular_facet")
+             ^
+/Users/cfitz/code/olac/lib/blacklight/solr_helper.rb:311: syntax error, unexpected kEND, expecting $end):
+  vendor/plugins/blacklight/app/controllers/catalog_controller.rb:3
+  rake (0.8.7) lib/rake.rb:2503:in `const_missing'
+  haml (3.0.23) lib/sass/plugin/rack.rb:41:in `call'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (129.5ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:49:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mSearch Load (0.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (91.1ms)
+Rendered catalog/_home_text (0.2ms)
+Rendered catalog/_facets (11.2ms)
+Rendered catalog/_item_facets (11.2ms)
+Rendered catalog/_home (114.9ms)
+Rendered _user_util_links (8.1ms)
+Rendered _flash_msg (0.4ms)
+Completed in 621ms (View: 129, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:50:05) [GET]
+  Parameters: {"action"=>"index", "f"=>{"libname_facet"=>["C"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.6ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24)) [0m
+  [4;36;1mSearch Create (0.7ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 04:50:05', '2010-11-10 04:50:05', NULL, '--- 
+:counter: "1"
+:total: 144
+:f: !map:HashWithIndifferentAccess 
+ libname_facet: 
+ - C
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (13.9ms)
+Rendered catalog/_search_form (1.3ms)
+Rendered catalog/_did_you_mean (0.5ms)
+Rendered catalog/_constraints (2.4ms)
+Rendered catalog/_sort_and_per_page (3.0ms)
+Rendered catalog/_bookmark_control (1.2ms)
+Rendered catalog/_index_partials/_default (0.5ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (22.0ms)
+Rendered catalog/_facets (11.2ms)
+Rendered catalog/_solr_request (0.4ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 278ms (View: 63, DB: 1) | 200 OK [http://localhost/?f%5Blibname_facet%5D%5B%5D=C]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:50:08) [GET]
+  Parameters: {"action"=>"index", "f"=>{"libname_facet"=>["C"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.7ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24)) [0m
+  [4;36;1mSearch Create (63.4ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 04:50:09', '2010-11-10 04:50:09', NULL, '--- 
+:counter: "1"
+:total: 30
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - C:DVD
+ libname_facet: 
+ - C
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (18.9ms)
+Rendered catalog/_search_form (1.5ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (3.2ms)
+Rendered catalog/_sort_and_per_page (2.5ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (19.5ms)
+Rendered catalog/_facets (9.7ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 429ms (View: 67, DB: 64) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Blibname_facet%5D%5B%5D=C]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:52:29) [GET]
+  Parameters: {"action"=>"index", "f"=>{"libname_facet"=>["C"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (3.6ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24)) [0m
+  [4;36;1mSearch Create (0.5ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 04:52:29', '2010-11-10 04:52:29', NULL, '--- 
+:counter: "1"
+:total: 13
+:f: !map:HashWithIndifferentAccess 
+ libname_facet: 
+ - C
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (13.5ms)
+Rendered catalog/_search_form (1.3ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (1.0ms)
+Rendered catalog/_sort_and_per_page (1.9ms)
+Rendered catalog/_bookmark_control (81.9ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (102.1ms)
+Rendered catalog/_facets (10.5ms)
+Rendered catalog/_solr_request (0.0ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 355ms (View: 139, DB: 4) | 200 OK [http://localhost/?&f[libname_facet][]=C]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:52:38) [GET]
+  Parameters: {"action"=>"index", "f"=>{"libname_facet"=>["C"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.8ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24)) [0m
+  [4;36;1mSearch Create (0.5ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 04:52:38', '2010-11-10 04:52:38', NULL, '--- 
+:counter: "1"
+:total: 30
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - C:DVD
+ libname_facet: 
+ - C
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (19.3ms)
+Rendered catalog/_search_form (1.6ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (3.0ms)
+Rendered catalog/_sort_and_per_page (2.4ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (18.9ms)
+Rendered catalog/_facets (9.7ms)
+Rendered catalog/_solr_request (0.0ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 583ms (View: 66, DB: 1) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Blibname_facet%5D%5B%5D=C]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:52:58) [GET]
+  Parameters: {"action"=>"index", "f"=>{"holdings_regular_facet"=>["C:DVD"], "libname_facet"=>["C", "F"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.9ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24)) [0m
+  [4;36;1mSearch Create (0.4ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 04:52:58', '2010-11-10 04:52:58', NULL, '--- 
+:counter: "1"
+:total: 13
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - C:DVD
+ - F:DVD
+ libname_facet: 
+ - C
+ - F
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (0.1ms)
+Rendered catalog/_search_form (1.8ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (8.0ms)
+Rendered catalog/_sort_and_per_page (1.7ms)
+Rendered catalog/_document_list (0.0ms)
+Rendered catalog/_facets (0.1ms)
+Rendered catalog/_solr_request (0.0ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 326ms (View: 16, DB: 1) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Bholdings_regular_facet%5D%5B%5D=C%3ADVD&f%5Blibname_facet%5D%5B%5D=C&f%5Blibname_facet%5D%5B%5D=F]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:53:09) [GET]
+  Parameters: {"action"=>"index", "f"=>{"holdings_regular_facet"=>["C:DVD"], "libname_facet"=>["C"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.7ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24)) [0m
+  [4;36;1mSearch Create (0.5ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 04:53:09', '2010-11-10 04:53:09', NULL, '--- 
+:counter: "1"
+:total: 0
+:f: !map:HashWithIndifferentAccess 
+ libname_facet: 
+ - C
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (13.6ms)
+Rendered catalog/_search_form (1.3ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (1.1ms)
+Rendered catalog/_sort_and_per_page (2.1ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (19.0ms)
+Rendered catalog/_facets (10.2ms)
+Rendered catalog/_solr_request (0.0ms)
+Rendered _user_util_links (0.2ms)
+Rendered _flash_msg (0.1ms)
+Completed in 284ms (View: 56, DB: 1) | 200 OK [http://localhost/?f%5Bholdings_regular_facet%5D%5B%5D=C%3ADVD&f%5Blibname_facet%5D%5B%5D=C]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:53:11) [GET]
+  Parameters: {"action"=>"index", "f"=>{"libname_facet"=>["C"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.8ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24)) [0m
+  [4;36;1mSearch Create (0.4ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 04:53:12', '2010-11-10 04:53:12', NULL, '--- 
+:counter: "1"
+:total: 30
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - C:DVD
+ libname_facet: 
+ - C
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (18.8ms)
+Rendered catalog/_search_form (1.5ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (3.1ms)
+Rendered catalog/_sort_and_per_page (2.5ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (18.9ms)
+Rendered catalog/_facets (9.8ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 1271ms (View: 66, DB: 1) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Blibname_facet%5D%5B%5D=C]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:53:14) [GET]
+  Parameters: {"action"=>"index", "f"=>{"holdings_regular_facet"=>["C:DVD"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.9ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24)) [0m
+  [4;36;1mSearch Create (0.4ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 04:53:14', '2010-11-10 04:53:14', NULL, '--- 
+:counter: "1"
+:total: 13
+:f: !map:HashWithIndifferentAccess 
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (14.0ms)
+Rendered catalog/_search_form (1.2ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (1.1ms)
+Rendered catalog/_sort_and_per_page (2.0ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (3.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (96.0ms)
+Rendered catalog/_facets (12.9ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 346ms (View: 139, DB: 1) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Bholdings_regular_facet%5D%5B%5D=C%3ADVD]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:53:17) [GET]
+  Parameters: {"action"=>"index", "f"=>{"libname_facet"=>["F"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.8ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24)) [0m
+  [4;36;1mSearch Create (0.4ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 04:53:17', '2010-11-10 04:53:17', NULL, '--- 
+:counter: "1"
+:total: 102
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - F:DVD
+ libname_facet: 
+ - F
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (18.7ms)
+Rendered catalog/_search_form (1.6ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (3.1ms)
+Rendered catalog/_sort_and_per_page (2.4ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (18.9ms)
+Rendered catalog/_facets (12.7ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.2ms)
+Rendered _flash_msg (0.1ms)
+Completed in 374ms (View: 69, DB: 1) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Blibname_facet%5D%5B%5D=F]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:53:26) [GET]
+  Parameters: {"action"=>"index", "f"=>{"holdings_regular_facet"=>["F:DVD"], "libname_facet"=>["F", "E"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.0ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24)) [0m
+  [4;36;1mSearch Create (0.4ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 04:53:26', '2010-11-10 04:53:26', NULL, '--- 
+:counter: "1"
+:total: 15
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - F:DVD
+ - E:DVD
+ libname_facet: 
+ - F
+ - E
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (14.5ms)
+Rendered catalog/_search_form (1.8ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (6.4ms)
+Rendered catalog/_sort_and_per_page (3.0ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (6.3ms)
+Rendered catalog/_facets (16.0ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 348ms (View: 52, DB: 1) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Bholdings_regular_facet%5D%5B%5D=F%3ADVD&f%5Blibname_facet%5D%5B%5D=F&f%5Blibname_facet%5D%5B%5D=E]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:53:28) [GET]
+  Parameters: {"action"=>"index", "f"=>{"holdings_regular_facet"=>["E:DVD"], "libname_facet"=>["F", "E"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.9ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24)) [0m
+  [4;36;1mSearch Create (0.5ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 04:53:29', '2010-11-10 04:53:29', NULL, '--- 
+:counter: "1"
+:total: 3
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - F:DVD
+ - E:DVD
+ libname_facet: 
+ - F
+ - E
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (13.7ms)
+Rendered catalog/_search_form (1.7ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (6.4ms)
+Rendered catalog/_sort_and_per_page (3.1ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (6.4ms)
+Rendered catalog/_facets (15.6ms)
+Rendered catalog/_solr_request (0.0ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 420ms (View: 124, DB: 1) | 200 OK [http://localhost/catalog?f%5Bformat_facet%5D%5B%5D=DVD&f%5Bholdings_regular_facet%5D%5B%5D=E%3ADVD&f%5Blibname_facet%5D%5B%5D=F&f%5Blibname_facet%5D%5B%5D=E]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:53:30) [GET]
+  Parameters: {"action"=>"index", "f"=>{"holdings_regular_facet"=>["F:DVD"], "libname_facet"=>["F", "E"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.9ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24)) [0m
+  [4;36;1mSearch Create (0.4ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 04:53:30', '2010-11-10 04:53:30', NULL, '--- 
+:counter: "1"
+:total: 3
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - F:DVD
+ - E:DVD
+ libname_facet: 
+ - F
+ - E
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (13.7ms)
+Rendered catalog/_search_form (1.7ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (7.4ms)
+Rendered catalog/_sort_and_per_page (3.2ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (6.4ms)
+Rendered catalog/_facets (16.9ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.2ms)
+Completed in 374ms (View: 54, DB: 1) | 200 OK [http://localhost/catalog?f%5Bformat_facet%5D%5B%5D=DVD&f%5Bholdings_regular_facet%5D%5B%5D=F%3ADVD&f%5Blibname_facet%5D%5B%5D=F&f%5Blibname_facet%5D%5B%5D=E]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:53:45) [GET]
+  Parameters: {"action"=>"index", "f"=>{"holdings_regular_facet"=>["F:DVD", "E:DVD"], "libname_facet"=>["E"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (0.9ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24)) [0m
+  [4;36;1mSearch Create (0.6ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 04:53:45', '2010-11-10 04:53:45', NULL, '--- 
+:counter: "1"
+:total: 3
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - E:DVD
+ libname_facet: 
+ - E
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (18.9ms)
+Rendered catalog/_search_form (1.5ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (3.2ms)
+Rendered catalog/_sort_and_per_page (81.3ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (17.6ms)
+Rendered catalog/_facets (13.1ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 440ms (View: 140, DB: 1) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Bholdings_regular_facet%5D%5B%5D=F%3ADVD&f%5Bholdings_regular_facet%5D%5B%5D=E%3ADVD&f%5Blibname_facet%5D%5B%5D=E]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:53:48) [GET]
+  Parameters: {"action"=>"index", "f"=>{"holdings_regular_facet"=>["E:DVD"], "libname_facet"=>["E"], "format_facet"=>["DVD", "VHS"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.0ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24)) [0m
+  [4;36;1mSearch Create (0.7ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 04:53:48', '2010-11-10 04:53:48', NULL, '--- 
+:counter: "1"
+:total: 9
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - E:DVD
+ - E:VHS
+ libname_facet: 
+ - E
+ format_facet: 
+ - DVD
+ - VHS
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (0.1ms)
+Rendered catalog/_search_form (1.8ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (9.0ms)
+Rendered catalog/_sort_and_per_page (1.6ms)
+Rendered catalog/_document_list (0.0ms)
+Rendered catalog/_facets (0.1ms)
+Rendered catalog/_solr_request (0.0ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 308ms (View: 17, DB: 2) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Bformat_facet%5D%5B%5D=VHS&f%5Bholdings_regular_facet%5D%5B%5D=E%3ADVD&f%5Blibname_facet%5D%5B%5D=E]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:54:13) [GET]
+  Parameters: {"action"=>"index", "f"=>{"holdings_regular_facet"=>["E:DVD"], "libname_facet"=>["E", "F"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.0ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24)) [0m
+  [4;36;1mSearch Create (0.4ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 04:54:13', '2010-11-10 04:54:13', NULL, '--- 
+:counter: "1"
+:total: 0
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - E:DVD
+ - F:DVD
+ libname_facet: 
+ - E
+ - F
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (14.4ms)
+Rendered catalog/_search_form (6.0ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (7.1ms)
+Rendered catalog/_sort_and_per_page (3.0ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (7.3ms)
+Rendered catalog/_facets (15.8ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 424ms (View: 133, DB: 1) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Bholdings_regular_facet%5D%5B%5D=E%3ADVD&f%5Blibname_facet%5D%5B%5D=E&f%5Blibname_facet%5D%5B%5D=F]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:54:24) [GET]
+  Parameters: {"action"=>"index", "f"=>{"holdings_regular_facet"=>["E:DVD", "F:DVD"], "libname_facet"=>["E"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.0ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24)) [0m
+  [4;36;1mSearch Create (0.5ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 04:54:25', '2010-11-10 04:54:25', NULL, '--- 
+:counter: "1"
+:total: 3
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - E:DVD
+ libname_facet: 
+ - E
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (18.6ms)
+Rendered catalog/_search_form (1.5ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (3.1ms)
+Rendered catalog/_sort_and_per_page (2.5ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (17.1ms)
+Rendered catalog/_facets (13.0ms)
+Rendered catalog/_solr_request (0.0ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 360ms (View: 60, DB: 2) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Bholdings_regular_facet%5D%5B%5D=E%3ADVD&f%5Bholdings_regular_facet%5D%5B%5D=F%3ADVD&f%5Blibname_facet%5D%5B%5D=E]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:54:27) [GET]
+  Parameters: {"action"=>"index", "f"=>{"holdings_regular_facet"=>["E:DVD"], "libname_facet"=>["E"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.0ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25)) [0m
+  [4;36;1mSearch Create (0.4ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 04:54:27', '2010-11-10 04:54:27', NULL, '--- 
+:counter: "1"
+:total: 9
+:f: !map:HashWithIndifferentAccess 
+ libname_facet: 
+ - E
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (13.9ms)
+Rendered catalog/_search_form (1.4ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (1.1ms)
+Rendered catalog/_sort_and_per_page (2.1ms)
+Rendered catalog/_bookmark_control (0.8ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (19.4ms)
+Rendered catalog/_facets (11.2ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 270ms (View: 58, DB: 1) | 200 OK [http://localhost/?f%5Bholdings_regular_facet%5D%5B%5D=E%3ADVD&f%5Blibname_facet%5D%5B%5D=E]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:54:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.2ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.2ms)
+Rendered catalog/_home_text (0.0ms)
+Rendered catalog/_facets (8.2ms)
+Rendered catalog/_item_facets (11.2ms)
+Rendered catalog/_home (21.3ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 240ms (View: 25, DB: 1) | 200 OK [http://localhost/?]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:54:41) [GET]
+  Parameters: {"action"=>"index", "f"=>{"libname_facet"=>["C"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.1ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26)) [0m
+  [4;35;1mSearch Create (0.4ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 04:54:41', '2010-11-10 04:54:41', NULL, '--- 
+:counter: "1"
+:total: 144
+:f: !map:HashWithIndifferentAccess 
+ libname_facet: 
+ - C
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (13.5ms)
+Rendered catalog/_search_form (1.4ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (1.1ms)
+Rendered catalog/_sort_and_per_page (2.0ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.3ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (20.9ms)
+Rendered catalog/_facets (11.1ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 267ms (View: 59, DB: 1) | 200 OK [http://localhost/?f%5Blibname_facet%5D%5B%5D=C]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:54:47) [GET]
+  Parameters: {"action"=>"index", "f"=>{"libname_facet"=>["C"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.0ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27)) [0m
+  [4;35;1mSearch Create (0.4ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 04:54:47', '2010-11-10 04:54:47', NULL, '--- 
+:counter: "1"
+:total: 30
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - C:DVD
+ libname_facet: 
+ - C
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (20.0ms)
+Rendered catalog/_search_form (1.7ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (3.1ms)
+Rendered catalog/_sort_and_per_page (2.5ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (3.5ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (97.4ms)
+Rendered catalog/_facets (9.6ms)
+Rendered catalog/_solr_request (0.0ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 463ms (View: 146, DB: 1) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Blibname_facet%5D%5B%5D=C]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:55:09) [GET]
+  Parameters: {"action"=>"index", "f"=>{"workdate_facet"=>["2000s"], "holdings_regular_facet"=>["C:DVD"], "libname_facet"=>["C"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28)) [0m
+  [4;35;1mSearch Create (0.5ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 04:55:09', '2010-11-10 04:55:09', NULL, '--- 
+:counter: "1"
+:total: 13
+:f: !map:HashWithIndifferentAccess 
+ workdate_facet: 
+ - 2000s
+ holdings_regular_facet: 
+ - C:DVD
+ libname_facet: 
+ - C
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (14.4ms)
+Rendered catalog/_search_form (1.7ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (4.6ms)
+Rendered catalog/_sort_and_per_page (2.8ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (9.6ms)
+Rendered catalog/_facets (6.3ms)
+Rendered catalog/_solr_request (0.0ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 343ms (View: 43, DB: 2) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Bholdings_regular_facet%5D%5B%5D=C%3ADVD&f%5Blibname_facet%5D%5B%5D=C&f%5Bworkdate_facet%5D%5B%5D=2000s]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:55:17) [GET]
+  Parameters: {"action"=>"index", "f"=>{"workdate_facet"=>["2000s"], "holdings_regular_facet"=>["C:DVD"], "libname_facet"=>["C", "D"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29)) [0m
+  [4;35;1mSearch Create (0.4ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 04:55:18', '2010-11-10 04:55:18', NULL, '--- 
+:counter: "1"
+:total: 5
+:f: !map:HashWithIndifferentAccess 
+ workdate_facet: 
+ - 2000s
+ holdings_regular_facet: 
+ - C:DVD
+ - D:DVD
+ libname_facet: 
+ - C
+ - D
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (0.1ms)
+Rendered catalog/_search_form (1.8ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (9.3ms)
+Rendered catalog/_sort_and_per_page (1.8ms)
+Rendered catalog/_document_list (0.0ms)
+Rendered catalog/_facets (0.1ms)
+Rendered catalog/_solr_request (0.0ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 397ms (View: 18, DB: 2) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Bholdings_regular_facet%5D%5B%5D=C%3ADVD&f%5Blibname_facet%5D%5B%5D=C&f%5Blibname_facet%5D%5B%5D=D&f%5Bworkdate_facet%5D%5B%5D=2000s]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:55:22) [GET]
+  Parameters: {"action"=>"index", "f"=>{"workdate_facet"=>["2000s"], "holdings_regular_facet"=>["C:DVD", "D:DVD"], "libname_facet"=>["D"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30)) [0m
+  [4;35;1mSearch Create (0.5ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 04:55:23', '2010-11-10 04:55:23', NULL, '--- 
+:counter: "1"
+:total: 0
+:f: !map:HashWithIndifferentAccess 
+ workdate_facet: 
+ - 2000s
+ holdings_regular_facet: 
+ - D:DVD
+ libname_facet: 
+ - D
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (0.1ms)
+Rendered catalog/_search_form (1.7ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (4.7ms)
+Rendered catalog/_sort_and_per_page (1.6ms)
+Rendered catalog/_document_list (0.0ms)
+Rendered catalog/_facets (0.1ms)
+Rendered catalog/_solr_request (0.0ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 307ms (View: 15, DB: 2) | 200 OK [http://localhost/catalog?f%5Bformat_facet%5D%5B%5D=DVD&f%5Bholdings_regular_facet%5D%5B%5D=C%3ADVD&f%5Bholdings_regular_facet%5D%5B%5D=D%3ADVD&f%5Blibname_facet%5D%5B%5D=D&f%5Bworkdate_facet%5D%5B%5D=2000s]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:55:26) [GET]
+  Parameters: {"action"=>"index", "f"=>{"holdings_regular_facet"=>["D:DVD"], "libname_facet"=>["D"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.1ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31)) [0m
+  [4;35;1mSearch Create (0.4ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 04:55:27', '2010-11-10 04:55:27', NULL, '--- 
+:counter: "1"
+:total: 0
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - D:DVD
+ libname_facet: 
+ - D
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (10.2ms)
+Rendered catalog/_search_form (1.5ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (3.2ms)
+Rendered catalog/_sort_and_per_page (2.7ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (3.4ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (94.6ms)
+Rendered catalog/_facets (10.5ms)
+Rendered catalog/_solr_request (0.0ms)
+Rendered _user_util_links (0.2ms)
+Rendered _flash_msg (0.1ms)
+Completed in 463ms (View: 127, DB: 2) | 200 OK [http://localhost/catalog?f%5Bformat_facet%5D%5B%5D=DVD&f%5Bholdings_regular_facet%5D%5B%5D=D%3ADVD&f%5Blibname_facet%5D%5B%5D=D]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:55:45) [GET]
+  Parameters: {"action"=>"index", "f"=>{"holdings_regular_facet"=>["D:DVD"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32)) [0m
+  [4;35;1mSearch Create (0.5ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 04:55:45', '2010-11-10 04:55:45', NULL, '--- 
+:counter: "1"
+:total: 10
+:f: !map:HashWithIndifferentAccess 
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (13.3ms)
+Rendered catalog/_search_form (1.3ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (1.1ms)
+Rendered catalog/_sort_and_per_page (1.9ms)
+Rendered catalog/_bookmark_control (0.8ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_document_list (19.0ms)
+Rendered catalog/_facets (10.0ms)
+Rendered catalog/_solr_request (0.0ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 266ms (View: 57, DB: 2) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Bholdings_regular_facet%5D%5B%5D=D%3ADVD]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:55:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33)) [0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_search_form (1.2ms)
+Rendered catalog/_home_text (0.0ms)
+Rendered catalog/_facets (8.3ms)
+Rendered catalog/_item_facets (10.1ms)
+Rendered catalog/_home (20.3ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 230ms (View: 24, DB: 1) | 200 OK [http://localhost/?]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:55:58) [GET]
+  Parameters: {"action"=>"index", "f"=>{"libname_facet"=>["F"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.0ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33)) [0m
+  [4;36;1mSearch Create (0.4ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 04:55:59', '2010-11-10 04:55:59', NULL, '--- 
+:counter: "1"
+:total: 144
+:f: !map:HashWithIndifferentAccess 
+ libname_facet: 
+ - F
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (13.9ms)
+Rendered catalog/_search_form (1.2ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (1.1ms)
+Rendered catalog/_sort_and_per_page (2.1ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (19.1ms)
+Rendered catalog/_facets (11.0ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 268ms (View: 58, DB: 1) | 200 OK [http://localhost/?f%5Blibname_facet%5D%5B%5D=F]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:56:01) [GET]
+  Parameters: {"action"=>"index", "f"=>{"libname_facet"=>["F"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.1ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34)) [0m
+  [4;36;1mSearch Create (0.5ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 04:56:01', '2010-11-10 04:56:01', NULL, '--- 
+:counter: "1"
+:total: 64
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - F:DVD
+ libname_facet: 
+ - F
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (19.1ms)
+Rendered catalog/_search_form (1.6ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (3.0ms)
+Rendered catalog/_sort_and_per_page (2.5ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (19.0ms)
+Rendered catalog/_facets (13.7ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 379ms (View: 70, DB: 2) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Blibname_facet%5D%5B%5D=F]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:56:35) [GET]
+  Parameters: {"action"=>"index", "f"=>{"holdings_regular_facet"=>["F:DVD"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.8ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (34,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35)) [0m
+  [4;36;1mSearch Create (0.4ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 04:56:35', '2010-11-10 04:56:35', NULL, '--- 
+:counter: "1"
+:total: 15
+:f: !map:HashWithIndifferentAccess 
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (13.3ms)
+Rendered catalog/_search_form (1.2ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (1.1ms)
+Rendered catalog/_sort_and_per_page (2.9ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (93.5ms)
+Rendered catalog/_facets (10.3ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 353ms (View: 133, DB: 2) | 200 OK [http://localhost/?f[format_facet][]=DVD&f[holdings_regular_facet][]=F:DVD]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:56:50) [GET]
+  Parameters: {"action"=>"index", "f"=>{"libname_facet"=>["F"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (35,34,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36)) [0m
+  [4;36;1mSearch Create (0.4ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 04:56:50', '2010-11-10 04:56:50', NULL, '--- 
+:counter: "1"
+:total: 102
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - F:DVD
+ libname_facet: 
+ - F
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (19.4ms)
+Rendered catalog/_search_form (1.6ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (3.2ms)
+Rendered catalog/_sort_and_per_page (2.8ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (18.8ms)
+Rendered catalog/_facets (12.6ms)
+Rendered catalog/_solr_request (0.0ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 369ms (View: 69, DB: 2) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Blibname_facet%5D%5B%5D=F]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:57:03) [GET]
+  Parameters: {"action"=>"index", "f"=>{"holdings_regular_facet"=>["F:DVD"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.2ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (36,35,34,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37)) [0m
+  [4;36;1mSearch Create (0.4ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 04:57:04', '2010-11-10 04:57:04', NULL, '--- 
+:counter: "1"
+:total: 15
+:f: !map:HashWithIndifferentAccess 
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (13.3ms)
+Rendered catalog/_search_form (1.5ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (1.1ms)
+Rendered catalog/_sort_and_per_page (2.2ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (18.9ms)
+Rendered catalog/_facets (10.4ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 747ms (View: 59, DB: 2) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Bholdings_regular_facet%5D%5B%5D=F%3ADVD]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:57:06) [GET]
+  Parameters: {"action"=>"index", "f"=>{"libname_facet"=>["C"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (37,36,35,34,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38)) [0m
+  [4;36;1mSearch Create (0.4ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 04:57:07', '2010-11-10 04:57:07', NULL, '--- 
+:counter: "1"
+:total: 102
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - C:DVD
+ libname_facet: 
+ - C
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (19.4ms)
+Rendered catalog/_search_form (1.5ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (3.1ms)
+Rendered catalog/_sort_and_per_page (2.8ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (3.2ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (93.7ms)
+Rendered catalog/_facets (10.0ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 1143ms (View: 142, DB: 2) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Blibname_facet%5D%5B%5D=C]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:57:21) [GET]
+  Parameters: {"action"=>"index", "f"=>{"holdings_regular_facet"=>["C:DVD"], "libname_facet"=>["C", "F"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.5ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39)) [0m
+  [4;36;1mSearch Create (0.4ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 04:57:22', '2010-11-10 04:57:22', NULL, '--- 
+:counter: "1"
+:total: 13
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - C:DVD
+ - F:DVD
+ libname_facet: 
+ - C
+ - F
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (0.1ms)
+Rendered catalog/_search_form (1.8ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (6.7ms)
+Rendered catalog/_sort_and_per_page (1.7ms)
+Rendered catalog/_document_list (0.1ms)
+Rendered catalog/_facets (0.1ms)
+Rendered catalog/_solr_request (0.0ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 1018ms (View: 15, DB: 2) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Bholdings_regular_facet%5D%5B%5D=C%3ADVD&f%5Blibname_facet%5D%5B%5D=C&f%5Blibname_facet%5D%5B%5D=F]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:57:43) [GET]
+  Parameters: {"action"=>"index", "f"=>{"holdings_regular_facet"=>["C:DVD"], "libname_facet"=>["C", "D"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40)) [0m
+  [4;36;1mSearch Create (0.5ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 04:57:43', '2010-11-10 04:57:43', NULL, '--- 
+:counter: "1"
+:total: 0
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - C:DVD
+ - D:DVD
+ libname_facet: 
+ - C
+ - D
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (0.1ms)
+Rendered catalog/_search_form (1.9ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (7.5ms)
+Rendered catalog/_sort_and_per_page (1.6ms)
+Rendered catalog/_document_list (0.0ms)
+Rendered catalog/_facets (0.1ms)
+Rendered catalog/_solr_request (0.0ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 319ms (View: 16, DB: 2) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Bholdings_regular_facet%5D%5B%5D=C%3ADVD&f%5Blibname_facet%5D%5B%5D=C&f%5Blibname_facet%5D%5B%5D=D]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:57:47) [GET]
+  Parameters: {"action"=>"index", "f"=>{"holdings_regular_facet"=>["C:DVD"], "libname_facet"=>["C", "B"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41)) [0m
+  [4;36;1mSearch Create (0.5ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 04:57:47', '2010-11-10 04:57:47', NULL, '--- 
+:counter: "1"
+:total: 0
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - C:DVD
+ - B:DVD
+ libname_facet: 
+ - C
+ - B
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (7.4ms)
+Rendered catalog/_search_form (2.0ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (6.9ms)
+Rendered catalog/_sort_and_per_page (1.7ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (2.7ms)
+Rendered catalog/_facets (7.0ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 327ms (View: 32, DB: 2) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Bholdings_regular_facet%5D%5B%5D=C%3ADVD&f%5Blibname_facet%5D%5B%5D=C&f%5Blibname_facet%5D%5B%5D=B]
+
+
+Processing CatalogController#update (for 127.0.0.1 at 2010-11-09 20:57:54) [PUT]
+  Parameters: {"action"=>"update", "_method"=>"put", "id"=>"156", "controller"=>"catalog", "counter"=>"1"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42)) [0m
+Redirected to http://localhost:3000/catalog/156
+Completed in 5ms (DB: 1) | 302 Found [http://localhost/catalog/156]
+
+
+Processing CatalogController#show (for 127.0.0.1 at 2010-11-09 20:57:54) [GET]
+  Parameters: {"action"=>"show", "id"=>"156", "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42)) [0m
+Rendering template within layouts/application
+Rendering catalog/show
+Rendered catalog/_constraints (6.8ms)
+Rendered catalog/_previous_next_doc (0.4ms)
+Rendered catalog/_show_tools (1.0ms)
+Rendered catalog/_show_partials/_holdings (0.5ms)
+Rendered catalog/_show_partials/_default (1.6ms)
+Rendered catalog/_solr_request (0.0ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 527ms (View: 16, DB: 1) | 200 OK [http://localhost/catalog/156]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:58:01) [GET]
+  Parameters: {"action"=>"index", "f"=>{"holdings_regular_facet"=>["C:DVD"], "libname_facet"=>["C", "A"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.3ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42)) [0m
+  [4;36;1mSearch Create (0.5ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 04:58:02', '2010-11-10 04:58:02', NULL, '--- 
+:counter: "1"
+:total: 1
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - C:DVD
+ - A:DVD
+ libname_facet: 
+ - C
+ - A
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (6.6ms)
+Rendered catalog/_search_form (1.8ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (7.2ms)
+Rendered catalog/_sort_and_per_page (1.6ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (2.7ms)
+Rendered catalog/_facets (9.5ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.2ms)
+Rendered _flash_msg (0.1ms)
+Completed in 330ms (View: 36, DB: 2) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Bholdings_regular_facet%5D%5B%5D=C%3ADVD&f%5Blibname_facet%5D%5B%5D=C&f%5Blibname_facet%5D%5B%5D=A]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 20:58:27) [GET]
+  Parameters: {"action"=>"index", "f"=>{"holdings_regular_facet"=>["C:DVD"], "libname_facet"=>["C"], "format_facet"=>["DVD", "laser disc"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43)) [0m
+  [4;36;1mSearch Create (0.4ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 04:58:27', '2010-11-10 04:58:27', NULL, '--- 
+:counter: "1"
+:total: 1
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - C:DVD
+ - C:laser disc
+ libname_facet: 
+ - C
+ format_facet: 
+ - DVD
+ - laser disc
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (0.1ms)
+Rendered catalog/_search_form (1.8ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (7.5ms)
+Rendered catalog/_sort_and_per_page (1.8ms)
+Rendered catalog/_document_list (0.0ms)
+Rendered catalog/_facets (0.1ms)
+Rendered catalog/_solr_request (0.0ms)
+Rendered _user_util_links (0.7ms)
+Rendered _flash_msg (0.1ms)
+Completed in 319ms (View: 16, DB: 2) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Bformat_facet%5D%5B%5D=laser+disc&f%5Bholdings_regular_facet%5D%5B%5D=C%3ADVD&f%5Blibname_facet%5D%5B%5D=C]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 21:05:45) [GET]
+  Parameters: {"action"=>"index", "f"=>{"libname_facet"=>["C"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;35;1mSearch Load (2.5ms)[0m   [0mSELECT * FROM "searches" WHERE ("searches"."id" IN (43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44)) [0m
+  [4;36;1mSearch Create (0.4ms)[0m   [0;1mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 05:05:46', '2010-11-10 05:05:46', NULL, '--- 
+:counter: "1"
+:total: 0
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - C:DVD
+ libname_facet: 
+ - C
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (18.9ms)
+Rendered catalog/_search_form (1.6ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (3.1ms)
+Rendered catalog/_sort_and_per_page (2.6ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (19.5ms)
+Rendered catalog/_facets (9.8ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.2ms)
+Rendered _flash_msg (0.1ms)
+Completed in 584ms (View: 67, DB: 3) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Blibname_facet%5D%5B%5D=C]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 21:06:10) [GET]
+  Parameters: {"action"=>"index", "f"=>{"libname_facet"=>["C"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45)) [0m
+  [4;35;1mSearch Create (0.7ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 05:06:10', '2010-11-10 05:06:10', NULL, '--- 
+:counter: "1"
+:total: 13
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - C:DVD
+ libname_facet: 
+ - C
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (25.9ms)
+Rendered catalog/_search_form (2.3ms)
+Rendered catalog/_did_you_mean (0.4ms)
+Rendered catalog/_constraints (4.6ms)
+Rendered catalog/_sort_and_per_page (3.2ms)
+Rendered catalog/_bookmark_control (25.9ms)
+Rendered catalog/_index_partials/_default (0.6ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.4ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (50.3ms)
+Rendered catalog/_facets (10.9ms)
+Rendered catalog/_solr_request (0.4ms)
+Rendered _user_util_links (0.6ms)
+Rendered _flash_msg (0.3ms)
+Completed in 520ms (View: 116, DB: 2) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Blibname_facet%5D%5B%5D=C]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 21:06:30) [GET]
+  Parameters: {"action"=>"index", "f"=>{"libname_facet"=>["C"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.4ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47,46)) [0m
+  [4;35;1mSearch Create (0.5ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 05:06:31', '2010-11-10 05:06:31', NULL, '--- 
+:counter: "1"
+:total: 13
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - C:DVD
+ libname_facet: 
+ - C
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (19.2ms)
+Rendered catalog/_search_form (1.5ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (3.3ms)
+Rendered catalog/_sort_and_per_page (2.4ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (19.5ms)
+Rendered catalog/_facets (9.7ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 462ms (View: 67, DB: 2) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Blibname_facet%5D%5B%5D=C]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 21:06:58) [GET]
+  Parameters: {"action"=>"index", "f"=>{"libname_facet"=>["C"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.6ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48,47)) [0m
+  [4;35;1mSearch Create (0.4ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 05:06:58', '2010-11-10 05:06:58', NULL, '--- 
+:counter: "1"
+:total: 13
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - C:DVD
+ libname_facet: 
+ - C
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (19.3ms)
+Rendered catalog/_search_form (1.5ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (3.1ms)
+Rendered catalog/_sort_and_per_page (2.5ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (75.6ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (97.5ms)
+Rendered catalog/_facets (9.7ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 443ms (View: 146, DB: 2) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Blibname_facet%5D%5B%5D=C]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 21:07:01) [GET]
+  Parameters: {"action"=>"index", "f"=>{"libname_facet"=>["C"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.7ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49,48)) [0m
+  [4;35;1mSearch Create (0.4ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 05:07:01', '2010-11-10 05:07:01', NULL, '--- 
+:counter: "1"
+:total: 13
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - C:DVD
+ libname_facet: 
+ - C
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (19.8ms)
+Rendered catalog/_search_form (1.6ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (3.3ms)
+Rendered catalog/_sort_and_per_page (2.6ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (19.5ms)
+Rendered catalog/_facets (9.8ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 376ms (View: 68, DB: 2) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Blibname_facet%5D%5B%5D=C]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 21:07:19) [GET]
+  Parameters: {"action"=>"index", "f"=>{"libname_facet"=>["C"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.5ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49)) [0m
+  [4;35;1mSearch Create (0.5ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 05:07:20', '2010-11-10 05:07:20', NULL, '--- 
+:counter: "1"
+:total: 13
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - C:DVD
+ libname_facet: 
+ - C
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (18.8ms)
+Rendered catalog/_search_form (1.5ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (3.0ms)
+Rendered catalog/_sort_and_per_page (2.4ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (18.8ms)
+Rendered catalog/_facets (9.5ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 366ms (View: 65, DB: 2) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Blibname_facet%5D%5B%5D=C]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 21:07:56) [GET]
+  Parameters: {"action"=>"index", "f"=>{"libname_facet"=>["C"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.5ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50)) [0m
+  [4;35;1mSearch Create (0.5ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 05:07:56', '2010-11-10 05:07:56', NULL, '--- 
+:counter: "1"
+:total: 13
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - C:DVD
+ libname_facet: 
+ - C
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (18.9ms)
+Rendered catalog/_search_form (1.6ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (3.2ms)
+Rendered catalog/_sort_and_per_page (2.8ms)
+Rendered catalog/_bookmark_control (0.8ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (18.9ms)
+Rendered catalog/_facets (9.5ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 371ms (View: 68, DB: 2) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Blibname_facet%5D%5B%5D=C]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 21:08:22) [GET]
+  Parameters: {"action"=>"index", "f"=>{"libname_facet"=>["C"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.5ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51)) [0m
+  [4;35;1mSearch Create (0.6ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 05:08:22', '2010-11-10 05:08:22', NULL, '--- 
+:counter: "1"
+:total: 13
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - C:DVD
+ libname_facet: 
+ - C
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (21.4ms)
+Rendered catalog/_search_form (2.1ms)
+Rendered catalog/_did_you_mean (0.6ms)
+
+ActionView::TemplateError (undefined local variable or method `v' for #<ActionView::Base:0x2473cfc>) on line #32 of app/views/catalog/_constraints.html.erb:
+29: 						<span class="appliedFilter">
+30: 							<span class="first">
+31: 								<span>
+32: 									<span class="filterName">Items in Library <%= v.split(":")[0]  %></span>
+33: 									<span class="filterValue">With Format <%= v.split(":")[1] %></span>
+34: 								</span>
+35: 							</span>
+
+    app/views/catalog/_constraints.html.erb:32
+    app/views/catalog/_constraints.html.erb:27:in `each_pair'
+    app/views/catalog/_constraints.html.erb:27
+    haml (3.0.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/views/catalog/index.html.erb:14
+    haml (3.0.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.23) lib/sass/plugin/rack.rb:41:in `call'
+    /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.7ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 21:09:35) [GET]
+  Parameters: {"action"=>"index", "f"=>{"libname_facet"=>["C"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.5ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52)) [0m
+  [4;35;1mSearch Create (0.4ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 05:09:35', '2010-11-10 05:09:35', NULL, '--- 
+:counter: "1"
+:total: 13
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - C:DVD
+ libname_facet: 
+ - C
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (18.8ms)
+Rendered catalog/_search_form (81.7ms)
+Rendered catalog/_did_you_mean (0.1ms)
+
+ActionView::TemplateError (undefined local variable or method `v' for #<ActionView::Base:0x5cedf24>) on line #32 of app/views/catalog/_constraints.html.erb:
+29: 						<span class="appliedFilter">
+30: 							<span class="first">
+31: 								<span>
+32: 									<span class="filterName">Items in Library <%= v.split(":")[0]  %></span>
+33: 									<span class="filterValue">With Format <%= v.split(":")[1] %></span>
+34: 								</span>
+35: 							</span>
+
+    app/views/catalog/_constraints.html.erb:32
+    app/views/catalog/_constraints.html.erb:27:in `each_pair'
+    app/views/catalog/_constraints.html.erb:27
+    haml (3.0.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/views/catalog/index.html.erb:14
+    haml (3.0.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.23) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.23) lib/sass/plugin/rack.rb:41:in `call'
+    /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/cfitz/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (43.1ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 21:10:14) [GET]
+  Parameters: {"action"=>"index", "f"=>{"libname_facet"=>["C"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.5ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53)) [0m
+  [4;35;1mSearch Create (0.6ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 05:10:14', '2010-11-10 05:10:14', NULL, '--- 
+:counter: "1"
+:total: 13
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - C:DVD
+ libname_facet: 
+ - C
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (21.6ms)
+Rendered catalog/_search_form (2.1ms)
+Rendered catalog/_did_you_mean (0.5ms)
+Rendered catalog/_constraints (4.1ms)
+Rendered catalog/_sort_and_per_page (3.3ms)
+Rendered catalog/_bookmark_control (9.0ms)
+Rendered catalog/_index_partials/_default (0.6ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (29.1ms)
+Rendered catalog/_facets (10.6ms)
+Rendered catalog/_solr_request (0.3ms)
+Rendered _user_util_links (0.6ms)
+Rendered _flash_msg (0.4ms)
+Completed in 507ms (View: 86, DB: 2) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Blibname_facet%5D%5B%5D=C]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 21:10:25) [GET]
+  Parameters: {"action"=>"index", "f"=>{"holdings_regular_facet"=>["C:DVD"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.6ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54)) [0m
+  [4;35;1mSearch Create (0.5ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 05:10:25', '2010-11-10 05:10:25', NULL, '--- 
+:counter: "1"
+:total: 13
+:f: !map:HashWithIndifferentAccess 
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (13.6ms)
+Rendered catalog/_search_form (1.4ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (1.2ms)
+Rendered catalog/_sort_and_per_page (2.4ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (18.7ms)
+Rendered catalog/_facets (10.5ms)
+Rendered catalog/_solr_request (0.0ms)
+Rendered _user_util_links (0.2ms)
+Rendered _flash_msg (0.1ms)
+Completed in 367ms (View: 59, DB: 2) | 200 OK [http://localhost/catalog?f%5Bformat_facet%5D%5B%5D=DVD&f%5Bholdings_regular_facet%5D%5B%5D=C%3ADVD]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 21:10:37) [GET]
+  Parameters: {"action"=>"index", "f"=>{"libname_facet"=>["C"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.7ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55)) [0m
+  [4;35;1mSearch Create (0.7ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 05:10:38', '2010-11-10 05:10:38', NULL, '--- 
+:counter: "1"
+:total: 102
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - C:DVD
+ libname_facet: 
+ - C
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (19.4ms)
+Rendered catalog/_search_form (1.5ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (2.2ms)
+Rendered catalog/_sort_and_per_page (2.6ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (19.7ms)
+Rendered catalog/_facets (9.7ms)
+Rendered catalog/_solr_request (0.0ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 1176ms (View: 66, DB: 2) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Blibname_facet%5D%5B%5D=C]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 21:11:00) [GET]
+  Parameters: {"action"=>"index", "f"=>{"libname_facet"=>["C"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (3.6ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56)) [0m
+  [4;35;1mSearch Create (0.5ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 05:11:00', '2010-11-10 05:11:00', NULL, '--- 
+:counter: "1"
+:total: 13
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - C:DVD
+ libname_facet: 
+ - C
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (18.3ms)
+Rendered catalog/_search_form (1.5ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (2.3ms)
+Rendered catalog/_sort_and_per_page (2.5ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (18.5ms)
+Rendered catalog/_facets (9.5ms)
+Rendered catalog/_solr_request (0.0ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 391ms (View: 64, DB: 4) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Blibname_facet%5D%5B%5D=C]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 21:11:14) [GET]
+  Parameters: {"action"=>"index", "f"=>{"libname_facet"=>["C"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.7ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57)) [0m
+  [4;35;1mSearch Create (0.6ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 05:11:15', '2010-11-10 05:11:15', NULL, '--- 
+:counter: "1"
+:total: 13
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - C:DVD
+ libname_facet: 
+ - C
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (20.6ms)
+Rendered catalog/_search_form (2.6ms)
+Rendered catalog/_did_you_mean (0.5ms)
+Rendered catalog/_constraints (4.0ms)
+Rendered catalog/_sort_and_per_page (3.2ms)
+Rendered catalog/_bookmark_control (8.2ms)
+Rendered catalog/_index_partials/_default (0.6ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (28.2ms)
+Rendered catalog/_facets (10.5ms)
+Rendered catalog/_solr_request (0.4ms)
+Rendered _user_util_links (0.6ms)
+Rendered _flash_msg (0.3ms)
+Completed in 472ms (View: 85, DB: 2) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Blibname_facet%5D%5B%5D=C]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 21:11:25) [GET]
+  Parameters: {"action"=>"index", "f"=>{"holdings_regular_facet"=>["C:DVD"], "libname_facet"=>["C", "F"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.8ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58)) [0m
+  [4;35;1mSearch Create (0.5ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 05:11:26', '2010-11-10 05:11:26', NULL, '--- 
+:counter: "1"
+:total: 13
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - C:DVD
+ - F:DVD
+ libname_facet: 
+ - C
+ - F
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (0.1ms)
+Rendered catalog/_search_form (1.7ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (4.9ms)
+Rendered catalog/_sort_and_per_page (1.6ms)
+Rendered catalog/_document_list (0.0ms)
+Rendered catalog/_facets (0.1ms)
+Rendered catalog/_solr_request (0.0ms)
+Rendered _user_util_links (0.8ms)
+Rendered _flash_msg (0.1ms)
+Completed in 387ms (View: 13, DB: 2) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Bholdings_regular_facet%5D%5B%5D=C%3ADVD&f%5Blibname_facet%5D%5B%5D=C&f%5Blibname_facet%5D%5B%5D=F]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 21:13:20) [GET]
+  Parameters: {"action"=>"index", "f"=>{"libname_facet"=>["C"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (2.3ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59)) [0m
+  [4;35;1mSearch Create (0.5ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 05:13:21', '2010-11-10 05:13:21', NULL, '--- 
+:counter: "1"
+:total: 0
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - C:DVD
+ libname_facet: 
+ - C
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (19.1ms)
+Rendered catalog/_search_form (1.5ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (2.2ms)
+Rendered catalog/_sort_and_per_page (2.6ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (18.9ms)
+Rendered catalog/_facets (9.8ms)
+Rendered catalog/_solr_request (0.0ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 367ms (View: 66, DB: 3) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Blibname_facet%5D%5B%5D=C]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 21:13:29) [GET]
+  Parameters: {"action"=>"index", "f"=>{"libname_facet"=>["C"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.8ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61,60)) [0m
+  [4;35;1mSearch Create (0.4ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 05:13:30', '2010-11-10 05:13:30', NULL, '--- 
+:counter: "1"
+:total: 13
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - C:DVD
+ libname_facet: 
+ - C
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (19.7ms)
+Rendered catalog/_search_form (2.4ms)
+Rendered catalog/_did_you_mean (0.1ms)
+Rendered catalog/_constraints (2.3ms)
+Rendered catalog/_sort_and_per_page (2.6ms)
+Rendered catalog/_bookmark_control (0.7ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.1ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (20.1ms)
+Rendered catalog/_facets (10.5ms)
+Rendered catalog/_solr_request (0.1ms)
+Rendered _user_util_links (0.1ms)
+Rendered _flash_msg (0.1ms)
+Completed in 376ms (View: 69, DB: 2) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Blibname_facet%5D%5B%5D=C]
+
+
+Processing CatalogController#index (for 127.0.0.1 at 2010-11-09 21:13:43) [GET]
+  Parameters: {"action"=>"index", "f"=>{"libname_facet"=>["C"], "format_facet"=>["DVD"]}, "controller"=>"catalog"}
+  [4;36;1mSearch Load (1.7ms)[0m   [0;1mSELECT * FROM "searches" WHERE ("searches"."id" IN (60,59,58,57,56,55,54,53,52,51,50,49,48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,88,87,86,85,84,83,82,81,80,79,78,77,76,75,74,6,5,4,3,2,1,73,72,71,70,69,68,67,66,65,64,63,62,61)) [0m
+  [4;35;1mSearch Create (0.6ms)[0m   [0mINSERT INTO "searches" ("created_at", "updated_at", "user_id", "query_params") VALUES('2010-11-10 05:13:44', '2010-11-10 05:13:44', NULL, '--- 
+:counter: "1"
+:total: 13
+:f: !map:HashWithIndifferentAccess 
+ holdings_regular_facet: 
+ - C:DVD
+ libname_facet: 
+ - C
+ format_facet: 
+ - DVD
+')[0m
+Rendering template within layouts/application
+Rendering catalog/index
+Rendered catalog/_item_facets (22.6ms)
+Rendered catalog/_search_form (2.0ms)
+Rendered catalog/_did_you_mean (0.4ms)
+Rendered catalog/_constraints (4.0ms)
+Rendered catalog/_sort_and_per_page (3.5ms)
+Rendered catalog/_bookmark_control (9.0ms)
+Rendered catalog/_index_partials/_default (0.6ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.2ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_bookmark_control (0.0ms)
+Rendered catalog/_index_partials/_default (0.1ms)
+Rendered catalog/_document_list (28.5ms)
+Rendered catalog/_facets (11.1ms)
+Rendered catalog/_solr_request (0.3ms)
+Rendered _user_util_links (0.6ms)
+Rendered _flash_msg (0.3ms)
+Completed in 494ms (View: 87, DB: 2) | 200 OK [http://localhost/?f%5Bformat_facet%5D%5B%5D=DVD&f%5Blibname_facet%5D%5B%5D=C]

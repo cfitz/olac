@@ -3,12 +3,19 @@
   
   <% index_field_names.each do |solr_fname| -%>
     <% if document.get solr_fname %>
-        <dt><%= h index_field_labels[solr_fname]%></dt>
-        <%  document[solr_fname].each do |field| %>
+        <% if document[solr_fname].length > 1   %>
+			<dt><%= h index_field_labels[solr_fname].pluralize + ":" %></dt>
+		<% else %>
+			<dt><%= h index_field_labels[solr_fname] + ":" %></dt>
+        <% end -%>
+		<%  document[solr_fname].each do |field| %>
         	<dd><%= h field %></dd>
         <% end -%>
 		<br/>
     <% end -%>
   <% end -%>
+
+ 
+  
 
 </dl>

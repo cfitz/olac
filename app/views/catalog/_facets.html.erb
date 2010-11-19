@@ -1,12 +1,12 @@
 <% # main container for facets/limits menu -%>
 <div id="sidebar_facets" class="facets">
-  <h2>Limit your search</h2>
+  <h2>Limit By Item:</h2>
   <% facet_names = ["libname_facet","format_facet","langname_facet","subtitlelang_facet","accessibility_facet"]%>
   <% facet_names.each do |solr_fname| %>
     <div>
-      <% display_facet = @response.facets.detect {|f| f.name == solr_fname} -%>
+      <% display_facet = @manifestation_response.facets.detect {|f| f.name == solr_fname} -%>
       <% if display_facet.items.length > 0 %>
-        <h3><%= facet_field_labels[solr_fname] -%></h3>
+        <h3><%= manifestation_facet_field_labels[solr_fname] -%></h3>
         <ul>
           <% paginator =    
               Blacklight::Solr::FacetPaginator.new(display_facet.items,        
@@ -17,7 +17,7 @@
             <% if facet_in_params?( solr_fname, item.value ) %>              
                 <%= render_selected_facet_value(solr_fname, item) %>              
               <% else %>              
-                <%= render_item_facet_value(solr_fname, item) %>              
+                <%= render_facet_value(solr_fname, item) %>              
             <% end -%>
             </li>
           <% end %>

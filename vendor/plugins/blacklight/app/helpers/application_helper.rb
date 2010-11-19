@@ -195,6 +195,7 @@ module ApplicationHelper
     format = document_partial_name(doc)
     begin
       render :partial=>"catalog/_#{action_name}_partials/#{format}", :locals=>{:document=>doc}
+      
     rescue ActionView::MissingTemplate
       render :partial=>"catalog/_#{action_name}_partials/default", :locals=>{:document=>doc}
     end

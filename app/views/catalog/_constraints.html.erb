@@ -25,36 +25,26 @@
 		<span id="appliedFilters">
 			<span id = "appliedFiltersList">
 				<% localized_params[:f].each_pair do |facet,values| %>
-					<% if facet == "holdings_regular_s"%>
-						<% values.each do |v| %>
+					<% values.each do |v| %>
 						<span class="appliedFilter">
 							<span class="first">
 								<span>
-									<span class="filterName">Browsing items in Library <%= v.split(":")[0]  %></span>
-									<span class="filterValue">with format <%= v.split(":")[1] %></span>
+									<% unless facet_field_labels[facet].nil?%>
+									<span class="filterName"><%= h "Works limited by #{facet_field_labels[facet]}" %></span>
+									<% else %>
+									<span class="filterName"><%= h "Items limited by #{manifestation_facet_field_labels[facet]}"  %></span>
+									<% end %>
+									<span class="filterValue"><%= v %></span>
 								</span>
 							</span>
-							</span>
-						<% end %>
-					<% elsif facet != "holdings_regular_s" %>
-					
-						<% values.each do |v| %>
-							<span class="appliedFilter">
-								<span class="first">
-									<span>
-										<span class="filterName"><%= h facet_field_labels[facet] %></span>
-										<span class="filterValue"><%= v %></span>
-									</span>
-								</span>
-								<%= link_to(
-									'',
-									catalog_index_path(remove_facet_params(facet, v, localized_params)),
-									:class=>'btnRemove imgReplace',
-	                :alot=>'x'
-								) %>
-								<%= image_tag "checkmark.gif", :alt=>"checkmark", :plugin=>'blacklight' %>
-							</span>
-						<% end %>
+							<%= link_to(
+								'',
+								catalog_index_path(remove_facet_params(facet, v, localized_params)),
+								:class=>'btnRemove imgReplace',
+                :alot=>'x'
+							) %>
+							<%= image_tag "checkmark.gif", :alt=>"checkmark", :plugin=>'blacklight' %>
+						</span>
 					<% end %>
 				<% end %>
 			</span>
@@ -65,7 +55,7 @@
 		<% if params[:action] == 'index' %>
 			<%= page_entries_info @response.docs, :entry_name=>'item' %>
 		<% else %>
-			Showing <%= session[:search][:counter].to_i %> of <%= format_num(session[:search][:total]) %> items from your search.
+			Showing <%= session[:search][:counter].to_i %> of <%= format_num(session[:search][:total]) %> works from your search.
 		<% end %>
 		<%=link_to "Start&nbsp;over&thinsp;", catalog_index_path, :id=>"startOverLink" %>
 	</div>

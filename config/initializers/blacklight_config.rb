@@ -44,7 +44,7 @@ Blacklight.configure(:shared) do |config|
   
   
   config[:default_qt] = "search"
-  
+  config[:manifestations_qt] = "manifestations_search"
 
   # solr field values given special treatment in the show (single result) view
   config[:show] = {
@@ -65,11 +65,6 @@ Blacklight.configure(:shared) do |config|
   # however, we are overriding this in the app/catalog/facets paritals
   config[:facet] = {
     :field_names => [
-      "libname_facet",
-      "format_facet",
-      "langname_facet",
-      "subtitlelang_facet",
-       "accessibility_facet",
        "genrename_facet",  
         "workdate_facet",
         "worklang_facet",
@@ -77,11 +72,6 @@ Blacklight.configure(:shared) do |config|
         "directorname_facet",
       ],
     :labels => {
-      "libname_facet" => "At Library:",
-       "format_facet" => "Format:",
-      "langname_facet" => "Spoken Language:",
-        "subtitlelang_facet"=> "Subtitle/Caption Language:",
-        "accessibility_facet" => "Accessibility Options:",
         "genrename_facet" => "Genre:",
         "workdate_facet" => "Dates:",
         "worklang_facet" => "Original Language:",
@@ -90,6 +80,29 @@ Blacklight.configure(:shared) do |config|
     },
     :limits=> {nil=>10}
   }
+  
+  
+  config[:facet_manifestations] = {
+    :field_names => [
+      "libname_facet",
+      "format_facet",
+      "langname_facet",
+      "subtitlelang_facet",
+       "accessibility_facet"
+      ],
+    :labels => {
+      "libname_facet" => "At Library:",
+       "format_facet" => "Format:",
+      "langname_facet" => "Spoken Language:",
+        "subtitlelang_facet"=> "Subtitle/Caption Language:",
+        "accessibility_facet" => "Accessibility Options:"
+    },
+    :limits=> {nil=>10}
+  }
+
+
+
+
 
   # solr fields to be displayed in the index (search results) view
   #   The ordering of the field names is the order of the display 
@@ -100,11 +113,30 @@ Blacklight.configure(:shared) do |config|
       "genrename_display",
       ],
     :labels => {
-      "alttitlename_display"=>"Alternate Title:",
-      "directorname_display"=>"Director:",
-      "genrename_display"=>"Genre:"
+      "alttitlename_display"=>"Alternate Title",
+      "directorname_display"=>"Director",
+      "genrename_display"=>"Genre"
     }
   }
+
+
+  config[:manifestation_index_fields] = {
+    :field_names => [
+      "id",
+      "format_display",
+      "libname_display",
+      "langname_display",
+      "subtitlelang_display"
+      ],
+    :labels => {
+      "id" => "",
+      "format_display"=>"Format",
+      "libname_display"=>"Library",
+      "langname_display"=>"Spoken Language",
+      "subtitlelang_display" => "Subtitle Language"
+    }
+  }
+
 
   # solr fields to be displayed in the show (single result) view
   #   The ordering of the field names is the order of the display 
@@ -121,15 +153,15 @@ Blacklight.configure(:shared) do |config|
       "workaspect_display"
     ],
     :labels => {
-       "alttitlename_display" => "Alternate Title:",
-       "directorname_display" => "Director:",
-        "genrename_display" => "Genre:",
-        "worklang_display" => "Language:",
-        "countryname_display" => "Country:",
-        "workduration_display" => "Run Time:",
-        "color_display" => "Color:",
-        "sound_display" => "Sound:",
-        "workaspect_display" => "Aspect ratio:"
+       "alttitlename_display" => "Alternate Title",
+       "directorname_display" => "Director",
+        "genrename_display" => "Genre",
+        "worklang_display" => "Language",
+        "countryname_display" => "Country",
+        "workduration_display" => "Run Time",
+        "color_display" => "Color",
+        "sound_display" => "Sound",
+        "workaspect_display" => "Aspect ratio"
     }
   }
 

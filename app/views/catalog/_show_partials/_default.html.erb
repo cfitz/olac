@@ -7,7 +7,11 @@
     <% if document[solr_fname] %>
 		<dl class="defList">
       <% if document[solr_fname].is_a?(Array) %>
-        <dt><%= document_show_field_labels[solr_fname]%></dt><dd>
+		<% if document[solr_fname].length > 1 %>
+		<dt><%= document_show_field_labels[solr_fname].pluralize + ":" %></dt><dd>
+        <% else %>
+		<dt><%= document_show_field_labels[solr_fname] + ":" %></dt><dd>
+		<%end -%>
         <% document[solr_fname].each do |val| %>
           <%= val %><%= "<br/>" unless val == document[solr_fname].last %>
         <% end %>
@@ -20,5 +24,9 @@
 	</dl>
   <% end -%>
 
-
-<%= render :partial=>"catalog/_show_partials/holdings", :locals => {:document => document} %>
+<h4>All Available Items:</h4>
+  <div class="manifestations">
+  	<% @manifestations_list.each_with_index do |man, i| %>
+	  	<%= render_manifestation_partial(man, i, :show) %>
+ 	<%end -%>
+  </div>
