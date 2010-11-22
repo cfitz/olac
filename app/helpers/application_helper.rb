@@ -108,7 +108,7 @@ module ApplicationHelper
          else
            raise 'Invalid label argument'
          end   
-       if params[:f]['worknum_s'].nil? 
+       if params[:f].nil? or params[:f]['worknum_s'].nil? 
          link_to_unless(options[:suppress_link], label, add_facet_params_and_redirect("worknum_s", doc["id"])) 
        else
           doc["worktitle_display"]
