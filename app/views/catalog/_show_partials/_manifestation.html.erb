@@ -1,29 +1,29 @@
 <%# default partial to display manifestation solr document fields in catalog index view -%>
 
 	<%= get_manifestation_dl color %>
-  
+    <%= link_to_manifestaion mandoc %>
+
+	<dl class='defList_manifestation'>
 	  <% manifestation_index_field_names.each do |solr_fname| -%>
 	    <% if mandoc.get solr_fname %>
 			<% if mandoc[solr_fname].length > 1 && !manifestation_index_field_labels[solr_fname].empty?  %>
-			<dt><%= h manifestation_index_field_labels[solr_fname].gsub(":", "").pluralize + ":" %></dt>
-			<% elsif !manifestation_index_field_labels[solr_fname].empty?  %>
-			<dt><%= h manifestation_index_field_labels[solr_fname] + ":" %></dt>
-			<% end -%>
-	        <% if solr_fname == "id" %>
-				<dd><%= link_to_manifestaion mandoc[solr_fname] %></dd>
-			<% else %>
+				<dt><%= h manifestation_index_field_labels[solr_fname].pluralize + ":" %></dt>
+				<dd><%  mandoc[solr_fname].each do |field| %>
+			        <%= h field %>; 
+			    <% end -%> </dd>
+			<% elsif  !manifestation_index_field_labels[solr_fname].empty? %>
+				<dt><%= h manifestation_index_field_labels[solr_fname] + ":" %></dt>
 				<%  mandoc[solr_fname].each do |field| %>
-		        	<dd><%= h field %></dd>
-		        <% end -%>
+			        	<dd><%= h field %></dd>
+			    <% end -%>
 			<% end -%>
+			<br/>
 	    <% end -%>
 	  <% end -%>
-
  
-  
-
 	</dl> 
 
+</div>
 
   
 

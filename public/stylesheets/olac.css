@@ -1,29 +1,42 @@
 
 .document { padding: 1em 0em; border-bottom: 1px dotted #CCCCCC;}
 
-dl.defList {width:100%;}
+dl.defList {width:100%; overflow: auto; padding: 0.5em 0;}
 dl.defList dt {
-clear:both;
 color:#888888;
 float:left;
 margin:0;
 padding:2px 1em 2px 0;
 text-align:right;
-width:0%;
+width:16%;
+clear:both;
 }
-dl.defList dd {  margin-left: 6em; padding: .5px 0;}
 
+dl.defList dd {text-align: left; margin: 0; padding: 2px 0;}
 
-dl.defList_manifestation  { margin: .3em; padding:1em; }
-dl.defList_manifestation#odd {background:none repeat scroll 0 0 #FFF7E5;}
-dl.defList_manifestation#even {background: none repeat scroll 0 0 #E2EDFE;}
+.documentFunctions { float: right; margin: 0 0 12px 0;}
+
+dl.defList_manifestation  { padding: .25em .3em; clear:both; }
+
+div#odd {background:none repeat scroll 0 0 #FFF7E5;}
+div#even {background: none repeat scroll 0 0 #E2EDFE;}
 
 dl.defList_manifestation  dd { display: inline; margin-left: .25em;}
 dl.defList_manifestation  dt { display:inline; margin-left: .5em;}
 
 .manifestations {border: 1px solid #E0D9CA; margin: 1em 0;}
 
+div.manLib {padding: .5em 2.5em .25em 25em; font-size: 1.4em;}
+div.manLib label {padding: 0 1em;}
 
+.manFormat {float:left; padding: .5em 0 .25em .25em; font-size: 1.4em;}
+.manFormat a {font-size: 1em;}
+.full_doc { float:right;}
+
+.get_library {
+margin:0;
+padding:0;
+width:460px;}
 
 .holdings {margin-top: 4em; background-color: #EEEEEE; padding: 2em;}
 .holdings_library_header { margin-right: 2em;   }

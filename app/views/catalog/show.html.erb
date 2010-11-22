@@ -25,6 +25,12 @@
     <div class="tools"><%= render :partial => 'show_tools' %></div>
     <div class="document">
       <%= render_document_partial @document, :show %>
+	<h4>All Available Items:</h4>
+	  <div class="manifestations">
+	  	<% @manifestations_list.each_with_index do |man, i| %>
+		  	<%= render_manifestation_partial(man, i, :show) %>
+	 	<%end -%>
+	  </div>
     </div>
   </div>
 </div>

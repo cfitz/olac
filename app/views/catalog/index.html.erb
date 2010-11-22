@@ -21,7 +21,11 @@
 	
 	<%= render 'sort_and_per_page' %>
 	
-	<%= render :partial=>'document_list' %>
+	<% if @document_list.length > 1%>
+		<%= render :partial=>'document_list' %>
+	<% else %>
+		<%= render :partial=> 'document_single'%>
+	<% end -%>
 	
 	<% sidebar_items << capture do %>
 	  <%= render :partial=>'facets' %>

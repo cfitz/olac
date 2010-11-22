@@ -9,9 +9,6 @@ xml = Nokogiri::XML(open('../spec/fixtures/items_export_from_db.xml'))
 @connection = Solr::Connection.new('http://saltworks.stanford.edu/chris_solr/', :autocommit => :on )
 #@connection = Solr::Connection.new("http://localhost:8983/solr/development", :autocommit => :on )
 
-#@connection = Solr::Connection.new("http://localhost:8983/solr", :autocommit => :on )
-
-
 
 
 xml.root.children.each do |child|
@@ -51,14 +48,15 @@ xml.root.children.each do |child|
     end
  
     
-   output = [values["format"].map {|x| "format_facet_#{x.downcase}" },
-    values["libname"].map {|x| "libname_facet_#{x.downcase}"}, 
-   values["subtitlelang"].map {|x| "subtitlelang_facet_#{x.downcase}"},
-    values["langname"].map {|x| "langname_facet_#{x.downcase}"},
-    values["genrename"].map {|x| "genrename_facet_#{x.downcase}"},
-    values["decade"].map {|x| "workdate_facet_#{x}"},
-    values["worklang"].map {|x| "worklang_facet_#{x.downcase}"},
-    values["directorname"].map {|x| "directorname_facet_#{x.downcase}"}]
+  output = [values["format"].map {|x| "format_facet_#{x.downcase}" },
+  values["libname"].map {|x| "libname_facet_#{x.downcase}"}, 
+  values["subtitlelang"].map {|x| "subtitlelang_facet_#{x.downcase}"},
+  values["langname"].map {|x| "langname_facet_#{x.downcase}"},
+  values["genrename"].map {|x| "genrename_facet_#{x.downcase}"},
+  values["decade"].map {|x| "workdate_facet_#{x}"},
+  values["worklang"].map {|x| "worklang_facet_#{x.downcase}"},
+  values["directorname"].map {|x| "directorname_facet_#{x.downcase}"},
+  values["countryname"].map {|x| "countryname_facet_#{x.downcase}"}]
    
    @final = [""]
    output.each do |o|
@@ -74,7 +72,7 @@ xml.root.children.each do |child|
    #puts @final
      
    @final.each do |f|
-     @document << Solr::Field.new("holdings_t" => f)
+     @document << Solr::Field.new("holdings_tws" => f)
    end
      
     #puts values.inspect

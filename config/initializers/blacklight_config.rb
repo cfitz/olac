@@ -110,28 +110,27 @@ Blacklight.configure(:shared) do |config|
     :field_names => [
       "alttitlename_display",
       "directorname_display",
-      "genrename_display",
+      "worklang_display",
+      "countryname_display",
+      "genrename_display"
       ],
     :labels => {
       "alttitlename_display"=>"Alternate Title",
       "directorname_display"=>"Director",
+      "worklang_display" => "Language",
+       "countryname_display" => "Country",
       "genrename_display"=>"Genre"
+     
     }
   }
 
 
   config[:manifestation_index_fields] = {
     :field_names => [
-      "id",
-      "format_display",
-      "libname_display",
       "langname_display",
       "subtitlelang_display"
       ],
     :labels => {
-      "id" => "",
-      "format_display"=>"Format",
-      "libname_display"=>"Library",
       "langname_display"=>"Spoken Language",
       "subtitlelang_display" => "Subtitle Language"
     }
@@ -184,12 +183,10 @@ Blacklight.configure(:shared) do |config|
   # except in the relevancy case).
   # label is key, solr field is value
   config[:sort_fields] ||= []
-  config[:sort_fields] << ['relevance', 'score desc, year_facet desc, month_facet asc, title_facet asc']
-  config[:sort_fields] << ['date -', 'year_facet desc, month_facet asc, title_facet asc']
-  config[:sort_fields] << ['date +', 'year_facet asc, month_facet asc, title_facet asc']
-  config[:sort_fields] << ['title', 'title_facet asc']
-  config[:sort_fields] << ['document type', 'medium_t asc, year_facet desc, month_facet asc, title_facet asc']
-  config[:sort_fields] << ['location', 'series_facet asc, box_facet asc, folder_facet asc, year_facet desc, month_facet asc, title_facet asc']
+  config[:sort_fields] << ['relevance', 'score desc, worktitle_sort asc, workdate_sort desc']
+  config[:sort_fields] << ['date -', 'workdate_sort desc, worktitle_sort asc']
+  config[:sort_fields] << ['date +', 'workdate_sort asc, worktitle_sort asc']
+  config[:sort_fields] << ['title', 'worktitle_sort asc']
   
   # If there are more than this many search results, no spelling ("did you 
   # mean") suggestion is offered.

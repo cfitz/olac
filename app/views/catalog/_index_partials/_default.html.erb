@@ -1,17 +1,19 @@
 <%# default partial to display solr document fields in catalog index view -%>
 <dl class="defList">
-  
   <% index_field_names.each do |solr_fname| -%>
     <% if document.get solr_fname %>
         <% if document[solr_fname].length > 1   %>
 			<dt><%= h index_field_labels[solr_fname].pluralize + ":" %></dt>
+			<dd>
+			<%  document[solr_fname].each do |field| %>
+	        	<%= h field + "; " %> 
+		    <% end -%>
+		     </dd>
 		<% else %>
 			<dt><%= h index_field_labels[solr_fname] + ":" %></dt>
+	        	<dd><%= h document[solr_fname].first %></dd>
         <% end -%>
-		<%  document[solr_fname].each do |field| %>
-        	<dd><%= h field %></dd>
-        <% end -%>
-		<br/>
+		
     <% end -%>
   <% end -%>
 

@@ -1,0 +1,46 @@
+<% # container for all documents in index view -%>
+<div id="documents">
+
+  <% # loop thru each doc -%>
+  <% @document_list.each_with_index do |document,counter| %>
+
+    <% # container for a single doc -%>
+    <div class="document">
+      
+      <% # header bar for doc items in index view -%>
+      <div class="documentHeader yui-g">
+        
+        <% # list controls for items/docs -%>
+        <div class="yui-u documentFunctions">
+         <h4><br/></h4>
+       
+		</div>
+        
+        <% # main title container for doc partial view -%>
+
+        <div class="yui-u">
+          <h3 class="index_title"><%= counter + 1 + @response.params[:start].to_i %>. <%= link_to_document_query document["document"], :label=>document_show_link_field, :counter => (counter + 1 + @response.params[:start].to_i) %></h3>
+		</div>
+      </div>
+      
+      <% # if there is only one item, we want to display the details like in the show partial -%>
+      <%= render :partial=>'catalog/_index_partials/single', :locals=>{:document => document["document"]} %> 
+	 
+	
+	<div class="yui-u documentFunctions">
+         <h4><%= link_to_document document["document"] %></h4>
+
+		</div> 
+	  <h4 class="get_library">Get from a library:</h4>
+	 
+	
+	
+	  <div class="manifestations">
+	  	<% document["manifestations"].each_with_index do |man, i| %>
+		  	<%= render_manifestation_partial(man, i, :index) %>
+	 	<%end -%>
+	  </div>
+    </div>
+    
+  <% end %>
+</div>

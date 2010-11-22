@@ -103,19 +103,21 @@ module Blacklight::SolrHelper
       if params[:f].is_a?(Hash)
          solr_parameters[:fq] ||= []
          params[:f].each_pair do |key, value|
-           value.each {|v| solr_parameters[:fq] << "holdings_t:#{key.downcase}_#{v.downcase}" }
+           unless key == "worknum_s"
+             value.each {|v| solr_parameters[:fq] << "holdings_tws:#{key.downcase}_#{v.downcase}" }
+           end
          end
       end
     end
            
      # Omit empty strings and nil values. 
-      [:facets, :f, :sort].each do |key|
+      [:facets, :f].each do |key|
         solr_parameters[key].merge! params[key] unless params[key].blank?      
       end
     
     # don't do paging for manifestations only for works.  
     if mode == :works
-      [:page, :per_page].each do |key|
+      [:page, :per_page, :sort].each do |key|
         solr_parameters[key] = params[key] unless params[key].blank? 
       end
     end
