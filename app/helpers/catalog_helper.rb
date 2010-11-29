@@ -19,7 +19,7 @@ module CatalogHelper
         else;   "Displaying <b>all #{total_num}</b> works"
         end
       else
-        "<b>#{total_num}</b> works found with <b>#{total_manifestation_hits}</b> #{entry_name.pluralize}. <br/>  Displaying works <b>#{start_num} - #{end_num}</b> of <b>#{total_num}</b>"
+        "<b>#{total_num}</b> versions found with <b>#{total_manifestation_hits}</b> #{entry_name.pluralize}. <br/>  Displaying works <b>#{start_num} - #{end_num}</b> of <b>#{total_num}</b>"
       end
   end
   

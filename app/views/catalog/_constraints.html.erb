@@ -58,7 +58,7 @@
 	
 	<div>
 		<% if params[:action] == 'index' %>
-			<%= page_entries_info @response.docs, :entry_name=>'item' %>
+			<%= page_entries_info @response.docs, :entry_name=>'movies/programs' %>
 		<% else %>
 			Showing <%= session[:search][:counter].to_i %> of <%= format_num(session[:search][:total]) %> works from your search.
 		<% end %>

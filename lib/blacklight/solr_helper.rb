@@ -105,6 +105,7 @@ module Blacklight::SolrHelper
          params[:f].each_pair do |key, value|
            unless key == "worknum_s"
              value.each {|v| solr_parameters[:fq] << "holdings_tws:#{key.downcase}_#{v.downcase}" }
+             solr_parameters[:"f.#{key.downcase}.facet.limit"] = 1
            end
          end
       end

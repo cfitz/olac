@@ -4,9 +4,9 @@
 <% else %>
 
 	<% @page_title = application_name + " Search Results" %>
-
-	<%=  render :partial=>'catalog/work_facets',  :locals => {:response => response} %>
-
+	<% if @document_list.length > 1 %>
+		<%=  render :partial=>'catalog/work_facets',  :locals => {:response => response} %>
+	<% end -%>
 	<%= render :partial => 'search_form' %>
 	
 	<%= render :partial => 'did_you_mean' %>

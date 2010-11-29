@@ -88,7 +88,7 @@ xml.root.children.each do |child|
   values["worklang"].map {|x| "worklang_facet_#{x.downcase}"},
   values["directorname"].map {|x| "directorname_facet_#{x.downcase}"},
   values["countryname"].map {|x| "countryname_facet_#{x.downcase}"},
-  values["pubdate"].map {|x| "pubdate_facet_#{x}"}]
+  values["pubdate"].map {|x| "pubdate_facet_#{x.downcase}"}]
    
    @final = [""]
    output.each do |o|
