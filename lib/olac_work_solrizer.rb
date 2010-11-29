@@ -2,10 +2,9 @@
 require 'rubygems'
 require 'nokogiri'
 require 'solr'
-
+require 'pp'
 
 xml = Nokogiri::XML(open('../spec/fixtures/works_export_from_db.xml'))
-
 @connection = Solr::Connection.new('http://saltworks.stanford.edu/chris_solr/', :autocommit => :on )
 #@connection = Solr::Connection.new("http://localhost:8983/solr/development", :autocommit => :on )
 
@@ -17,13 +16,16 @@ xml.root.children.each do |child|
     child.children.each do |grandchildren|
      
       grandchildren.children.each do |value|
+        v = value.content.strip.chomp.gsub(/^./) {|x| x.upcase}
         if  values["#{grandchildren.name.downcase}"].nil?
           values["#{grandchildren.name.downcase}"] = []
         end #if .nil?
-        values["#{grandchildren.name.downcase}"] << value.content.gsub(/^./) {|x| x.upcase}
+         unless v.empty?
+            values["#{grandchildren.name.downcase}"] << v
+          end
       end #grandchildren  
     end #children.each  
-    
+    #pp values
       @id = values["worknum"]
       puts @id   
 
@@ -32,6 +34,46 @@ xml.root.children.each do |child|
         @document << Solr::Field.new("documentType_s" => "work")
       #puts values.inspect
 
+      values["subtitlelang"].each do |sub|
+        if sub.include?(" ")
+          unless sub.include?("Mandarin") or sub.include?("Sign")
+            sub.split(" ").each { |s| values["subtitlelang"] << s }
+            values["subtitlelang"].delete(sub)
+          end
+        end
+      end
+      
+       values["langname"].each do |sub|
+          if sub.include?(" ") 
+            unless sub.include?("Mandarin") or sub.include?("Sign")
+              sub.split(" ").each { |s| values["langname"] << s }
+              values["langname"].delete(sub)
+            end
+          end
+        end
+
+      values["largerworks"] = []
+      unless values["lgworktitle"].nil? or values["lgworktype"].nil?
+        values["lgworktype"].each_with_index do |v,k|
+          values["largerworks"] << "#{v.capitalize} : #{values["lgworktitle"][k]}"          
+        end
+      end
+
+
+       unless values["date"].nil?
+          if values["pubdate"].nil?
+            values["pubdate"] =[]
+          end
+          values['date'].each do |v| 
+            unless v.include?("Un")
+              values["pubdate"] << "#{v.slice(0..2)}0s"
+            else
+               values["pubdate"] << "Unspecified"
+            end
+          end
+        end
+       
+        
       values.each do |key,value|
         uniques = value.uniq
         uniques.each do |values|
@@ -54,7 +96,8 @@ xml.root.children.each do |child|
                 @document << Solr::Field.new("#{key}_facet" => v)
                 @document << Solr::Field.new("#{key}_sort" => v)    
               elsif key == "holdings"
-                 @document << Solr::Field.new("#{key}_display" => v)
+                 puts "We no longer using this field."
+                 #@document << Solr::Field.new("#{key}_display" => v)
               elsif key == "workdate"
                 @document << Solr::Field.new("workdate_s" => v)
                 @document << Solr::Field.new("workdate_t" => v)

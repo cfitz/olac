@@ -29,12 +29,17 @@
 						<span class="appliedFilter">
 							<span class="first">
 								<span>
-									<% unless facet_field_labels[facet].nil?%>
-									<span class="filterName"><%= h "Works limited by #{facet_field_labels[facet]}" %></span>
+									<% if facet == "worknum_s"%>
+										<span class="filterName"><%= h "Works limited by " %></span>
+										<span class="filterValue"><%= localized_response.first["worktitle_display"] %></span>
 									<% else %>
-									<span class="filterName"><%= h "Items limited by #{manifestation_facet_field_labels[facet]}"  %></span>
+										<% unless facet_field_labels[facet].nil?%>
+											<span class="filterName"><%= h "Works limited by #{facet_field_labels[facet]}" %></span>
+										<% else %>
+											<span class="filterName"><%= h "Items limited by #{manifestation_facet_field_labels[facet]}"  %></span>
+										<% end %>
+										<span class="filterValue"><%= v %></span>
 									<% end %>
-									<span class="filterValue"><%= v %></span>
 								</span>
 							</span>
 							<%= link_to(

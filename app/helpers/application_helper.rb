@@ -43,14 +43,14 @@ module ApplicationHelper
        if mandoc["libname_display"].length > 1
          libs = "<div class='manLib'><label>Libraries:</label>"
          mandoc["libname_display"].each do |l|
-           libs << l + ","
+           libs << "<a href=#{link}>#{l}</a> , "
          end
          libs.chop!
          libs << "</div>"
         else
-          libs = "<div class='manLib'><label>Library:</label>#{mandoc["libname_display"].first}</div>"
+          libs = "<div class='manLib'><label>Library:</label><a href=#{link}>#{mandoc["libname_display"].first}</a></div>"
         end 
-        "<div class='manFormat'><a href=#{link}>#{h(mandoc.get "format_display")}</a></div>#{libs}"
+        "<div class='manFormat'>#{h(mandoc.get "format_display")} (#{h(mandoc.get "date_display")})</div>#{libs}"
    end
 
    def get_manifestation_dl(color)

@@ -11,7 +11,7 @@
 	
 	<%= render :partial => 'did_you_mean' %>
 	
-	<%= render 'constraints', :localized_params=>params %>
+	<%= render 'constraints', :localized_params=>params, :localized_response =>  @response.docs %>
 	
 	<div class="pagination">
 	  <h2>Results navigation</h2>

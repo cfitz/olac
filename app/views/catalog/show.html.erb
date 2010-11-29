@@ -1,6 +1,6 @@
 <% @page_title = "#{document_show_html_title} - #{application_name}" %>
 
-<%= render 'constraints', :localized_params=>session[:search] %>
+<%= render 'constraints', :localized_params=>session[:search], :localized_response =>  @response.docs %>
 
 <%# this should be in a partial -%>
 <div class="yui-g">

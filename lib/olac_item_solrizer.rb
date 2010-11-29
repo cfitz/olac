@@ -2,7 +2,7 @@
 require 'rubygems'
 require 'nokogiri'
 require 'solr'
-
+require 'pp'
 
 xml = Nokogiri::XML(open('../spec/fixtures/items_export_from_db.xml'))
 
@@ -18,10 +18,13 @@ xml.root.children.each do |child|
     child.children.each do |grandchildren|
      
       grandchildren.children.each do |value|
+        v = value.content.strip.chomp.gsub(/^./) {|x| x.upcase}
         if  values["#{grandchildren.name.downcase}"].nil?
           values["#{grandchildren.name.downcase}"] = []
         end #if .nil?
-        values["#{grandchildren.name.downcase}"] << value.content.gsub(/^./) {|x| x.upcase}
+        unless v.empty?
+          values["#{grandchildren.name.downcase}"] << v
+        end
       end #grandchildren
       
       @id = values["mannum"]
@@ -31,6 +34,21 @@ xml.root.children.each do |child|
       @document << Solr::Field.new("documentType_s" => "manifestation")
       
     end #children.each  
+    
+    unless values["asecptratio"].nil? or values["aspecttext"].nil?
+      values["aspect"] = []
+        values["asecptratio"].each_with_index do |a, k|
+          unless a == "0" 
+            values["aspect"] << values["aspecttext"][k].capitalize + " ( #{a} ) "
+          else
+            values["aspect"] << "Unspecified"
+          end
+        end
+    else
+       values["aspect"] = ["Unspecified"]
+    end
+    
+    pp  values["aspect"]
     
     if values["subtitlelang"].nil?
       values["subtitlelang"] = ["None"]
@@ -46,8 +64,21 @@ xml.root.children.each do |child|
       end
       values["workdate"].each {|v| values["decade"] << "#{v.slice(0..2)}0s" }        
     end
- 
     
+    unless values["date"].nil?
+      if values["pubdate"].nil?
+        values["pubdate"] =[]
+      end
+      values['date'].each do |v| 
+        unless v.include?("Un")
+          values["pubdate"] << "#{v.slice(0..2)}0s"
+        else
+           values["pubdate"] << "Unspecified"
+        end
+      end
+    end
+  
+ # pp(values)
   output = [values["format"].map {|x| "format_facet_#{x.downcase}" },
   values["libname"].map {|x| "libname_facet_#{x.downcase}"}, 
   values["subtitlelang"].map {|x| "subtitlelang_facet_#{x.downcase}"},
@@ -56,7 +87,8 @@ xml.root.children.each do |child|
   values["decade"].map {|x| "workdate_facet_#{x}"},
   values["worklang"].map {|x| "worklang_facet_#{x.downcase}"},
   values["directorname"].map {|x| "directorname_facet_#{x.downcase}"},
-  values["countryname"].map {|x| "countryname_facet_#{x.downcase}"}]
+  values["countryname"].map {|x| "countryname_facet_#{x.downcase}"},
+  values["pubdate"].map {|x| "pubdate_facet_#{x}"}]
    
    @final = [""]
    output.each do |o|

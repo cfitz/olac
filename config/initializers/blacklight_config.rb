@@ -86,6 +86,7 @@ Blacklight.configure(:shared) do |config|
     :field_names => [
       "libname_facet",
       "format_facet",
+      "pubdate_facet",
       "langname_facet",
       "subtitlelang_facet",
        "accessibility_facet"
@@ -93,6 +94,7 @@ Blacklight.configure(:shared) do |config|
     :labels => {
       "libname_facet" => "At Library:",
        "format_facet" => "Format:",
+       "pubdate_facet" => "Publication Date:",
       "langname_facet" => "Spoken Language:",
         "subtitlelang_facet"=> "Subtitle/Caption Language:",
         "accessibility_facet" => "Accessibility Options:"
@@ -109,17 +111,21 @@ Blacklight.configure(:shared) do |config|
   config[:index_fields] = {
     :field_names => [
       "alttitlename_display",
+       "largerworks_display",
       "directorname_display",
       "worklang_display",
       "countryname_display",
-      "genrename_display"
+      "genrename_display",
+      "summary_display"
       ],
     :labels => {
       "alttitlename_display"=>"Alternate Title",
       "directorname_display"=>"Director",
+      "largerworks_display" => "Series", 
       "worklang_display" => "Language",
        "countryname_display" => "Country",
-      "genrename_display"=>"Genre"
+      "genrename_display"=>"Genre",
+      "summary_display" => "Description"
      
     }
   }
@@ -128,11 +134,13 @@ Blacklight.configure(:shared) do |config|
   config[:manifestation_index_fields] = {
     :field_names => [
       "langname_display",
-      "subtitlelang_display"
+      "subtitlelang_display",
+      "aspect_display"
       ],
     :labels => {
       "langname_display"=>"Spoken Language",
-      "subtitlelang_display" => "Subtitle Language"
+      "subtitlelang_display" => "Subtitle Language",
+      "aspect_display" => "Aspect Ratio"
     }
   }
 
@@ -142,25 +150,27 @@ Blacklight.configure(:shared) do |config|
   config[:show_fields] = {
     :field_names => [
       "alttitlename_disaply",
-      "directorname_display",
+        "largerworks_display",
+         "directorname_display",
       "genrename_display",
       "worklang_display",
       "countryname_display",
       "workduration_display",
       "color_display",
       "sound_display",
-      "workaspect_display"
+        "summary_display"
     ],
     :labels => {
        "alttitlename_display" => "Alternate Title",
        "directorname_display" => "Director",
+         "largerworks_display" => "In", 
         "genrename_display" => "Genre",
         "worklang_display" => "Language",
         "countryname_display" => "Country",
         "workduration_display" => "Run Time",
         "color_display" => "Color",
         "sound_display" => "Sound",
-        "workaspect_display" => "Aspect ratio"
+          "summary_display" => "Description"
     }
   }
 

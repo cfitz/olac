@@ -1,7 +1,7 @@
 <% # main container for facets/limits menu -%>
 <div id="sidebar_facets" class="facets">
   <h2>Limit By Item:</h2>
-  <% facet_names = ["libname_facet","format_facet","langname_facet","subtitlelang_facet","accessibility_facet"]%>
+  <% facet_names = ["libname_facet","format_facet","pubdate_facet", "langname_facet","subtitlelang_facet","accessibility_facet"]%>
   <% facet_names.each do |solr_fname| %>
     <div>
       <% display_facet = @manifestation_response.facets.detect {|f| f.name == solr_fname} -%>
