@@ -21,7 +21,7 @@ xml.root.children.each do |child|
           values["#{grandchildren.name.downcase}"] = []
         end #if .nil?
          unless v.empty?
-            values["#{grandchildren.name.downcase}"] << v
+            values["#{grandchildren.name.downcase}"] << v.strip
           end
       end #grandchildren  
     end #children.each  
@@ -36,8 +36,11 @@ xml.root.children.each do |child|
 
       values["subtitlelang"].each do |sub|
         if sub.include?(" ")
-          unless sub.include?("Mandarin") or sub.include?("Sign")
+          if !sub.include?("Mandarin") or !sub.include?("Sign")
             sub.split(" ").each { |s| values["subtitlelang"] << s }
+            values["subtitlelang"].delete(sub)
+          elsif sub == "none" or sub == "None"
+            puts "NONE!--> #{sub}"
             values["subtitlelang"].delete(sub)
           end
         end

@@ -4,8 +4,8 @@ require 'nokogiri'
 require 'solr'
 require 'pp'
 
-xml = Nokogiri::XML(open('../spec/fixtures/items_export_from_db.xml'))
-
+#xml = Nokogiri::XML(open('../spec/fixtures/items_export_from_db.xml'))
+xml = Nokogiri::XML(open('/tmp/test.xml'))
 @connection = Solr::Connection.new('http://saltworks.stanford.edu/chris_solr/', :autocommit => :on )
 #@connection = Solr::Connection.new("http://localhost:8983/solr/development", :autocommit => :on )
 
@@ -23,7 +23,7 @@ xml.root.children.each do |child|
           values["#{grandchildren.name.downcase}"] = []
         end #if .nil?
         unless v.empty?
-          values["#{grandchildren.name.downcase}"] << v
+          values["#{grandchildren.name.downcase}"] << v.strip
         end
       end #grandchildren
       
@@ -51,7 +51,15 @@ xml.root.children.each do |child|
     pp  values["aspect"]
     
     if values["subtitlelang"].nil?
-      values["subtitlelang"] = ["None"]
+      values["subtitlelang"] = []  
+    end
+    
+    values["subtitlelang"].each do |s| 
+      puts s
+      if s == "none" or s == "None"
+         puts "none --- #{s}"
+        values["subtitlelang"].delete[s]  
+      end
     end
     
     if values["libname"].nil?
@@ -70,10 +78,10 @@ xml.root.children.each do |child|
         values["pubdate"] =[]
       end
       values['date'].each do |v| 
-        unless v.include?("Un")
-          values["pubdate"] << "#{v.slice(0..2)}0s"
-        else
+        if v.include?("Un")
            values["pubdate"] << "Unspecified"
+        else
+          values["pubdate"] << "#{v.slice(0..2)}0s"
         end
       end
     end
@@ -92,7 +100,10 @@ xml.root.children.each do |child|
    
    @final = [""]
    output.each do |o|
-     @final = @final * o.length
+     if o.length == 0
+       o << ""
+     end
+     @final = @final *  o.length
      o.each_with_index do |v,k|
        i = k * (@final.length / o.length)
        while i < (k * (@final.length / o.length)) + (@final.length / o.length)
@@ -107,7 +118,7 @@ xml.root.children.each do |child|
      @document << Solr::Field.new("holdings_tws" => f)
    end
      
-    #puts values.inspect
+    puts values.inspect
 
     values.each do |key,value|
       uniques = value.uniq
@@ -155,25 +166,25 @@ xml.root.children.each do |child|
   
   @work_id.each do |wi|
       
-    unless File.exists?(File.join('/tmp', "#{wi}.txt"))
-    
-        file = File.open(File.join('/tmp', "#{wi}.txt"), 'w')
-        @final.each do |f|
-          file << f + "\n"
-        end
-        file.close
-        
-    else
-       puts wi
+    if File.exists?(File.join('/tmp', "#{wi}.txt"))
+      puts "Appending to #{wi}"
         puts "man id #{@id}"
       file = File.open(File.join('/tmp', "#{wi}.txt"), 'a')
       @final.each do |f|
         file << f + "\n"
       end
-      file.close
+    else
+      puts "creating new #{wi}"
+       puts "man id #{@id}"
+        file = File.open(File.join('/tmp', "#{wi}.txt"), 'w')
+        @final.each do |f|
+          file << f + "\n"
+        end
+    end
+    
   
-    end #unless file.exists
   
+     file.close
   end #work_id each
                
   @connection.add(@document)

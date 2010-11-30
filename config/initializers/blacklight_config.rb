@@ -156,8 +156,8 @@ Blacklight.configure(:shared) do |config|
       "worklang_display",
       "countryname_display",
       "workduration_display",
-      "color_display",
-      "sound_display",
+      "workcolor_display",
+      "worksound_display",
         "summary_display"
     ],
     :labels => {
@@ -168,8 +168,8 @@ Blacklight.configure(:shared) do |config|
         "worklang_display" => "Language",
         "countryname_display" => "Country",
         "workduration_display" => "Run Time",
-        "color_display" => "Color",
-        "sound_display" => "Sound",
+        "workcolor_display" => "Color",
+        "worksound_display" => "Sound",
           "summary_display" => "Description"
     }
   }
