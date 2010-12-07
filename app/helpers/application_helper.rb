@@ -4,7 +4,7 @@ module ApplicationHelper
 
 
     def application_name
-      'OLAC'
+      'OLAC Work-Centric Moving Image Discovery Interface Prototype'
     end
   
   
@@ -39,7 +39,7 @@ module ApplicationHelper
    
    # used to generate a dummy link for the manifestation id
    def link_to_manifestaion(mandoc)
-       link = "http://www.worldcat.org/search?qt=worldcat_org_all&q=#{mandoc.get "id"}"
+       link = "/page/search"
        if mandoc["libname_display"].length > 1
          libs = "<div class='manLib'><label>Libraries:</label>"
          mandoc["libname_display"].each do |l|

@@ -1,0 +1,34 @@
+<h1>About the OLAC Work-Centric Moving Image Discovery Interface Prototype</h1>
+<div>
+The OLAC Work-Centric Moving Image Discovery Interface Prototype is an exploration of the possibilities of leveraging the Functional Requirements for Bibliographic Records (FRBR) model and faceted search to improve access to moving image materials held by libraries and archives. It was developed using the free open source tools Ruby on Rails, Solr, and the Blacklight and Hydra plug-ins.
+</div>
+<div>
+In this demonstration interface we present the user with a two-level view inspired by the FRBR model. The top level, labeled Movie or Program, provides information about the FRBR Work and what we are calling the Primary Expression, usually the first publicly-released Expression. Facets for the Work/Primary Expression level are displayed across the top of the screen and the records found in the hit list contain information about the Work and Primary Expression. The second level, labeled Version, includes information about Expressions (language options), Manifestations (format and publication date), and in a very basic way about Items (what libraries or archives hold a particular Manifestation). Facets for the Version level are displayed separately on the side of the screen and information about the particular Versions that meet the user’s qualifications are displayed below each Work/Primary Expression.
+</div>
+<div>
+The prototype includes only a small dataset that was deemed sufficient to demonstrate the basic concept. It contains 143 Work/Primary Expression records, 210 Manifestation records that include Expression-level information, and 297 Items found in 6 Libraries or Archives. The types of information included about each entity are limited to a few representative attributes selected to demonstrate some of the potential of this type of approach.
+</div>
+
+<h2>Why FRBR?</h2>
+
+<div>
+Library users are very often interested in finding a specific movie or program (what FRBR calls a Work) or in attributes of that original movie (e.g., language, date, genre). A Work-centric record, similar to that found in the Internet Movie Database (IMDb), focuses on these characteristics and provides a more streamlined, easily-understandable display than the publication-focused records currently used by libraries. Current library records combine information from the different FRBR levels in a way that makes it difficult to untangle them. 
+</div>
+<div>
+This proliferation of publication-focused records also leads to multiple records for a particular Work (movie or program) showing up in catalog hit lists, often with no easy way for users to discern the differences among them. Our Work-centric interface presents only one result per Work and then allows users to identify an appropriate version of that Work in terms of format (Blu-ray, DVD, VHS), soundtrack and subtitle options, and so on.
+</div>
+<h2>Why Facets?</h2>
+<div>
+Faceted interfaces are a good way to provide patrons with the power to explore collections and refine result sets in an easy-to-use and easily-understood form. They do require controlled values for characteristics of interest that are often not present in current library data. However, the library world is moving in the direction of recording more machine-actionable data and we hope to be able to map existing free text data to controlled values in many cases.
+</div>
+<div>
+Patrons have trouble browsing for videos in libraries for many reasons. Academic libraries often have video collections that are kept behind service desks so patrons must use the catalog. The catalog usually provides little guidance as to the type and extent of a library’s collection or what search terms would be most effective. Even when libraries have browsable collections, these physical collections are generally only arranged by a single characteristic, usually genre. A given DVD can only be put in one category so a foreign comedy must be placed either with the foreign films or with the comedies. A faceted interface supports multiple values for a given characteristic and the ability to search across multiple characteristics simultaneously. It also gives users an idea of the size and scope of a library’s collection and supports them in exploration when they don’t already have a specific title in mind.
+</div>
+<h2>Economic and Efficiency Advantages of the FRBR-Based Approach</h2>
+<div>
+Libraries currently create records based on publications (i.e., specific versions such as the two-disc special edition DVD set issued by Warner Brothers Home Video in 2009). Many moving images are released in numerous published versions, partly because technological platforms continually change. Particularly for major motion pictures, extensive information about the original film is repeated in each publication-based record. This leads to redundancy of effort and inconsistency of data. Creating a single record focused on the original Work would eliminate the inefficiencies associated with creating and maintaining Work data in multiple places.
+</div>
+<h2>Data Quality Advantages of the FRBR-Based Approach</h2>
+<div>
+Work records also reduce the obstacles to improving the accuracy and completeness of data about movies or programs. By creating a shared Work record that can be cooperatively-maintained, data quality can be improved at the network level. The efforts of each individual cataloger would be cumulative rather than parallel. Errors need only be corrected once in one place. It would be easier to create incentives to enhance Work records when the benefits can be widely shared.
+</div>

@@ -1,0 +1,8 @@
+<%= render :partial=>'catalog/search_form' %>
+<%= render :partial=>'catalog/home_text' %>
+
+<% sidebar_items << capture do %>
+  <%= render :partial=>'catalog/facets' %>
+<% end %>
+
+<%=  render :partial=>'catalog/work_facets',  :locals => {:response => response} %>

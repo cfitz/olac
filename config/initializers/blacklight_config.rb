@@ -121,7 +121,7 @@ Blacklight.configure(:shared) do |config|
     :labels => {
       "alttitlename_display"=>"Alternate Title",
       "directorname_display"=>"Director",
-      "largerworks_display" => "Series", 
+      "largerworks_display" => "Part Of", 
       "worklang_display" => "Language",
        "countryname_display" => "Country",
       "genrename_display"=>"Genre",

@@ -19,9 +19,20 @@
     <body>
   <% end %>
 	  <div id="doc4" class="yui-t2">
-	    
+	    <div id="nav" class="nav">
+		 <dl id="nav_items" class="nav_items">
+		    <dd><a href="page/about">ABOUT</a></dd>
+			<dd><a href="page/credits">CREDITS</a></dd>
+			<dd><a href="page/samples">SAMPLE SEARCHES/USE CASES<a></dd>
+				<dd><a href="page/samples">FEEDBACK<a></dd>
+					<dd></dd>
+		 </dl>
+		</div>
 	    <div id="hd">
-        <div class="yui-g">
+		<% if params[:f].nil? or params[:f][:worknum_s].nil? %>
+			<%= render :partial => 'catalog/search_form' %>
+        <% end -%>
+		<div class="yui-g">
           <div class="yui-u first">
             <h1 class="site_title"><%= link_to application_name, root_path %><%= (params[:controller] == "catalog" and !params[:id]) ? "<span id='results_text'>Search Results</span>" : "" %></h1>
           </div>
