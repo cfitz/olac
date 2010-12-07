@@ -6,8 +6,8 @@ require 'pp'
 
 xml = Nokogiri::XML(open('../spec/fixtures/items_export_from_db.xml'))
 #xml = Nokogiri::XML(open('/tmp/test.xml'))
-#@connection = Solr::Connection.new('http://saltworks.stanford.edu/chris_solr/', :autocommit => :on )
-@connection = Solr::Connection.new("http://localhost:8983/solr/development", :autocommit => :on )
+@connection = Solr::Connection.new('http://saltworks.stanford.edu/chris_solr/', :autocommit => :on )
+#@connection = Solr::Connection.new("http://localhost:8983/solr/development", :autocommit => :on )
 
 
 
@@ -41,7 +41,7 @@ xml.root.children.each do |child|
           unless a == "0" 
             values["aspect"] << values["aspecttext"][k].capitalize + " ( #{a} ) "
           else
-            values["aspect"] << "Unspecified"
+            values["aspect"] << values["aspecttext"][k].capitalize + "( Unspecified )"
           end
         end
     else
@@ -113,7 +113,7 @@ xml.root.children.each do |child|
      end #o.each_with_index
    end #output.each
    #puts @final
-     
+   @final.uniq!
    @final.each do |f|
      @document << Solr::Field.new("holdings_tws" => f)
    end

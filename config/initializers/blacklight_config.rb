@@ -149,12 +149,13 @@ Blacklight.configure(:shared) do |config|
   #   The ordering of the field names is the order of the display 
   config[:show_fields] = {
     :field_names => [
-      "alttitlename_disaply",
+      "alttitlename_display",
         "largerworks_display",
          "directorname_display",
       "genrename_display",
       "worklang_display",
       "countryname_display",
+      "originalaspect_display",
       "workduration_display",
       "workcolor_display",
       "worksound_display",
@@ -167,6 +168,7 @@ Blacklight.configure(:shared) do |config|
         "genrename_display" => "Genre",
         "worklang_display" => "Language",
         "countryname_display" => "Country",
+        "originalaspect_display" => "Original Aspect Ratio",
         "workduration_display" => "Run Time",
         "workcolor_display" => "Color",
         "worksound_display" => "Sound",

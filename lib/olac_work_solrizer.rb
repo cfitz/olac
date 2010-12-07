@@ -75,6 +75,19 @@ xml.root.children.each do |child|
             end
           end
         end
+        
+         unless values["workaspectratio"].nil? or values["workaspect"].nil?
+            values["originalaspect"] = []
+              values["workaspectratio"].each_with_index do |a, k|
+                unless a == "0" 
+                  values["originalaspect"] << values["workaspect"][k].capitalize + " ( #{a} ) "
+                else
+                  values["originalaspect"] << values["workaspect"][k].capitalize + "( Unspecified )"
+                end
+              end
+          else
+             values["originalaspect"] = ["Unspecified"]
+          end
        
         
       values.each do |key,value|
