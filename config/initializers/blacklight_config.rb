@@ -168,7 +168,7 @@ Blacklight.configure(:shared) do |config|
         "genrename_display" => "Genre",
         "worklang_display" => "Language",
         "countryname_display" => "Country",
-        "originalaspect_display" => "Original Aspect Ratio",
+        "originalaspect_display" => "Original Aspect",
         "workduration_display" => "Run Time",
         "workcolor_display" => "Color",
         "worksound_display" => "Sound",
