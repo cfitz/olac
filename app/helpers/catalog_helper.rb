@@ -15,11 +15,11 @@ module CatalogHelper
       if collection.total_pages < 2
         case collection.size
         when 0; "No #{entry_name.pluralize} found"
-        when 1; "Displaying <b>1</b> work"
-        else;   "Displaying <b>all #{total_num}</b> works"
+        when 1; "Displaying <b>1</b> movie/program"
+        else;   "Displaying <b>all #{total_num}</b> "
         end
       else
-        "<b>#{total_num}</b> versions found with <b>#{total_manifestation_hits}</b> #{entry_name.pluralize}. <br/>  Displaying works <b>#{start_num} - #{end_num}</b> of <b>#{total_num}</b>"
+        "<b>#{total_num}</b> movies/programs found with <b>#{total_manifestation_hits}</b> versions. <br/>  Displaying movies/programs <b>#{start_num} - #{end_num}</b> of <b>#{total_num}</b>"
       end
   end
   
