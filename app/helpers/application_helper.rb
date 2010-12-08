@@ -92,7 +92,8 @@ module ApplicationHelper
       else
         raise 'Invalid label argument'
       end
-      link_to_with_data(label, catalog_path(doc[:id]), {:method => :put, :data => {:counter => opts[:counter]}})
+      #link_to_with_data(label, catalog_path(doc[:id]), {:method => :put, :data => {:counter => opts[:counter]}})
+      return ""
     end
     
     
