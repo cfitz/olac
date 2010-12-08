@@ -68,10 +68,21 @@ width:460px;}
 
 h1.site_title {
 background:url("../images/olac_logo_white_transparent.png") no-repeat scroll left top transparent;
-height:66px;
-margin:2em 0 0 1em;
-width:200px;
+height:87px;
+padding:0em 0 0 0em;
+width:264px;
 }
+
+h1.site_title a {
+    border: 0 none;
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    text-decoration: none;
+    text-indent: -9999px;
+    width: 100%;
+}
+
 
 #item_facets dl { margin-bottom: 2em;}
 #item_facets dl dd { display: inline; margin-left: .5em;}
