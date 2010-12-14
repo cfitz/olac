@@ -4,8 +4,7 @@
 #hd { padding: 1em 0 0 0;}
 .yui-t1 #yui-main, .yui-t2 #yui-main, .yui-t3 #yui-main {
     float: left;
-    padding-left: 275px;
-    width: 695px;
+    margin-left: -17em;
 }
 
 .yui-t2 .yui-b {
@@ -16,7 +15,7 @@
 .yui-t2 #yui-main .yui-b {
     border-right: 1px dotted #CCCCCC;
     border-left: none;
-    margin-left: 0px;
+    margin-left: 200px;
     padding: 2em 2em 2em 0em;
     position: relative;
 }
