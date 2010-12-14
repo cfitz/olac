@@ -5,6 +5,8 @@
 .yui-t1 #yui-main, .yui-t2 #yui-main, .yui-t3 #yui-main {
     float: left;
     margin-left: -17em;
+    padding-left: 185px;
+    width: 695px;
 }
 
 .yui-t2 .yui-b {
@@ -15,9 +17,9 @@
 .yui-t2 #yui-main .yui-b {
     border-right: 1px dotted #CCCCCC;
     border-left: none;
-    margin-left: 200px;
+    margin-left: 0px;
     padding: 2em 2em 2em 0em;
-    position: relative;
+    position: inherit;
 }
 
 .sidebar { text-align: right;}
