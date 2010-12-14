@@ -2,13 +2,16 @@
 <dl class="defList">
   <% document_show_fields.each do |solr_fname| -%>
    <% if document.get solr_fname %>
-        <% if document[solr_fname].length > 1   %>
+        <% if document[solr_fname].length > 1 && solr_fname != "summary_display"   %>
 			<dt><%= h document_show_field_labels[solr_fname].pluralize + ":" %></dt>
 			<dd>
 			<%  document[solr_fname].each do |field| %>
 	        	<%= h field + "; " %> 
 		    <% end -%>
 		     </dd>
+		<% elsif solr_fname == "summary_display"%>
+			<dt><%= h index_field_labels[solr_fname] + ":" %></dt>
+	        	<dd><%= h document[solr_fname].join(" ") %></dd>
 		<% else %>
 			<dt><%= h document_show_field_labels[solr_fname] + ":" %></dt>
 	        	<dd><%= h document[solr_fname].first %></dd>
