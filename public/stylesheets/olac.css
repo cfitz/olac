@@ -75,6 +75,11 @@ padding:0em 0 0 0em;
 width:264px;
 }
 
+#hd .yui-g {
+    display: inline;
+    text-align: right;
+}
+
 .site_title a { text-align: right;}
 .site_title img { text-align: right; width: 100%; height: 100%;}
 
