@@ -1,7 +1,7 @@
-<%= render :partial=>'home_text' %>
-
 <% sidebar_items << capture do %>
   <%= render :partial=>'facets' %>
 <% end %>
 
 <%=  render :partial=>'catalog/work_facets',  :locals => {:response => response} %>
+
+<%= render :partial=>'home_text' %>

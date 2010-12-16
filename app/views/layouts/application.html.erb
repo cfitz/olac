@@ -29,16 +29,15 @@
 		 </dl>
 		</div>
 	    <div id="hd">
+		<div class="yui-g">
+          <div class="yui-u first"> 
+            <h1 class="site_title"><%= link_to  "", root_path %><%= (params[:controller] == "catalog" and !params[:id]) ? "<span id='results_text'>Search Results</span>" : "" %></h1>
+          </div>
+        </div>
 		<% if params[:f].nil? or params[:f][:worknum_s].nil? %>
 			<%= render :partial => 'catalog/search_form' %>
         <% end -%>
-		<div class="yui-g">
-          <div class="yui-u first">
-            <h1 class="site_title"><%= link_to image_tag("olac_logo_white_transparent.png", :border=>0), root_path %><%= (params[:controller] == "catalog" and !params[:id]) ? "<span id='results_text'>Search Results</span>" : "" %></h1>
-          </div>
-        </div>
-      </div>
-	    
+      </div>  
 	    <div id="bd">
       	
       	<div id="yui-main">
