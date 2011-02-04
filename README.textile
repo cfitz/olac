@@ -103,7 +103,7 @@ Charles Kerns, Bess Sadler, Richard Green, Tom Lauderman, Mark Matienzo
 
 h3. Additional thanks
 
-http://blazing-sunset-24.heroku.com/page/credits:http://blazing-sunset-24.heroku.com/page/credits
+"http://blazing-sunset-24.heroku.com/page/credits":http://blazing-sunset-24.heroku.com/page/credits
 
 
 
