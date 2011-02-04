@@ -4,6 +4,8 @@ h2. Introduction and Installation Instructions
 
 This is a "OLAC":http://www.olacinc.org/drupal/ demo application that implements "Function Requirements for Bibliographic Records (FRBR)":https://secure.wikimedia.org/wikipedia/en/wiki/Functional_Requirements_for_Bibliographic_Records methodology.
 
+A demo of this application can be seen here:http://blazing-sunset-24.heroku.com
+
 It is based on code developed for the "Hydrangea":https://github.com/projecthydra/hydrangea, which is the reference implementation of the Hydra framework, which builds on "Blacklight":http://projectblacklight.org, "ActiveFedora":http://yourmediashelf.com/activefedora and "Ruby on Rails":http://rubyonrails.org
 
 This document is based on the install process for the "Hydrangea":https://github.com/projecthydra/hydrangea project.
@@ -101,6 +103,7 @@ Charles Kerns, Bess Sadler, Richard Green, Tom Lauderman, Mark Matienzo
 
 h3. Additional thanks
 
+http://blazing-sunset-24.heroku.com/page/credits:http://blazing-sunset-24.heroku.com/page/credits
 
 
 
