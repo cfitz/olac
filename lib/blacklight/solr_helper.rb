@@ -15,6 +15,7 @@
 #   
 # end
 #
+require 'iconv'
 module Blacklight::SolrHelper
   MaxPerPage = 100
   # When a request for a single solr document by id

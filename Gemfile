@@ -1,10 +1,10 @@
 source 'http://rubygems.org'
 
-gem 'rails', '>=2.3.5', '<3.0.0'
+gem 'rails', '=2.3.5'
 
  
 gem 'authlogic', '>=0.1.0'
-gem 'builder'
+gem 'builder', '=2.1.2'
 gem 'columnize'
 gem 'crack'
 gem 'curb'
@@ -23,8 +23,8 @@ gem 'rack-test'
 gem 'rake'
 gem 'rcov'
 gem 'RedCloth'
-gem 'rsolr'
-gem 'rsolr-ext'
+gem 'rsolr', '=0.12.1'
+gem 'rsolr-ext', '=0.12.0'
 gem 'solr-ruby'
 gem 'sqlite3-ruby', '1.3.0'
 gem 'term-ansicolor'

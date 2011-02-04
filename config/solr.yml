@@ -10,9 +10,9 @@ test: &TEST
     url: http://localhost:8983/solr/development
 production:
   default:
-    url: http://saltworks.stanford.edu/chris_solr/
+    url: http://your.production.com/solr/
   fulltext:
-    url: http://saltworks.stanford.edu/chris_solr/
+    url: http://your.production.com/solr/
 cucumber:
   <<: *TEST
 cucumber:

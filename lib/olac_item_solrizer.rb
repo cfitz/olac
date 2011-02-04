@@ -5,9 +5,7 @@ require 'solr'
 require 'pp'
 
 xml = Nokogiri::XML(open('../spec/fixtures/items_export_from_db.xml'))
-#xml = Nokogiri::XML(open('/tmp/test.xml'))
-@connection = Solr::Connection.new('http://saltworks.stanford.edu/chris_solr/', :autocommit => :on )
-#@connection = Solr::Connection.new("http://localhost:8983/solr/development", :autocommit => :on )
+@connection = Solr::Connection.new("http://localhost:8983/solr/development", :autocommit => :on )
 
 
 
