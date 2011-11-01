@@ -2,17 +2,17 @@ GEM
   remote: http://rubygems.org/
   remote: http://gemcutter.org/
   specs:
-    RedCloth (4.2.3)
-    actionmailer (2.3.5)
-      actionpack (= 2.3.5)
-    actionpack (2.3.5)
-      activesupport (= 2.3.5)
-      rack (~> 1.0.0)
-    activerecord (2.3.5)
-      activesupport (= 2.3.5)
-    activeresource (2.3.5)
-      activesupport (= 2.3.5)
-    activesupport (2.3.5)
+    RedCloth (4.2.7)
+    actionmailer (2.3.11)
+      actionpack (= 2.3.11)
+    actionpack (2.3.11)
+      activesupport (= 2.3.11)
+      rack (~> 1.1.0)
+    activerecord (2.3.11)
+      activesupport (= 2.3.11)
+    activeresource (2.3.11)
+      activesupport (= 2.3.11)
+    activesupport (2.3.11)
     authlogic (2.1.6)
       activesupport
     block_helpers (0.3.3)
@@ -20,11 +20,11 @@ GEM
     builder (2.1.2)
     columnize (0.3.2)
     crack (0.1.8)
-    curb (0.7.10)
-    database_cleaner (0.6.1)
+    curb (0.7.15)
+    database_cleaner (0.6.6)
     diff-lcs (1.1.2)
     haml (3.0.25)
-    httparty (0.7.3)
+    httparty (0.7.4)
       crack (= 0.1.8)
     json_pure (1.5.1)
     linecache (0.43)
@@ -32,15 +32,15 @@ GEM
     mime-types (1.16)
     multipart-post (1.1.0)
     nokogiri (1.4.4)
-    rack (1.0.1)
+    rack (1.1.2)
     rack-test (0.5.7)
       rack (>= 1.0)
-    rails (2.3.5)
-      actionmailer (= 2.3.5)
-      actionpack (= 2.3.5)
-      activerecord (= 2.3.5)
-      activeresource (= 2.3.5)
-      activesupport (= 2.3.5)
+    rails (2.3.11)
+      actionmailer (= 2.3.11)
+      actionpack (= 2.3.11)
+      activerecord (= 2.3.11)
+      activeresource (= 2.3.11)
+      activesupport (= 2.3.11)
       rake (>= 0.8.3)
     rake (0.8.7)
     rcov (0.9.9)
@@ -49,7 +49,7 @@ GEM
     rsolr-ext (0.12.0)
       rsolr (>= 0.12.1)
     solr-ruby (0.0.8)
-    sqlite3-ruby (1.3.0)
+    sqlite3-ruby (1.2.5)
     term-ansicolor (1.0.5)
     trollop (1.16.2)
     webrat (0.7.3)
@@ -57,7 +57,7 @@ GEM
       rack (>= 1.0)
       rack-test (>= 0.5.3)
     will_paginate (2.3.15)
-    xml-simple (1.0.14)
+    xml-simple (1.0.15)
 
 PLATFORMS
   ruby
@@ -82,13 +82,13 @@ DEPENDENCIES
   nokogiri
   rack
   rack-test
-  rails (= 2.3.5)
+  rails (= 2.3.11)
   rake
   rcov
   rsolr (= 0.12.1)
   rsolr-ext (= 0.12.0)
   solr-ruby
-  sqlite3-ruby (= 1.3.0)
+  sqlite3-ruby (= 1.2.5)
   term-ansicolor
   trollop
   webrat

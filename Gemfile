@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '=2.3.5'
+gem 'rails', '=2.3.11'
 
  
 gem 'authlogic', '>=0.1.0'
@@ -26,7 +26,7 @@ gem 'RedCloth'
 gem 'rsolr', '=0.12.1'
 gem 'rsolr-ext', '=0.12.0'
 gem 'solr-ruby'
-gem 'sqlite3-ruby', '1.3.0'
+gem 'sqlite3-ruby', '1.2.5'
 gem 'term-ansicolor'
 gem 'trollop'
 gem 'webrat'
