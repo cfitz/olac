@@ -1,6 +1,5 @@
 GEM
   remote: http://rubygems.org/
-  remote: http://gemcutter.org/
   specs:
     RedCloth (4.2.8)
     actionmailer (2.3.11)

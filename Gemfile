@@ -32,7 +32,6 @@ gem 'trollop'
 gem 'webrat'
 gem 'will_paginate'
 gem 'xml-simple'
-source 'http://gemcutter.org'
 
 gem 'block_helpers'
 
